@@ -13,13 +13,13 @@ function App() {
       {/* <ResponsiveNavbar /> */}
       <Switch>
         <Route path="/" exact>
-          <Home />
+          <LandingPage />
         </Route>
 
         <Route path="/LandingPage" exact>
           <LandingPage />
         </Route>
-        
+
         <Route path="/Contact" exact>
           <Contact />
         </Route>
