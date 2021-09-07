@@ -1,0 +1,85 @@
+.form-container {
+    border: 2px solid #f5f5f5;
+    box-shadow: 1px 2px 4px 1px #c2f8f0;
+    max-width: 34rem;
+    margin-inline: auto;
+    padding: 3em;
+    border-radius: 1rem;
+}
+
+.form-head {
+    color: #333;
+}
+
+.sm-signup {
+    display: flex;
+    width: 100%;
+}
+
+.sm-signup-icon {
+    padding: 0.8rem;
+    margin-inline-end: 0.4rem;
+    display: flex;
+    border: 2px solid #f5f5f5;
+    border-radius: 0.4rem;
+    font-size: 0.9725rem;
+    box-shadow: 1px 2px 2px 2px #ddd;
+}
+
+.sm-signup-icon span {
+    padding-inline-start: 0.3rem;
+}
+
+.form-mid-div {
+    margin: 1em;
+    font-size: 1.4rem;
+    text-align: center;
+    color: #333;
+}
+
+.col-md-4 {
+    padding-block: 1rem;
+}
+
+.form-group {
+    display: flex;
+}
+
+.form-control {
+    width: 34em;
+    margin-block: 1em;  
+    align-self: flex-end;
+    border-top: #fff;
+    border-left: #fff;
+    border-right: #fff;
+    border-bottom: 1px solid #ccc;
+}
+
+.form-control:focus {
+    outline: none;
+    border: none;
+}
+
+.show-icon:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.terms {
+    display: flex;
+    padding-inline: 0.7rem;
+    color: #333;
+}
+
+.terms p {
+    margin-top: -0.5rem;
+    margin-left: 0.5rem;
+}
+
+.last-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+

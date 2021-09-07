@@ -3,9 +3,10 @@ import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-d
 //import ResponsiveNavbar from './components/Navbar';
 
 //import pages
-import LandingPage from './pages/Landing';
+import LandingPage from './pages/LandingPage';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
+import Login from './pages/Login';
 
 function App() {
   return (
@@ -16,8 +17,12 @@ function App() {
           <LandingPage />
         </Route>
 
-        <Route path="/LandingPage" exact>
-          <LandingPage />
+        <Route path="/Login" exact>
+          <Login />
+        </Route>
+
+        <Route path="/Home" exact>
+          <Home />
         </Route>
 
         <Route path="/Contact" exact>

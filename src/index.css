@@ -23,6 +23,22 @@ code {
   height: 100vh;
 }
 
+/* =========DECLARING UTILITY CLASSES FOR COLORS ======== */
+
+:root {
+  --clr-primary-100: #223e8b;
+  --clr-primary-200: #008470;
+  --clr-primary-400: #000f3b;
+  --clr-primary-500: #ed1c24;
+  --clr-primary-600: #ffbf46;
+  --clr-neutral-100: #fff;
+  --clr-neutral-200: #555;
+  --clr-neutral-400: #f44174;
+
+  /* --ff-primary: serif; */
+  /* --ff-accent: monteserrat; */
+}
+
 /* =======STYLING PRIMARY BUTTONS========= */
 .btn-primary {
   padding: 0.3rem 1.5rem;
@@ -32,4 +48,15 @@ code {
   border: none;
   border-radius: 6px;
   outline: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  opacity: 0.8;
+}
+
+/* =======STYLING FORM LABEL=========== */
+label {
+  font-weight: 500;
+  color: var(--clr-neutral-200);
 }

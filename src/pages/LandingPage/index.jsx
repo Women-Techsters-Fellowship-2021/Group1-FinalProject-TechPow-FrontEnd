@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+//import component
+import Signup from '../SignUp';
+
 //import logos, images and icons
 import people from '../../resources/images/landingthreePicsAndTriangles.png';
 import together from '../../resources/icons/Together....svg';
@@ -30,7 +33,6 @@ function LandingPage() {
         <div className="landingPage">
 
             <header>
-                {/* <div className="container"> */}
                 <div className="flex-header">
                     <div>
                         <img src={TechPow_logo} alt="TechPow Logo" className="head-logo" />
@@ -48,10 +50,12 @@ function LandingPage() {
                         </nav>
                     </div>
                     <div>
-                        <button className="btn-primary login-btn">Login</button>
+                        <button className="btn-primary login-btn">
+                        <a href="/Login" className
+                        ="login-btn">Login</a>
+                        </button>
                     </div>
                 </div>
-                {/* </div> */}
             </header>
 
             <section>
@@ -82,7 +86,7 @@ function LandingPage() {
                             <img src={together} alt="statistics" />
                         </div>
                         <div>
-                            <img src={together} alt="statistics" />
+                            <Signup />
                         </div>
                     </div>
                 </div>
@@ -177,14 +181,14 @@ function LandingPage() {
                             <h4 className="donee-name">Ifunnaya Oke</h4>
                             <p className="donee-desc">A description of donee's need...</p>
                             <a href="#home" className="green link">Learn more</a>
-                            <div>
+                            <div className="flex-icon-container">
                                 <div className="flex-icon">
                                     <img src={phone} alt="" className="smm-icon" />
                                     <p>038-39283-38789</p>
                                 </div>
-                                <div className="flex-icon">
+                                <div className="flex-icon location-icon">
                                     <img src={location_icon} alt="" className="sm-icon" />
-                                    <p>Lagos, Nigeria</p>
+                                    <p>Nigeria</p>
                                 </div>
                             </div>
                             <button className=" btn btn-primary">Donate</button>
@@ -196,12 +200,12 @@ function LandingPage() {
                             <h4 className="donee-name">Hezron Geteye</h4>
                             <p className="donee-desc">A description of donee's need...</p>
                             <a href="#home" className="green link">Learn more</a>
-                            <div>
+                            <div className="flex-icon-container">
                                 <div className="flex-icon">
                                     <img src={phone} alt="" className="smm-icon" />
                                     <p>038-39283-38789</p>
                                 </div>
-                                <div className="flex-icon">
+                                <div className="flex-icon location-icon">
                                     <img src={location_icon} alt="" className="sm-icon" />
                                     <p>Kenya</p>
                                 </div>
@@ -215,12 +219,12 @@ function LandingPage() {
                             <h4 className="donee-name">Reem Mohammed</h4>
                             <p className="donee-desc">A description of donee's need...</p>
                             <a href="#home" className="green link">Learn more</a>
-                            <div>
+                            <div className="flex-icon-container">
                                 <div className="flex-icon">
                                     <img src={phone} alt="" className="smm-icon" />
                                     <p>038-39283-38789</p>
                                 </div>
-                                <div className="flex-icon">
+                                <div className="flex-icon location-icon">
                                     <img src={location_icon} alt="" className="sm-icon" />
                                     <p>Egypt</p>
                                 </div>
