@@ -136,32 +136,24 @@ function LandingPage() {
                     </p>
                     <div className="flex-cards">
                         <div>
-                            <Link className="card-link" to="">
-                                <img src={person_icon} alt="" className="md-icon" />
-                                <h3 className="flex-card-head">Choose a donee</h3>
-                                <p className="flex-card-text">Browse Catalogue</p>
-                            </Link>
+                            <img src={person_plus} alt="" className="mmd-icon" />
+                            <h3 className="flex-card-head mmd-text">Apply as a donor</h3>
+                            <p className="flex-card-text">Share your needs with us let's help...</p>
                         </div>
                         <div>
-                            <Link className="card-link" to="">
-                                <img src={donation_icon} alt="" className="md-icon" />
-                                <h3 className="flex-card-head">Make a donation</h3>
-                                <p className="flex-card-text">Donate either a technical device or internet data.</p>
-                            </Link>
+                            <img src={person_icon} alt="" className="md-icon" />
+                            <h3 className="flex-card-head">Choose a donee</h3>
+                            <p className="flex-card-text">Browse Catalogue</p>      
                         </div>
                         <div>
-                            <Link className="card-link" to="">
-                                <img src={update_icon} alt="" className="md-icon" />
-                                <h3 className="flex-card-head">Receive an update</h3>
-                                <p className="flex-card-text">Get updates regarding the donation process and how you can make a difference.</p>
-                            </Link>
+                            <img src={donation_icon} alt="" className="md-icon" />
+                            <h3 className="flex-card-head">Make a donation</h3>
+                            <p className="flex-card-text">Donate either a technical device or internet data.</p>
                         </div>
                         <div>
-                            <Link className="card-link" to="">
-                                <img src={person_plus} alt="" className="md-icon" />
-                                <h3 className="flex-card-head">Apply as a donee</h3>
-                                <p className="flex-card-text">Share your needs with us let's help...</p>
-                            </Link>
+                            <img src={update_icon} alt="" className="md-icon" />
+                            <h3 className="flex-card-head">Receive an update</h3>
+                            <p className="flex-card-text">Get updates regarding the donation process and how you can make a difference.</p>
                         </div>
                     </div>
                 </div>
