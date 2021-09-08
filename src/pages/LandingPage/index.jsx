@@ -51,8 +51,8 @@ function LandingPage() {
                     </div>
                     <div>
                         <button className="btn-primary login-btn">
-                        <a href="/Login" className
-                        ="login-btn">Login</a>
+                            <a href="/Login" className
+                                ="login-btn">Login</a>
                         </button>
                     </div>
                 </div>
@@ -128,7 +128,7 @@ function LandingPage() {
                 </div>
             </section>
 
-            <section className="bg-primary">
+            <section id="bg-primary" className="bg-primary">
                 <div className="container">
                     <h2 className="center-text">How it works</h2>
                     <p className="center-para">To donate on TechPow, you can support either an
@@ -136,28 +136,28 @@ function LandingPage() {
                     </p>
                     <div className="flex-cards">
                         <div>
-                            <Link className="card-link">
+                            <Link className="card-link" to="">
                                 <img src={person_icon} alt="" className="md-icon" />
                                 <h3 className="flex-card-head">Choose a donee</h3>
                                 <p className="flex-card-text">Browse Catalogue</p>
                             </Link>
                         </div>
                         <div>
-                            <Link className="card-link">
+                            <Link className="card-link" to="">
                                 <img src={donation_icon} alt="" className="md-icon" />
                                 <h3 className="flex-card-head">Make a donation</h3>
                                 <p className="flex-card-text">Donate either a technical device or internet data.</p>
                             </Link>
                         </div>
                         <div>
-                            <Link className="card-link">
+                            <Link className="card-link" to="">
                                 <img src={update_icon} alt="" className="md-icon" />
                                 <h3 className="flex-card-head">Receive an update</h3>
                                 <p className="flex-card-text">Get updates regarding the donation process and how you can make a difference.</p>
                             </Link>
                         </div>
                         <div>
-                            <Link className="card-link">
+                            <Link className="card-link" to="">
                                 <img src={person_plus} alt="" className="md-icon" />
                                 <h3 className="flex-card-head">Apply as a donee</h3>
                                 <p className="flex-card-text">Share your needs with us let's help...</p>

@@ -7,32 +7,35 @@ import LandingPage from './pages/LandingPage';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
 import Login from './pages/Login';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
-    <Router>
-      {/* <ResponsiveNavbar /> */}
-      <Switch>
-        <Route path="/" exact>
-          <LandingPage />
-        </Route>
+    <><ToastContainer />
+      <Router>
+        {/* <ResponsiveNavbar /> */}
+        <Switch>
+          <Route path="/" exact>
+            <LandingPage />
+          </Route>
 
-        <Route path="/Login" exact>
-          <Login />
-        </Route>
+          <Route path="/Login" exact>
+            <Login />
+          </Route>
 
-        <Route path="/Home" exact>
-          <Home />
-        </Route>
+          <Route path="/Home" exact>
+            <Home />
+          </Route>
 
-        <Route path="/Contact" exact>
-          <Contact />
-        </Route>
+          <Route path="/Contact" exact>
+            <Contact />
+          </Route>
 
-        <Redirect to="/" />
+          <Redirect to="/" />
 
-      </Switch>
-    </Router>
+        </Switch>
+      </Router></>
   );
 }
 
