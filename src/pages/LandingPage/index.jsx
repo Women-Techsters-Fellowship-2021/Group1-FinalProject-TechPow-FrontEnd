@@ -37,7 +37,7 @@ function LandingPage() {
                     <div>
                         <img src={TechPow_logo} alt="TechPow Logo" className="head-logo" />
                     </div>
-                    <div>
+                    <div className="flex-header-links">
                         <nav>
                             <ul>
                                 <Link to="/Home" className
@@ -79,11 +79,11 @@ function LandingPage() {
                 </div>
             </section>
 
-            <section>
+            <section id="bg-circle">
                 <div className="container">
                     <div className="split">
                         <div>
-                            <img src={together} alt="statistics" />
+                            <img src={together} alt="statistics" id="statistics" />
                         </div>
                         <div>
                             <Signup />
@@ -128,7 +128,7 @@ function LandingPage() {
                 </div>
             </section>
 
-            <section id="bg-primary">
+            <section className="bg-primary">
                 <div className="container">
                     <h2 className="center-text">How it works</h2>
                     <p className="center-para">To donate on TechPow, you can support either an
@@ -158,7 +158,7 @@ function LandingPage() {
                         </div>
                         <div>
                             <Link className="card-link">
-                                <img src={person_plus} alt="" className="md-icon mmd-icon" />
+                                <img src={person_plus} alt="" className="md-icon" />
                                 <h3 className="flex-card-head">Apply as a donee</h3>
                                 <p className="flex-card-text">Share your needs with us let's help...</p>
                             </Link>

@@ -23,7 +23,7 @@ code {
   height: 100vh;
 }
 
-/* =========DECLARING UTILITY CLASSES FOR COLORS ======== */
+/* =========DECLARING UTILITY CLASSES======== */
 
 :root {
   --clr-primary-100: #223e8b;
@@ -39,9 +39,39 @@ code {
   /* --ff-accent: monteserrat; */
 }
 
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.1125rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+body, h1, h2, h3, h4, p {
+  margin: 0;
+}
+
+h1, h2, h3, h4 {
+  /* font-family: var(--ff-accent); */
+  font-weight: 900;
+  line-height: 1;
+}
+
+h1, h2, h3, h4, p {
+  margin-bottom: 1em;
+}
+
+.bg-primary {
+  background-color:#e4fdf9;
+}
+
 /* =======STYLING PRIMARY BUTTONS========= */
 .btn-primary {
-  padding: 0.3rem 1.5rem;
+  padding: 0.5rem 1.5rem;
   font-size: 1rem;
   background-color: var(--clr-primary-100);
   color: var(--clr-neutral-100);
@@ -59,4 +89,9 @@ code {
 label {
   font-weight: 500;
   color: var(--clr-neutral-200);
+}
+
+/* ========STYLING SECTIONS========= */
+section {
+  background-color: #fff;
 }
