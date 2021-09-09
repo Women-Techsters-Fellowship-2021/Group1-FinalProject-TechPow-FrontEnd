@@ -1,0 +1,27 @@
+.center-form {
+    display: flex;
+    height: 100vh;
+    margin-block: auto;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+
+/* to show on hover */
+.light-red {
+    color:  var(--clr-primary-500);
+}
+
+.fg-pwd {
+    padding: 2rem;
+    max-width: 24rem;
+}
+
+.fg-text {
+    color:  var(--clr-primary-400);
+    text-align: center;
+}
+
+.reset {
+    margin: 2em auto;
+}

@@ -22,16 +22,17 @@ function Login() {
     }
 
     return (
-            <div className="login-page">
+            <div className="bg-pattern">
                 <div className="home-link">
                     <Link to="/Home" className="back-to-link">Back to home</Link>
                 </div>
                 <div className="top-login-section">
-                    <img src={portrait} alt="" className="mmd-icon" />
+                    <img src={portrait} alt="" id="portrait" />
                     <h2>Welcome back!</h2>
                     <p>Login the way you did last time to avoid creating a second TechPow account.</p>
                 </div>
                 <div className="form-container">
+                    <h2 className="form-head">Login</h2>
                     <div className="sm-login">
                         <div className="sm-login-icon">
                             <img src={google} alt="google-icon" className="xms-icon"/><span>with Google</span>
@@ -54,7 +55,6 @@ function Login() {
                                     name="email" 
                                     id="email" 
                                     class="form-control"
-                                    placeholder="Enter your email, e.g: janedoe@gmail.com"
                                     {...register('email', {required: true}
                                     )} 
                                 />
@@ -66,7 +66,6 @@ function Login() {
                                     name="password" 
                                     id="password" 
                                     class="form-control"
-                                    placeholder="Password"
                                     {...register('password', {required: true}
                                     )}
                                 />
@@ -74,10 +73,10 @@ function Login() {
                         </form>
                     </div>
                     <div className="terms">
-                        <input type="checkbox" name="terms-and-conditions" id="checkbox" />
-                        <input type="checkbox" name="remember-me" id="checkbox" />
+                        <input type="checkbox" name="remember-me" id="remember-me" />
                         <p>Remember me</p>
-                        <span className="green green-span">Forgot Password?</span>
+                        <a href="/ForgotPassword" className=" red   green-span">Forgot Password?
+                        </a>
                     </div>
                     <div className="form-login-btn">
                         <button type="submit" class="btn btn-primary">Log in</button>
@@ -86,7 +85,7 @@ function Login() {
                         <span className="txt1">
                             Don’t have an account?
                         </span>
-                        <a href="/Signup" className="txt2">
+                        <a href="/Signup" className="green txt1">
                             Sign up here!
                         </a>
                     </div>

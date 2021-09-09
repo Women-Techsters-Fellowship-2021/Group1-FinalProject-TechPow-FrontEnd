@@ -200,14 +200,19 @@ strong {
 }
 
 .md-icon {
-    width: 6rem;
-    height: 6rem;
+    width: 7rem;
+    height: 7rem;
     margin-inline: auto;
 }
 
 .mmd-icon {
-    width: 8rem;
-    height: 8rem;
+    width: 5.5rem;
+    height: 5.5rem; 
+    margin-inline: auto
+}
+
+.mmd-text {
+    padding-top: 1em;
 }
 
 .flex-cards {
@@ -223,16 +228,11 @@ strong {
     font-weight: 500;
 }
 
-.card-link{
-    text-decoration: none;
-    font-size: 1rem;
-}
-
-.card-link h3 {
+.flex-card-head {
     color: #000f3b;
 }
 
-.card-link p {
+.flex-card-text {
     color: #555;
 }
 

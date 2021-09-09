@@ -1,0 +1,19 @@
+.container-padding {
+    padding-block: 2em;
+}
+
+.create-pwd {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.create-pwd-box label {
+    display: block;
+    text-align: left;
+}
+
+.pwd-field {
+    width: 30em;
+    margin-inline: auto;
+}

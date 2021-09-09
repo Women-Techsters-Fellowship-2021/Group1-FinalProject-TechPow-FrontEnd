@@ -1,4 +1,4 @@
-.login-page {
+.bg-pattern {
     width: 100%;
     margin: 0;
     height: 100vh;
@@ -23,9 +23,18 @@
     font-weight: 500;
 }
 
+#portrait {
+    width: 5rem;
+    height: 5rem;
+    margin-inline: auto;
+}
+
 .top-login-section {
     max-width: 34rem;
-    margin: 2rem auto 0rem;
+    margin-top: -1rem;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
     text-align: center;
 }
 
@@ -35,7 +44,7 @@
 }
 
 .top-login-section p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: var(--clr-neutral-200);
 }
 
@@ -59,12 +68,12 @@
 }
 
 .sm-login-icon {
-    padding: 0.6rem 1rem;
-    margin-inline: 0.2rem;
+    padding: 0.15rem 0.3rem;
+    margin-inline-end: 0.4rem;
     display: flex;
     border: 2px solid #f5f5f5;
     border-radius: 0.4rem;
-    font-size: 0.8725rem;
+    font-size: 0.9125rem;
     box-shadow: 1px 2px 2px 2px #ddd;
 }
 
@@ -87,9 +96,13 @@
     display: flex;
 }
 
+.form-group label {
+    margin-top: 1rem;
+}
+
 .form-control {
     width: 34em;
-    margin-block: 1em;  
+    margin-block: 0.7em;  
     align-self: flex-end;
     border-top: #fff;
     border-left: #fff;
@@ -101,24 +114,43 @@
     outline: none;
     border: none;
 }
+
 .terms {
     display: flex;
-    padding-inline: 0.7rem;
+    margin-top: 1rem;
+    padding-inline: 0.5rem;
     color: #333;
+    font-weight: bold;
+}
+
+#remember-me {
+    margin-top: 0.5rem;
 }
 
 .terms p {
-    margin-top: -0.5rem;
+    margin-top: 0.3rem;
     margin-left: 0.5rem;
 }
 
 .green-span {
-    padding-left: 2rem;
+    margin-top: 0.3rem;
+    margin-left: 5.5rem;
+    text-decoration: none;
 }
+
+.green-span:hover {
+    text-decoration: underline 2px;
+    color: teal;
+}
+
 
 .form-login-btn {
     width: 100%;
     margin: 1rem;
     text-align: center;
+}
+
+.txt1 {
+    margin-inline-end: 0.3rem;
 }
 

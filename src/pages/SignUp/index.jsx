@@ -60,6 +60,32 @@ export default function Signup() {
                 //do a dispatch and push history to login
                 //catch errors
             })
+        // const newUser = {
+        //     firstName: firstname,
+        //     lastName: lastname,
+        //     email: email,
+        //     password: password,
+        //     ConfirmPassword: confirmPassword,
+        //     role: role
+        // };
+
+        // axios.post('https://localhost:44326/api/v1/Auth/Register',
+        //     newUser)
+        //     // .then((res) => {
+        //     //     console.log(res);
+        //     //     return res.json()
+        //     // })
+        //     .then((result) => {
+        //         if (result.error === false) {
+        //             // alert(result.message);
+        //             toast.success('User created Sucessfully, please log in to continue!');
+        //             return true;-
+        //             //do a dispatch and push history to login
+        //             //catch errors
+
+        //         }
+        //     })
+
 
     }
 

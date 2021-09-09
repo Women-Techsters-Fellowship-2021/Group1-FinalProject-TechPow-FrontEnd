@@ -1,0 +1,124 @@
+.contact-page {
+    max-width: 60%;
+    margin: 2rem auto 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-text h2 {
+    color: var(--clr-primary-400);
+}
+
+.contact-text {
+    text-align: center;
+}
+
+.contact-text p {
+    font-size: 1.1.5rem;
+    color: var(--clr-neutral-200);
+}
+
+.third-para {
+    padding-top: 1.5em;
+}
+
+.contact-form {
+    border: 2px solid #f5f5f5;
+    box-shadow: 1px 2px 4px 1px #c2f8f0;
+    margin-inline: auto;
+    width: min(90%, 70.5rem);
+    padding: 2em 2em- 4em;
+    border-radius: 1rem;   
+}
+
+@media (min-width: 40rem) {
+    .contact-form {
+        padding: 2em;
+        margin: 2em;
+    }
+
+    .form-field {
+        margin-block: 1em;
+    }
+
+    .text-area {
+        padding: 3em;
+        margin-top: -1.5em;
+    }
+
+    .text-area label {
+        display: block;
+    }
+
+    #help {
+        margin-inline-end: 2em;
+    }
+
+    .last-field {
+        display: flex;
+    }
+
+    .help-btn {
+        margin-top: 2em;
+    }
+}
+
+.form-box {
+    width: 100%;
+    display: flex;
+}
+
+@media (max-width: 960px) {
+    .contact-form {
+        padding: 3em;
+        margin-bottom: 2em;
+    }
+
+    .form-box {
+        flex-direction: column;
+    }
+
+    #help {
+        margin-block-end: 2em;
+    }
+
+    .text-area {
+        margin-bottom: -1.5em;
+    }
+}
+
+.form-field {
+    padding-block: 0.8rem;
+    padding-inline: 0.6em 10em;
+    margin-inline-end: 3rem;
+    border: 2px solid #ccc;
+    border-radius: 0.5rem;
+}
+
+.form-field:hover {
+    border-color: #555;
+    outline: none;
+}
+
+.form-field:focus {
+    outline: none;
+}
+
+#topic {
+    padding-inline: 0.5em 5.8em;
+}
+
+#help {
+    font-size: 1rem;
+    padding: 0.5em;
+}
+
+.help-btn {
+    padding-block: 0.7em;
+    margin-inline: auto;
+}
+
+.text-area {
+    padding-block: 2em;
+    width: 100%;
+}
