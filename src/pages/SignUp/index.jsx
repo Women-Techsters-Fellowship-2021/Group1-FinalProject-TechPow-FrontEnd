@@ -20,6 +20,7 @@ export default function Signup() {
     // const history = useHistory();
 
     const registerUser = ({ firstname, lastname, email, password, confirmPassword, role }) => {
+
         if (!email) {
             // console.log("Error");
             return toast.error("Please provide an email");
@@ -41,24 +42,23 @@ export default function Signup() {
             email: email,
             password: password,
             ConfirmPassword: confirmPassword,
-            role: role
+            typeofuser: role
         };
 
+        // console.log(newUser);
         axios.post('https://localhost:44326/api/v1/Auth/Register',
             newUser)
-            // .then((res) => {
-            //     console.log(res);
-            //     return res.json()
-            // })
-            .then((result) => {
-                if (result.error === false) {
-                    // alert(result.message);
-                    toast.success('User created Sucessfully, please log in to continue!');
-                    return true;
-                    //do a dispatch and push history to login
-                    //catch errors
+            .then(result => {
+                console.log(result);
+                if (result.data.error !== false) {
+                    console.log(result.data.error);
+                    toast.error(result.data.error);
 
                 }
+                toast.success('User created Sucessfully, please log in to continue!');
+                return true;
+                //do a dispatch and push history to login
+                //catch errors
             })
 
     }
@@ -143,9 +143,9 @@ export default function Signup() {
                     <div className="drop-down">
                         <label htmlFor="roles">Apply as:</label>
                         <select name="role" id="role" {...register('role', { required: true })}>
-                            <option value="A Donor">A Donor</option>
-                            <option value="A Donee">A Donee</option>
-                            <option value="A Volunteer/NGO">A volunteer/NGO</option>
+                            <option value="Donor">Donor</option>
+                            <option value="Donee">Donee</option>
+                            <option value="Volunteer/NGO">Volunteer/NGO</option>
                         </select>
                     </div>
                     <div className="terms">
