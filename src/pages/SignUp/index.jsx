@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import { useHistory } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import axios from 'axios';
+import { AppContext } from '../../components/AppStateProvider';
 
 //import styles
 import './style.css';
@@ -21,6 +22,7 @@ export default function Signup() {
         { reValidateMode: 'onSubmit' })
 
     const history = useHistory();
+    const context = useContext(AppContext);
 
     const validatePassword = (data) => {
         if (!(/[A-Z].*/g).test(data)) {
@@ -80,6 +82,14 @@ export default function Signup() {
                 console.log(result);
                 if (result.data.success) {
                     toast.success(result.data.message);
+                    context.dispatch({
+                        type : 'REGISTER',
+                        payload : {
+                            userId : newUser.userId,
+                            userEmail : newUser.email,
+                            userRole : newUser.typeofuser,
+                        },
+                    })
                     history.push('Login');
                     return true;
                 }
