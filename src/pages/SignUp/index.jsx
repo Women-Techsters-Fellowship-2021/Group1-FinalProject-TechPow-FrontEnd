@@ -1,6 +1,6 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
-//import { useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import axios from 'axios';
 
@@ -16,8 +16,36 @@ import facebook from '../../resources/icons/facebook.svg';
 import linkedin from '../../resources/icons/linkedin.svg';
 
 export default function Signup() {
-    const { register, handleSubmit } = useForm();
-    // const history = useHistory();
+
+    const { register, handleSubmit } = useForm(
+        { reValidateMode: 'onSubmit' })
+
+    const history = useHistory();
+
+    const validatePassword = (data) => {
+        if (!(/[A-Z].*/g).test(data)) {
+            toast.warning("Password should contain an uppercase character");
+            return false;
+        }
+        if (!(/[a-z].*/g).test(data)) {
+            toast.warning("Password should contain a lowercase character");
+            return false;
+        }
+        if (!(/[@#$%^&!].*/g).test(data)) {
+            toast.warning("Password should contain a special character(@#$%^&!)");
+            return false;
+        }
+        if (!(/[0-9].*/g).test(data)) {
+            toast.warning("Password should contain a digit");
+            return false;
+        }
+        // if (!(/.[8,]/).test(data)) {
+        //     toast.warning("Password should be 8 characters long or more...");
+        //     return false;
+        // }
+
+        //return (/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@#$%^&!]{8,}$/).test(data)
+    };
 
     const registerUser = ({ firstname, lastname, email, password, confirmPassword, role }) => {
 
@@ -50,44 +78,28 @@ export default function Signup() {
             newUser)
             .then(result => {
                 console.log(result);
-                if (result.data.error !== false) {
-                    console.log(result.data.error);
-                    toast.error(result.data.error);
-
+                if (result.data.success) {
+                    toast.success(result.data.message);
+                    history.push('Login');
+                    return true;
                 }
-                toast.success('User created Sucessfully, please log in to continue!');
-                return true;
-                //do a dispatch and push history to login
-                //catch errors
+                for (let index = 0; index < result.data.errors.length; index++) {
+                    toast.error(result.data.errors[index]);
+                }
             })
-        // const newUser = {
-        //     firstName: firstname,
-        //     lastName: lastname,
-        //     email: email,
-        //     password: password,
-        //     ConfirmPassword: confirmPassword,
-        //     role: role
-        // };
-
-        // axios.post('https://localhost:44326/api/v1/Auth/Register',
-        //     newUser)
-        //     // .then((res) => {
-        //     //     console.log(res);
-        //     //     return res.json()
-        //     // })
-        //     .then((result) => {
-        //         if (result.error === false) {
-        //             // alert(result.message);
-        //             toast.success('User created Sucessfully, please log in to continue!');
-        //             return true;-
-        //             //do a dispatch and push history to login
-        //             //catch errors
-
-        //         }
-        //     })
+            .catch(error => {
+                console.log(error.response.data.errors);
+                for (let index = 0; index < error.response.data.errors.length; index++) {
+                    toast.error(error.response.data.errors[index]);
+                }
+            })
 
 
-    }
+        //do a dispatch and push history to login
+        //catch errors
+    };
+
+
 
     return (
         <div className="form-container">
@@ -149,7 +161,9 @@ export default function Signup() {
                             name="password"
                             id="password"
                             className="form-control"
-                            {...register('password', { required: true }
+                            {...register('password', {
+                                required: true, validate: validatePassword
+                            }
                             )}
                         />
                     </div>
@@ -180,7 +194,7 @@ export default function Signup() {
                     </div>
                     <div className="last-flex">
                         <button type="submit" className="btn btn-primary">Create Account</button>
-                        <p>Already have an account? <span className="green">Log in</span></p>
+                        <p>Already have an account? <a className="green" href="/Login">Log in</a></p>
                     </div>
                 </form>
             </div>
