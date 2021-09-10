@@ -13,7 +13,7 @@
     height: 100%;
 } */
 
-.container, .flex-header {
+.container, .flex-header, .flex-footer{
     margin-inline: auto;
     width: min(90%, 70.5rem);
 }

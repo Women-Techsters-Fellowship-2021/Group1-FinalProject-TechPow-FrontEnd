@@ -1,0 +1,12 @@
+footer {
+display: flex;
+padding-block: 2rem;
+
+}
+
+.flex-footer{
+   display: flex; 
+   /* flex-direction: column; */
+}
+
+

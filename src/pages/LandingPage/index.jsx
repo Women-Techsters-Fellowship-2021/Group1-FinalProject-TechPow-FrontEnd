@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 //import component
 import Signup from '../SignUp';
+import Footer from '../../components/Footer';
 
 //import logos, images and icons
 import people from '../../resources/images/landingthreePicsAndTriangles.png';
@@ -27,6 +28,7 @@ import TechPow_logo from '../../resources/Logos/TechPow Logo.png';
 
 //import styles
 import './style.css';
+
 
 function LandingPage() {
     return (
@@ -143,7 +145,7 @@ function LandingPage() {
                         <div>
                             <img src={person_icon} alt="" className="md-icon" />
                             <h3 className="flex-card-head">Choose a donee</h3>
-                            <p className="flex-card-text">Browse Catalogue</p>      
+                            <p className="flex-card-text">Browse Catalogue</p>
                         </div>
                         <div>
                             <img src={donation_icon} alt="" className="md-icon" />
@@ -247,7 +249,7 @@ function LandingPage() {
                     </div>
                 </div>
             </section>
-
+            <Footer />
         </div>
     );
 }
