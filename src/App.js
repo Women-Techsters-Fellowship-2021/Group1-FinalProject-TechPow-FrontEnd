@@ -12,47 +12,52 @@ import Login from './pages/Login';
 import ForgotPassword from './pages/ForgotPassword';
 import CreateNewPassword from './pages/NewPassword';
 import Authentication from './pages/Authentication';
+import AppStateProvider from './components/AppStateProvider';
+import DoneeApplication from './pages/DoneeApplicationForm';
 
 function App() {
   return (
-    <>
-    <ToastContainer />
-        <Router>
-          {/* <ResponsiveNavbar /> */}
-          <Switch>
-            <Route path="/" exact>
-              <LandingPage />
-            </Route>
+    <AppStateProvider>
+      <ToastContainer />
+      <Router>
+        {/* <ResponsiveNavbar /> */}
+        <Switch>
+          <Route path="/" exact>
+            <LandingPage />
+          </Route>
 
-            <Route path="/Login" exact>
-              <Login />
-            </Route>
+          <Route path="/Login" exact>
+            <Login />
+          </Route>
 
-            <Route path="/Home" exact>
-              <Home />
-            </Route>
+          <Route path="/Home" exact>
+            <Home />
+          </Route>
 
-            <Route path="/Contact" exact>
-              <Contact />
-            </Route>
+          <Route path="/Contact" exact>
+            <Contact />
+          </Route>
 
-            <Route path="/ForgotPassword" exact>
-              <ForgotPassword />
-            </Route>
+          <Route path="/ForgotPassword" exact>
+            <ForgotPassword />
+          </Route>
 
-            <Route path="/CreateNewPassword" exact>
-              <CreateNewPassword />
-            </Route>
+          <Route path="/CreateNewPassword" exact>
+            <CreateNewPassword />
+          </Route>
 
-            <Route path="/Authentication" exact>
-              <Authentication />
-            </Route>
+          <Route path="/Authentication" exact>
+            <Authentication />
+          </Route>
+          <Route path="/DoneeApplication" exact>
+            <DoneeApplication />
+          </Route>
 
-            <Redirect to="/" />
+          <Redirect to="/" />
 
-          </Switch>
-        </Router>
-      </>
+        </Switch>
+      </Router>
+    </AppStateProvider>
   );
 }
 

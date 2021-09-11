@@ -1,0 +1,22 @@
+ul {
+list-style: none;
+}
+
+
+
+.menu {
+    background-color: rgb(217, 217, 236);
+    padding-inline: 2em;
+   
+    
+ }
+ .sidebar-menu {
+   
+    width:100% ;
+
+ }
+ .menu:hover {
+     background-color: cadetblue;
+ }
+
+

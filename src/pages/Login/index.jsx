@@ -37,10 +37,10 @@ function Login() {
                     console.log(result.data);
                     toast.success('Welcome! ' + result.data.data.firstName + ' ' + result.data.data.lastName);
                     context.dispatch({
-                        type : 'LOGIN',
-                        payload : {
-                            isLoggedIn : true,
-                            userEmail : userlogin.email,
+                        type: 'LOGIN',
+                        payload: {
+                            isLoggedIn: true,
+                            userEmail: userlogin.email,
                         },
                     })
                     history.push('/Home');

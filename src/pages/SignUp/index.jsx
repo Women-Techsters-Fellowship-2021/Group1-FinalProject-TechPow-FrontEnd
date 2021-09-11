@@ -83,11 +83,11 @@ export default function Signup() {
                 if (result.data.success) {
                     toast.success(result.data.message);
                     context.dispatch({
-                        type : 'REGISTER',
-                        payload : {
-                            userId : newUser.userId,
-                            userEmail : newUser.email,
-                            userRole : newUser.typeofuser,
+                        type: 'REGISTER',
+                        payload: {
+                            userId: newUser.userId,
+                            userEmail: newUser.email,
+                            userRole: newUser.typeofuser,
                         },
                     })
                     history.push('Login');
@@ -104,9 +104,6 @@ export default function Signup() {
                 }
             })
 
-
-        //do a dispatch and push history to login
-        //catch errors
     };
 
 
