@@ -3,6 +3,9 @@ import { useContext } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { AppContext } from '../AppStateProvider';
 
+//import styles
+import './style.css';
+
 
 import TechPow_logo from '../../resources/Logos/TechPow Logo.png';
 

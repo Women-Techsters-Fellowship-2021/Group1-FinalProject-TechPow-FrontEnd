@@ -1,0 +1,14 @@
+.home-page {
+    background-color: #fff;
+}
+
+.bg-primary-para {
+    width: 100%;
+    padding: 2rem;
+}
+
+.bg-primary-para p {
+    width: 80%;
+    text-align: center;
+    margin-inline: auto;
+}

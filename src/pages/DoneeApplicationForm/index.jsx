@@ -1,13 +1,14 @@
 import React from 'react';
-import { useForm } from 'react-hook-form';
-import { useHistory } from 'react-router-dom';
-import { toast } from 'react-toastify';
-import axios from 'axios';
+//import { useForm } from 'react-hook-form';
+//import { useHistory } from 'react-router-dom';
+//import { toast } from 'react-toastify';
+//import axios from 'axios';
 import DefaultLayout from '../../components/Layout/DefaultLayout';
 import Sidebar from '../../components/Sidebar';
 import Vector from '../../resources/icons/Vector.svg';
 
 import './style.css';
+
 function DoneeApplication() {
     return (
         <DefaultLayout>

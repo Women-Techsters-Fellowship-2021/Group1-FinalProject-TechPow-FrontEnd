@@ -69,6 +69,12 @@ h1, h2, h3, h4, p {
   background-color:#A9F1DF1A;
 }
 
+/* ==========GENERAL STYLING FOR CONTAINER, HEADER AND FOOTER ============= */
+.container, .flex-header, footer, .home-page{
+  margin-inline: auto;
+  width: min(90%, 85.5rem);
+}
+
 /* =======STYLING PRIMARY BUTTONS========= */
 .btn-primary {
   padding: 0.5rem 1.5rem;
