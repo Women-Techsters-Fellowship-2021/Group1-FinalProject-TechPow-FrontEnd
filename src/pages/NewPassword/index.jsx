@@ -1,11 +1,13 @@
 import React from 'react';
+import DefaultLayout from '../../components/Layout/DefaultLayout';
 
 //import styles
 import './style.css';
 
 function CreateNewPassword() {
     return (
-        <div className="bg-pattern">
+        <DefaultLayout>
+            <div className="bg-pattern">
             <div className="center-form">
                 <div className="form-container container-padding">
                     <h1 className="fg-text">Create new password</h1>
@@ -33,7 +35,8 @@ function CreateNewPassword() {
                     </form>
                 </div>
             </div>
-        </div>
+            </div>
+        </DefaultLayout>
     );
 }
 

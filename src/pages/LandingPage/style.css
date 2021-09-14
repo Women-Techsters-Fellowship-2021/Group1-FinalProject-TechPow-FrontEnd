@@ -28,6 +28,10 @@ img {
     flex-direction: column;
 }
 
+.first-section {
+    margin-top: -2em;
+}
+
 @media (min-width:40rem) {
     .split {
         flex-direction: row;
@@ -42,6 +46,17 @@ img {
     }
 }
 
+/* @media (max-width: 960px) {
+    .color-stats {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .color-stats div {
+        margin: 2rem;
+    }
+} */
+
 /* .container--narrow {
     max-width: 34rem;
 } */
@@ -54,7 +69,7 @@ img {
     color: var(--clr-neutral-200);
 }
 
-@media (min-width: 40em) {
+@media (min-width: 40rem) {
     section {
         padding: 2.5rem 0;
     }
@@ -105,8 +120,16 @@ strong {
 .center-text {
     text-align: center;
     color: var(--clr-primary-100);
-    font-size: 1.7rem;
+    font-size: 2rem;
 }
+
+/* .colors {
+    width: 100%;
+}
+
+#statistics {
+    width: 100%;
+} */
 
 .stats {
     font-size: 1.2rem;
@@ -123,6 +146,10 @@ strong {
 
 .pink {
     color: var(--clr-neutral-400);
+}
+
+.bgd-section {
+    padding-block-start: 2em;
 }
 
 .bgd-text {
@@ -189,12 +216,6 @@ strong {
         flex-direction: row;
     }
 
-@media (max-width: 760px) {
-    .flex-cards > div {
-        margin: 1rem 0;
-    }
-}
-
     .flex-cards > * {
         flex-basis: 100%;
     }
@@ -204,12 +225,30 @@ strong {
     }
 }
 
+@media (max-width: 960px) {
+    .flex-cards {
+        display: grid;
+        grid-template-rows: auto auto;
+    }
+    
+    .flex-cards > div {
+        margin: 1rem;
+        padding: 2px;
+    }
+}
+
+@media (max-width: 760px) {
+    .flex-cards > div {
+        margin: 1rem 0;
+    }
+}
+
 .flex-images {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-content: center;
-    margin-bottom: 2rem;
+    /* margin-bottom: 2rem; */
 }
 
 @media (min-width: 40rem) {
@@ -219,6 +258,21 @@ strong {
 
     .flex-images {
         flex-direction: row;
+    }
+}
+
+@media (max-width: 760px) {
+    .flex-images div {
+        margin: 0em auto 2em;
+        
+    }
+
+    .donee-img img {
+        width: 20rem;
+    }
+
+    .flex-icon {
+        margin: -3em;
     }
 }
 
@@ -279,4 +333,8 @@ strong {
 
 .partners-logo > * {
     flex-basis: 100%;
+}
+
+.map {
+    width: 100%;
 }

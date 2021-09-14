@@ -19,56 +19,59 @@ function Navbar() {
     }
     return (
         <header>
-            <div className="flex-header">
-                {!state.isLoggedIn ? (
-                    <>
-                        <div>
-                            <img src={TechPow_logo} alt="TechPow Logo" className="head-logo" />
-                        </div>
-                        <div className="flex-header-links">
-                            <nav>
-                                <ul>
-                                    <Link to="/Home" className
-                                        ="head-link">Home</Link>
-                                    <a href="#bg-primary" className
-                                        ="head-link">Get Invlolved</a>
-                                    <Link to="/Contact" className
-                                        ="head-link">Contact</Link>
-                                </ul>
-                            </nav>
-                        </div>
-                        <div>
-                            <button className="btn-primary login-btn">
-                                <a href="/Login" className
-                                    ="login-btn">Login</a>
-                            </button>
-                        </div>
-                    </>
-                ) : (
-                    <>
-                        <div>
-                            <img src={TechPow_logo} alt="TechPow Logo" className="head-logo" />
-                        </div>
-                        <div className="flex-header-links">
-                            <nav>
-                                <ul>
-                                    <Link to="/Home" className
-                                        ="head-link">Home</Link>
-                                    <a href="#bg-primary" className
-                                        ="head-link">Get Invlolved</a>
-                                    <Link to="/Contact" className
-                                        ="head-link">Contact</Link>
-                                </ul>
-                            </nav>
-                        </div>
-                        <div>
-                            <button className="btn-primary login-btn" onClick={logout}>
-                                Logout
-                            </button>
-                        </div>
-                    </>
-                )}
-
+            <div className="container">
+                <div className="flex-header">
+                    {!state.isLoggedIn ? (
+                        <>
+                            <div>
+                                <Link to="/">
+                                    <img src={TechPow_logo} alt="TechPow Logo" className="head-logo" />
+                                </Link>
+                            </div>
+                            <div className="flex-header-links">
+                                <nav>
+                                    <ul>
+                                        <Link to="/About" className
+                                            ="head-link">About</Link>
+                                        <a href="#bg-primary" className
+                                            ="head-link">Get Invlolved</a>
+                                        <Link to="/Contact" className
+                                            ="head-link">Contact</Link>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div>
+                                <button className="btn-primary login-btn">
+                                    <a href="/Login" className
+                                        ="login-btn">Login</a>
+                                </button>
+                            </div>
+                        </>
+                    ) : (
+                        <>
+                            <div>
+                                <img src={TechPow_logo} alt="TechPow Logo" className="head-logo" />
+                            </div>
+                            <div className="flex-header-links">
+                                <nav>
+                                    <ul>
+                                        <Link to="/Home" className
+                                            ="head-link">Home</Link>
+                                        <a href="#bg-primary" className
+                                            ="head-link">Get Invlolved</a>
+                                        <Link to="/Contact" className
+                                            ="head-link">Contact</Link>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div>
+                                <button className="btn-primary login-btn" onClick={logout}>
+                                    Logout
+                                </button>
+                            </div>
+                        </>
+                    )}
+                </div>
             </div>
 
         </header >

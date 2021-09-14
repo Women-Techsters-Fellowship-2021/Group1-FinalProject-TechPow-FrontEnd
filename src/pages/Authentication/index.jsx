@@ -15,8 +15,9 @@ function Authentication() {
                         <form method="post">
                             <label htmlFor="otp">Enter OTP</label>
                             <input type="tel" name="OTP" id="OTP" className="form-control pwd-field"  />
-                            <button type="submit" className="btn-primary reset">Submit</button>
+                            <button type="submit" className="btn-primary reset">Continue</button>
                         </form>
+                        <p>Did not receive email verification code? <span className="blue-text">Resend OTP</span></p>
                     </div>
                 </div>
             </div>

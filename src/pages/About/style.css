@@ -1,0 +1,42 @@
+.txt-one {
+    font-size: 1.7rem;
+    color: var(--clr-primary-100);
+}
+
+.flex-text {
+    margin-top: 2em;
+    font-size: 1.5rem;
+}
+
+.blue-div {
+    background-color: var(--clr-primary-100);
+    color: var(--clr-neutral-100);
+}
+
+.blue-div-texts h2 {
+    font-size: 1.7rem;
+}
+
+.blue-div-texts {
+    padding: 1.5em;
+    text-align: center;
+}
+
+.grey-circle {
+    background-color: #ddd;
+    padding: 5rem;
+    border-radius: 50%;
+    margin-block-end: 1em;
+}
+
+.grey-line {
+    background-color: #ddd;
+    padding: 1rem;
+    margin-block-end: 1em;
+}
+
+@media (max-width: 375px) {
+    .about-page {
+        margin-inline: auto;
+    }
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import { createContext, useReducer } from 'react';
+import doneeInfo from '../resources/DoneeData/donee-info';
 
 export const AppContext = createContext();
 
@@ -7,6 +8,7 @@ const initialState = {
     isLoggedIn: false,
     userId: null,
     userEmail: null,
+    donees : doneeInfo,
 };
 
 function reducer(state, action) {
@@ -29,6 +31,11 @@ function reducer(state, action) {
         saveState.isLoggedIn = false;
         saveState.userId = null;
         saveState.userEmail = null;
+    }
+
+    if (action.type === 'DONEE_APPLICATION') {
+        saveState.isLoggedIn = true;
+        saveState.donees = [action.payload.donee, ...saveState.donee];
     }
     return saveState;
 }

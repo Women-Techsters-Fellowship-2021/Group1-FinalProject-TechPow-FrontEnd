@@ -27,6 +27,7 @@ function ForgotPassword() {
                             />
                         </div>
                         <button type="reset" className="btn-primary reset">Reset password</button>
+                        <p>Remeber your password? <span className="green">Login</span></p>
                     </div>
                 </div>
             </div>

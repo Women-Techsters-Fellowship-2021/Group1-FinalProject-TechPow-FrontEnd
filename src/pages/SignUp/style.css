@@ -102,6 +102,15 @@
     box-shadow: 1px 2px 4px 1px #c2f8f0;
 }
 
+.bold-text {
+    color: #333;
+    text-decoration: none;
+}
+
+.bold-text:hover {
+    text-decoration: underline 2px;
+}
+
 .terms {
     display: flex;
     padding-inline: 0.7rem;

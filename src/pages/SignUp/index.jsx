@@ -9,7 +9,7 @@ import { AppContext } from '../../components/AppStateProvider';
 import './style.css';
 
 //import icon
-import show from '../../resources/icons/Show.svg';
+//import show from '../../resources/icons/Show.svg';
 
 //import social-media icons
 import google from '../../resources/icons/google.svg';
@@ -185,19 +185,18 @@ export default function Signup() {
                             {...register('confirmPassword', { required: true }
                             )}
                         />
-                        <img src={show} alt="" className="sm-icon show-icon" />
+                        {/* <img src={show} alt="" className="sm-icon show-icon" /> */}
                     </div>
                     <div className="drop-down">
                         <label htmlFor="roles">Apply as:</label>
                         <select name="role" id="role" {...register('role', { required: true })}>
                             <option value="Donor">Donor</option>
                             <option value="Donee">Donee</option>
-                            <option value="Volunteer/NGO">Volunteer/NGO</option>
                         </select>
                     </div>
                     <div className="terms">
                         <input type="checkbox" name="terms-and-conditions" id="checkbox" />
-                        <p>By signing up, you agree to the <strong className="bold-text">Terms of Service </strong>and <strong className="bold-text">Privacy Policy</strong>.</p>
+                        <p>By signing up, you agree to the <strong className="bold-text"><a href="/TermsOfService" className="bold-text">Terms of Service </a></strong>and <strong className="bold-text"><a href="/PrivacyPolicy" className="bold-text">Privacy Policy</a></strong>.</p>
                     </div>
                     <div className="last-flex">
                         <button type="submit" className="btn btn-primary">Create Account</button>

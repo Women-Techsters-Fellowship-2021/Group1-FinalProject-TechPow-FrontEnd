@@ -11,39 +11,51 @@ import './style.css';
 function Footer() {
     return (
         <footer>
-            <div className="flex-footer">
-                <div>
-                    <img src={TechPow_logo} alt="TechPow Logo" className="head-logo foot-logo" />
+            <div className="container">
+                <div className="flex-footer"> 
+                    <Link to="/">
+                        <div>
+                            <img src={TechPow_logo} alt="TechPow Logo" className="head-logo foot-logo" />
+                        </div>
+                    </Link>
+                    <div className="flex-footer-links">
+                        <nav>
+                            <ul>
+                                <Link to="/Home" className
+                                    ="foot-link">Home</Link>
+                                <a href="#bg-primary" className
+                                    ="foot-link">Get Invlolved</a>
+                                <Link to="/Contact" className
+                                    ="foot-link">Contact</Link>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div className="sm-footer">
+                        <div className="sm-footer-icon">
+                            <a href="http://www.facebook.com/techpow">
+                                <img src={facebook} alt="facebook-icon" className="sms-icon" />
+                            </a>
+                        </div>
+                        <div className="sm-footer-icon">
+                            <a href="http://www.twitter.com/techPow">
+                                <img src={twitter} alt="twitter-icon" className="sms-icon" />
+                            </a>
+                        </div>
+                        <div className="sm-footer-icon">
+                            <a href="http://www.linkedin.com/in/TechPow">
+                                <img src={linkedin} alt="linkedin-icon" className="sms-icon" />
+                            </a>
+                        </div>
+                        <div className="sm-footer-icon">
+                            <a href="http://www.instagram.com/TechPow">
+                                <img src={instagram} alt="instagram-icon" className="sms-icon" />
+                            </a>
+                        </div>
+                    </div>
+                                </div>
+                                <div className="copyright">
+                    <p>&copy;2021 TechPow. All Rights Reserved</p>
                 </div>
-                <div className="flex-footer-links">
-                    <nav>
-                        <ul>
-                            <Link to="/Home" className
-                                ="foot-link">Home</Link>
-                            <a href="#bg-primary" className
-                                ="foot-link">Get Invlolved</a>
-                            <Link to="/Contact" className
-                                ="foot-link">Contact</Link>
-                        </ul>
-                    </nav>
-                </div>
-                <div className="sm-footer">
-                    <div className="sm-footer-icon">
-                        <img src={facebook} alt="facebook-icon" className="sms-icon" />
-                    </div>
-                    <div className="sm-footer-icon">
-                        <img src={twitter} alt="twitter-icon" className="sms-icon" />
-                    </div>
-                    <div className="sm-footer-icon">
-                        <img src={linkedin} alt="linkedin-icon" className="sms-icon" />
-                    </div>
-                    <div className="sm-footer-icon">
-                        <img src={instagram} alt="instagram-icon" className="sms-icon" />
-                    </div>
-                </div>
-            </div>
-            <div className="copyright">
-                <p>&copy;2021 TechPow. All Rights Reserved</p>
             </div>
         </footer>
 

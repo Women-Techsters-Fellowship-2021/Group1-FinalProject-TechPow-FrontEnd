@@ -3,6 +3,10 @@
     height: 5rem;
 }
 
+.head-logo:hover {
+    transform: translateY(3px);
+}
+
 .flex-header {
     display: flex;
     flex-direction: row;

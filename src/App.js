@@ -14,6 +14,7 @@ import CreateNewPassword from './pages/NewPassword';
 import Authentication from './pages/Authentication';
 import AppStateProvider from './components/AppStateProvider';
 import DoneeApplication from './pages/DoneeApplicationForm';
+import About from './pages/About';
 
 function App() {
   return (
@@ -34,6 +35,10 @@ function App() {
             <Home />
           </Route>
 
+          <Route path="/About" exact>
+            <About />
+          </Route>
+
           <Route path="/Contact" exact>
             <Contact />
           </Route>
@@ -49,6 +54,7 @@ function App() {
           <Route path="/Authentication" exact>
             <Authentication />
           </Route>
+
           <Route path="/DoneeApplication" exact>
             <DoneeApplication />
           </Route>

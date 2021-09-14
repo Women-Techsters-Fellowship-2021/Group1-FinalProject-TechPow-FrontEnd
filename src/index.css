@@ -70,14 +70,14 @@ h1, h2, h3, h4, p {
 }
 
 /* ==========GENERAL STYLING FOR CONTAINER, HEADER AND FOOTER ============= */
-.container, .flex-header, footer, .home-page{
+.container, .flex-header, footer {
   margin-inline: auto;
   width: min(90%, 85.5rem);
 }
 
 /* =======STYLING PRIMARY BUTTONS========= */
 .btn-primary {
-  padding: 0.5rem 1.5rem;
+  padding: 0.7rem 1.5rem;
   font-size: 1rem;
   background-color: var(--clr-primary-100);
   color: var(--clr-neutral-100);
@@ -100,4 +100,5 @@ label {
 /* ========STYLING SECTIONS========= */
 section {
   background-color: #fff;
+  margin-top: 2em;
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 //import components
 import DefaultLayout from '../../components/Layout/DefaultLayout';
@@ -34,16 +35,18 @@ function LandingPage() {
             <div className="landingPage">
                 <section>
                     <div className="container container--narrow">
-                        <div className="split">
+                        <div className="split first-section">
                             <div>
                                 <div className="self-aligned">
-                                    <h2 className="banner-text">
+                                    <h2 className="banner-text home-banner-text">
                                         Enhancing and Promoting digital inclusion in Africa.
                                     </h2>
                                     <p className="banner-para">
                                         <span className="green appname">T</span><span className="appname">ech</span><span className="green appname">P</span><span className="appname">ow</span> is connecting <strong>people and organizations </strong> that need <strong>technical devices and internet data</strong> with <strong>people that are willing </strong>to donate in order to fulfil their dreams.
                                     </p>
-                                    <button className=" btn-one btn-primary">Learn more</button>
+                                   <Link to="/About">
+                                        <button className=" btn-one btn-primary">Learn more</button>
+                                   </Link>
                                 </div>
                             </div>
                             <div>
@@ -55,7 +58,7 @@ function LandingPage() {
 
                 <section id="bg-circle">
                     <div className="container">
-                        <div className="split">
+                        <div className="split color-stats">
                             <div>
                                 <img src={together} alt="statistics" id="statistics" />
                             </div>
@@ -88,7 +91,7 @@ function LandingPage() {
                 <section>
                     <div className="container">
                         <h2 className="center-text">Bridging Digital Divide</h2>
-                        <div className="split">
+                        <div className="split bgd-section">
                             <div>
                                 <p className="bgd-text">
                                     <span className="green appname">T</span><span className="appname">ech</span><span className="green appname">P</span><span className="appname">ow</span> begins with technical devices out of the four areas of focus that we believe will help us build a fully inclusive digital society.
@@ -146,7 +149,7 @@ function LandingPage() {
                                 </div>
                                 <h4 className="donee-name">Ifunnaya Oke</h4>
                                 <p className="donee-desc">A description of donee's need...</p>
-                                <a href="#home" className="green link">Learn more</a>
+                                <a href="/About" className="green link">Learn more</a>
                                 <div className="flex-icon-container">
                                     <div className="flex-icon">
                                         <img src={phone} alt="" className="smm-icon" />
@@ -157,7 +160,9 @@ function LandingPage() {
                                         <p>Nigeria</p>
                                     </div>
                                 </div>
-                                <button className=" btn btn-primary">Donate</button>
+                                <Link to="/">
+                                    <button className=" btn btn-primary">Donate</button>
+                               </Link>
                             </div>
                             <div>
                                 <div className="donee-img">
@@ -165,7 +170,7 @@ function LandingPage() {
                                 </div>
                                 <h4 className="donee-name">Hezron Geteye</h4>
                                 <p className="donee-desc">A description of donee's need...</p>
-                                <a href="#home" className="green link">Learn more</a>
+                                <a href="/About" className="green link">Learn more</a>
                                 <div className="flex-icon-container">
                                     <div className="flex-icon">
                                         <img src={phone} alt="" className="smm-icon" />
@@ -176,7 +181,9 @@ function LandingPage() {
                                         <p>Kenya</p>
                                     </div>
                                 </div>
-                                <button className=" btn btn-primary">Donate</button>
+                               <Link to="/">
+                                    <button className=" btn btn-primary">Donate</button>
+                               </Link>
                             </div>
                             <div>
                                 <div className="donee-img">
@@ -184,7 +191,7 @@ function LandingPage() {
                                 </div>
                                 <h4 className="donee-name">Reem Mohammed</h4>
                                 <p className="donee-desc">A description of donee's need...</p>
-                                <a href="#home" className="green link">Learn more</a>
+                                <a href="/About" className="green link">Learn more</a>
                                 <div className="flex-icon-container">
                                     <div className="flex-icon">
                                         <img src={phone} alt="" className="smm-icon" />
@@ -195,7 +202,9 @@ function LandingPage() {
                                         <p>Egypt</p>
                                     </div>
                                 </div>
-                                <button className=" btn btn-primary">Donate</button>
+                                <Link to="/">
+                                    <button className=" btn btn-primary">Donate</button>
+                               </Link>
                             </div>
                         </div>
                     </div>
@@ -204,7 +213,7 @@ function LandingPage() {
                 <section>
                     <div className="container">
                         <h2 className="center-text">Donate from around the world</h2>
-                        <img src={people_map} alt="" />
+                        <img src={people_map} alt="" className="map" />
                     </div>
                 </section>
 
