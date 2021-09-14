@@ -13,9 +13,12 @@ import ForgotPassword from './pages/ForgotPassword';
 import CreateNewPassword from './pages/NewPassword';
 import Authentication from './pages/Authentication';
 import AppStateProvider from './components/AppStateProvider';
-import DoneeApplication from './pages/DoneeApplicationForm';
+import DoneeApplicationForm from './pages/DoneeApplicationForm';
 import About from './pages/About';
 import TabNav from './components/TabNav';
+import PersonalInfo from './pages/DoneeApplicationForm/PersonalInfo';
+import Request from './pages/DoneeApplicationForm/Request';
+import Verification from './pages/DoneeApplicationForm/Verification';
 
 function App() {
   return (
@@ -56,14 +59,24 @@ function App() {
             <Authentication />
           </Route>
 
-          <Route path="/DoneeApplication" exact>
-            <DoneeApplication />
+          <Route path="/DoneeApplicationForm" exact>
+            <DoneeApplicationForm />
           </Route>
 
           <Route path="/TabNav" exact>
             <TabNav />
           </Route>
 
+          <Route path="/PersonalInfo" exact>
+            <PersonalInfo />
+          </Route>
+          <Route path="/Request" exact>
+            <Request />
+          </Route>
+
+          <Route path="/Verification" exact>
+            <Verification />
+          </Route>
 
           <Redirect to="/" />
 

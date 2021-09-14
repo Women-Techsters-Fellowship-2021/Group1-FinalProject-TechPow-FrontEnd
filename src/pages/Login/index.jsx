@@ -43,7 +43,7 @@ function Login() {
                             userEmail: userlogin.email,
                         },
                     })
-                    if (result.data.data.typeofUser == "Donee") {
+                    if (result.data.data.typeofUser === "Donee") {
                         history.push('/Home');
                     }
                     return true;

@@ -1,6 +1,9 @@
 import React from 'react';
 import Tabpane from "./Tabpane";
 import "./style.css";
+import PersonalInfo from '../../pages/DoneeApplicationForm/PersonalInfo';
+import Verification from '../../pages/DoneeApplicationForm/Verification';
+import Request from '../../pages/DoneeApplicationForm/Request';
 
 //import { TabPane } from 'react-bootstrap';
 
@@ -11,13 +14,13 @@ function TabNav() {
             <Tabpane>
 
                 <div label="Personal Information">
-                    <h4>Personal Information Form Here...</h4>
+                    <PersonalInfo />
                 </div>
                 <div label="Donation Request">
-                    <h4>Donation Request Form Here...</h4>
+                    <Request />
                 </div>
                 <div label="Verification">
-                    <h4>Verification Form Here...</h4>
+                    <Verification />
                 </div>
             </Tabpane>
         </div>

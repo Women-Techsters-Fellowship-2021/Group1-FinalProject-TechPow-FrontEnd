@@ -2,93 +2,82 @@ import React from 'react';
 
 function PersonalInfo() {
     return (
-        <div>
-            <div className="app-header-text">
-                <h2>
-                    <span className="green appname">Welcome To T</span><span className="appname">ech</span><span className="green appname">P</span><span className="appname">ow</span>
-                </h2>
-                <p>Please tell us about yourself and why you need a device. We aim to ensure that everyone has access to technical devices.</p>
-            </div> 
 
-            <div>
-                <a href="/LandingPage"> &lt; Back to home</a>
-            </div>
-
-            <div className="donee-app-form">
-                {/* <div>
+        <div className="donee-app-form">
+            {/* <div>
                     <TabNav />
                 </div> */}
 
-                <div className=" donee-form">
-                    <div>
-                        <div className="form-input">
-                            <label asp for="FullName">Full Name</label>
-                            <input type="text" name="fullname" id="fullname" />
-                            <span className="notify">Please enter a legal name here. We will ask or your preferred name later.</span>
-                        </div>
-                        <div className="form-input">
-                            <label asp for="Phonenumber">Phone Number</label>
-                            <input 
-                                type="tel"  
-                                name="phonenumber" 
-                                id="phonenumber"
-                                placeholder="+234xxxxxxxxxx"
-                            />
-                        </div>
+            <div className=" donee-form">
+                <div>
+                    <div className="form-input">
+                        <label asp for="FullName">Full Name</label>
+                        <input type="text" name="fullname" id="fullname" />
+                        <span className="notify">Please enter a legal name here. We will ask or your preferred name later.</span>
                     </div>
-
-                    <div>
-                        <div className="form-input">
-                            <label asp for="HomeAddress">Date of Birth</label>
-                            <input type="text" name="dob" id="dob" placeholder="MM/DD/YYYY" />
-                            <span className="notify">Please Note: To make a donation request, you must be 18 years or above.</span>
-                        </div>
-                        <div className="form-input">
-                            <label HtmlFor="Gender">Gender</label>
-                            <select name="Gender" id="gender">
-                                <option value="Female"> Female</option>
-                                <option value="Male"> Male</option>
-                            </select>
-                        </div>
+                    <div className="form-input">
+                        <label asp for="Phonenumber">Phone Number</label>
+                        <input
+                            type="tel"
+                            name="phonenumber"
+                            id="phonenumber"
+                            placeholder="+234xxxxxxxxxx"
+                        />
                     </div>
+                </div>
 
-                    <div>
-                        <div className="form-input">
-                            <label asp for="HomeAddress">What is your home address?</label>
-                            <input type="text" name="dob" id="dob" placeholder="MM/DD/YYYY" />
-                            <span className="notify">Please Note: To make a donation request, you must be 18 years or above.</span>
-                        </div>
-                        <div className="form-input">
-                            <label HtmlFor="Country">Country</label>
-                            <select name="Country" id="country">
-                                <option value="Egypt"> Egypt</option>
-                                <option value="Ghana"> Ghana</option>
-                                <option value="Kenya"> Kenya</option>
-                                <option value="Nigeria"> Nigeria</option>
-                                <option value="SouthAfrica"> SouthAfrica</option>
-                            </select>
-                        </div>
+                <div>
+                    <div className="form-input">
+                        <label asp for="Dob">Date of Birth</label>
+                        <input type="text" name="dob" id="dob" placeholder="MM/DD/YYYY" />
+                        <span className="notify">Please Note: To make a donation request, you must be 18 years or above.</span>
                     </div>
+                    <div className="form-input">
+                        <label HtmlFor="Gender">Gender</label>
+                        <select name="Gender" id="gender">
+                            <option value="Female"> Female</option>
+                            <option value="Male"> Male</option>
+                        </select>
+                    </div>
+                </div>
 
-                    <div>
-                        <div className="form-input">
-                            <label HtmlFor="Education">Education level</label>
-                            <select name="Education" id="education">
-                                <option value="Egypt"> Senior Secondary School</option>
-                                <option value="Ghana"> University</option>
-                                <option value="Kenya"> Masters</option>
-                            </select>
-                        </div>
-                    </div>      
+                <div>
+                    <div className="form-input">
+                        <label asp for="HomeAddress">What is your home address?</label>
+                        <input type="text" name="dob" id="dob" placeholder="MM/DD/YYYY" />
+                        <span className="notify">Please Note: To make a donation request, you must be 18 years or above.</span>
+                    </div>
+                    <div className="form-input">
+                        <label HtmlFor="Country">Country</label>
+                        <select name="Country" id="country">
+                            <option value="Egypt"> Egypt</option>
+                            <option value="Ghana"> Ghana</option>
+                            <option value="Kenya"> Kenya</option>
+                            <option value="Nigeria"> Nigeria</option>
+                            <option value="SouthAfrica"> SouthAfrica</option>
+                        </select>
+                    </div>
+                </div>
 
-                    <div>
-                        <div className="form-login-btn form-input">
-                            <button type="submit" className="btn btn-primary">Next</button>
-                        </div>
-                    </div>            
+                <div>
+                    <div className="form-input">
+                        <label HtmlFor="Education">Education level</label>
+                        <select name="Education" id="education">
+                            <option value="Egypt"> Senior Secondary School</option>
+                            <option value="Ghana"> University</option>
+                            <option value="Kenya"> Masters</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <div className="form-login-btn form-input">
+                        <button type="submit" className="btn btn-primary">Next</button>
+                    </div>
                 </div>
             </div>
         </div>
+
     );
 }
 
