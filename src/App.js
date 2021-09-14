@@ -15,6 +15,7 @@ import Authentication from './pages/Authentication';
 import AppStateProvider from './components/AppStateProvider';
 import DoneeApplication from './pages/DoneeApplicationForm';
 import About from './pages/About';
+import TabNav from './components/TabNav';
 
 function App() {
   return (
@@ -58,6 +59,11 @@ function App() {
           <Route path="/DoneeApplication" exact>
             <DoneeApplication />
           </Route>
+
+          <Route path="/TabNav" exact>
+            <TabNav />
+          </Route>
+
 
           <Redirect to="/" />
 

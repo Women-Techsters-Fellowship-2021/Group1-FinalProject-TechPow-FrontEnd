@@ -43,7 +43,9 @@ function Login() {
                             userEmail: userlogin.email,
                         },
                     })
-                    history.push('/Home');
+                    if (result.data.data.typeofUser == "Donee") {
+                        history.push('/Home');
+                    }
                     return true;
                 }
                 toast.error(result.data.message);

@@ -1,0 +1,27 @@
+.tabs {
+display:flex;
+}
+
+.tabnav {
+    width: 100%;
+}
+
+.tab-list {
+  border-bottom: 1px solid #ccc;
+  padding-left: 0;
+}
+
+.tab-list-item {
+  /* display:inline-flexbox; */
+  list-style: none;
+  margin-bottom: -1px;
+  padding: 0.5rem 0.75rem;
+}
+
+
+.tab-list-active {
+  background-color: rgb(97, 119, 218);
+  border: solid rgb(247, 247, 250);
+  border-width: 1px 1px 0 1px;
+
+}
