@@ -1,6 +1,6 @@
 import React from 'react';
 //importing the styles
-import './styles.css';
+//import './styles.css';
 
 function EmailVerification() {
     return (
@@ -24,4 +24,4 @@ function EmailVerification() {
 
     );
 }
-export default EmailVerification;
+export default EmailVerification;;

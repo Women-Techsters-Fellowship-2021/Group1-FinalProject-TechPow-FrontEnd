@@ -15,7 +15,7 @@ import Authentication from './pages/Authentication';
 import AppStateProvider from './components/AppStateProvider';
 import DoneeApplication from './pages/DoneeApplicationForm';
 import About from './pages/About';
-import EmailVerification from '.pages/EmailVerification';
+import EmailVerification from './pages/EmailVerification';
 
 function App() {
   return (
@@ -59,10 +59,10 @@ function App() {
           <Route path="/DoneeApplication" exact>
             <DoneeApplication />
           </Route>
-          <Route path="/" exact>
-          <EmailVerification />
-
-        </Route>
+          <Route path="/EmailVerification" exact>
+            <EmailVerification />
+          </Route>
+         
 
           <Redirect to="/" />
 
