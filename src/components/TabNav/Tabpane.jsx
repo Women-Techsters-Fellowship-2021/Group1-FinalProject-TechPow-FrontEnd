@@ -1,15 +1,27 @@
-import React, { useState } from "react";
+import { useState, useEffect } from "react";
+import { useContext } from "react";
+import { AppContext } from "../AppStateProvider";
 //import PropTypes from "prop-types";
 import Tab from "./Tab";
 
 // class Tabpane extends Component {
 function Tabpane({ children }) {
 
+    const { state: { completedTabs }, dispatch } = useContext(AppContext);
     const [activeTab, setActiveTab] = useState(children[0].props.label);
 
     const onClickTabItem = (tab) => {
-        setActiveTab(tab);
+        if (!completedTabs.includes(tab))
+            setActiveTab(tab);
     };
+
+    useEffect(() => {
+        dispatch({
+            type: 'SET_ACTIVE_TAB',
+            payload: setActiveTab
+        })
+
+    }, [])
 
 
     return (

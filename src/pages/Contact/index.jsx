@@ -5,8 +5,8 @@ import DefaultLayout from '../../components/Layout/DefaultLayout';
 import './style.css';
 
 function Contact() {
-  return (
-      <DefaultLayout>
+    return (
+        <DefaultLayout>
             <div className="bg-pattern">
                 <div className="contact-page">
                     <div className="contact-text">
@@ -18,21 +18,21 @@ function Contact() {
                         <form id="form-group">
                             <div className="form-box">
                                 <div>
-                                    <label htmlFor="Fullname">FullName</label>
+                                    <label for="Fullname">FullName</label>
                                     <input type="text" name="fullname" id="fullname" className="form-field" required />
                                 </div>
                                 <div>
-                                    <label htmlFor="Email">Email</label>
+                                    <label for="Email">Email</label>
                                     <input type="email" name="email" id="email" className="form-field" required />
                                 </div>
                             </div>
                             <div className="form-box">
                                 <div>
-                                    <label htmlFor="subject">Subject</label>
+                                    <label for="subject">Subject</label>
                                     <input type="text" name="fullname" id="fullname" className="form-field" required />
                                 </div>
                                 <div>
-                                    <label htmlFor="topic">Topic</label>
+                                    <label for="topic">Topic</label>
                                     <select name="topic" id="topic" className="form-field" required>
                                         <option value="--None">--None--</option>
                                         <option value="Get Started/About TechPow">Get Started/ About TechPow</option>
@@ -47,7 +47,7 @@ function Contact() {
                                 </div>
                             </div>
                             <div className="text-area">
-                                <label htmlFor="help">How can we help you?</label>
+                                <label for="help">How can we help you?</label>
                                 <textarea name="help" id="help" cols="60" rows="10" className="last-field"></textarea>
                                 <button type="submit" className="btn-primary last-field help-btn">SEND MESSAGE</button>
                             </div>
@@ -55,8 +55,8 @@ function Contact() {
                     </div>
                 </div>
             </div>
-      </DefaultLayout>
-  );
+        </DefaultLayout>
+    );
 }
 
 export default Contact;

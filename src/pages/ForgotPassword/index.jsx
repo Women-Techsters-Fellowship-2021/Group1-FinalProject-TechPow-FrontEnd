@@ -18,7 +18,7 @@ function ForgotPassword() {
                             <p className="light-red">This email is not associated with an account. Please try a different email.</p>
                         </div> */}
                         <div className="form-group">
-                            <label htmlFor="email">Email</label>
+                            <label for="email">Email</label>
                             <input
                                 type="email"
                                 name="email"

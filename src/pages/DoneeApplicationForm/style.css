@@ -33,12 +33,24 @@
     justify-content: space-between;
 }
 
+
 .upload-btn {
-    max-width: 80%;
-    height: 20vh;
-    border-radius: 0.5rem;
-   
+    width: 150px;
+    background-color: rgb(219, 217, 217);
+    margin:auto;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: medium;
+    cursor: pointer;
+  
 }
+
+.upload-btn:hover{
+    background-color: rgb(132, 135, 179);
+}
+
 
 .upload-btn-group{
     display: flex;

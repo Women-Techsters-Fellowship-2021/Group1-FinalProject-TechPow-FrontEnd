@@ -6,7 +6,7 @@ import DefaultLayout from '../../components/Layout/DefaultLayout';
 import './style.css';
 
 //import image
-import ladyImage from  '../../resources/images/Donee Application.png';
+import ladyImage from '../../resources/images/Donee Application.png';
 import doneeFlowImg from '../../resources/images/Donee Process.svg';
 import imgCheck from '../../resources/icons/Circles.svg';
 
@@ -23,9 +23,9 @@ function Home() {
                                 </h1>
                                 <div className="green-line"></div>
                                 <p className="home-banner-para">Request a technical device to fulfil your dreams.</p>
-                                <Link to="/DoneeApplication">
+                                <Link to="/DoneeApplicationForm">
                                     <button className="btn-primary home-btns">
-                                    Get Started
+                                        Get Started
                                     </button>
                                 </Link>
                             </div>
@@ -54,9 +54,9 @@ function Home() {
                                 <img src={doneeFlowImg} alt="" />
                             </div>
                             <div className="div-home-btn apply-now">
-                                <Link to="/DoneeApplication">
+                                <Link to="/DoneeApplicationForm">
                                     <button className="btn-primary home-btns">
-                                    Apply now
+                                        Apply now
                                     </button>
                                 </Link>
                             </div>
@@ -71,30 +71,30 @@ function Home() {
                             <div className="eligibility-section">
                                 <div className="img-check">
                                     <img src={imgCheck} alt="" className
-                                    ="xxms-icon" />
+                                        ="xxms-icon" />
                                     <p className="eligibility-text">
                                         You must be living in any of these countries - Egypt, Kenya, Ghana, Nigeria, and South Africa.
                                     </p>
                                 </div>
                                 <div className="img-check">
                                     <img src={imgCheck} alt="" className
-                                    ="xxms-icon" />
+                                        ="xxms-icon" />
                                     <p className="eligibility-text">
                                         You must be 18years old and above.
                                     </p>
                                 </div>
                                 <div className="img-check">
                                     <img src={imgCheck} alt="" className
-                                    ="xxms-icon" />
+                                        ="xxms-icon" />
                                     <p className="eligibility-text">
                                         You must use this device to acquire digital skills.
                                     </p>
                                 </div>
                             </div>
                             <div className="div-home-btn">
-                                <Link to="/DoneeApplication">
+                                <Link to="/DoneeApplicationForm">
                                     <button className="btn-primary home-btns eligibility-btn">
-                                    I understand, let me fill out an application
+                                        I understand, let me fill out an application
                                     </button>
                                 </Link>
                             </div>

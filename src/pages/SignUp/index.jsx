@@ -188,7 +188,7 @@ export default function Signup() {
                         {/* <img src={show} alt="" className="sm-icon show-icon" /> */}
                     </div>
                     <div className="drop-down">
-                        <label htmlFor="roles">Apply as:</label>
+                        <label for="roles">Apply as:</label>
                         <select name="role" id="role" {...register('role', { required: true })}>
                             <option value="Donor">Donor</option>
                             <option value="Donee">Donee</option>

@@ -40,7 +40,8 @@ function Login() {
                         type: 'LOGIN',
                         payload: {
                             isLoggedIn: true,
-                            userEmail: userlogin.email,
+                            userId: result.data.data.id,
+                            Token: result.data.data.token,
                         },
                     })
                     if (result.data.data.typeofUser === "Donee") {
