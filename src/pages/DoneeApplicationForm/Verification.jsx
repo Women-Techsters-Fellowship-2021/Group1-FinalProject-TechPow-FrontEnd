@@ -23,12 +23,10 @@ function Verification() {
             type: 'SELECT_IMAGE',
             payload: {
                 imageSelectedPass: imageselectPass
-
             },
         });
     }
     const LetterSelectorHandler = (e) => {
-
         imageselectLetter = e.target.files[0];
         //console.log(imageselect);
         dispatch({
@@ -39,7 +37,6 @@ function Verification() {
         });
     }
     const IDSelectorHandler = (e) => {
-
         imageselectID = e.target.files[0];
         //console.log(imageselect);
         dispatch({
@@ -69,13 +66,12 @@ function Verification() {
 
 
         // saving image on cloudinary space into the techpow_uploads folder
-
         const responseImage = await Axios.post(
             "https://api.cloudinary.com/v1_1/ddg54qg6i/image/upload", formDataImage)
         console.log(responseImage);
         if (responseImage.status === 200) {
             console.log(responseImage.data.url);
-            return responseImage.data.url
+            return responseImage.data.url;
         }
 
         const responseLetter = await Axios.post(
@@ -83,7 +79,7 @@ function Verification() {
         console.log(responseLetter);
         if (responseLetter.status === 200) {
             console.log(responseLetter.data.url);
-            return responseLetter.data.url
+            return responseLetter.data.url;
         }
 
         const responseID = await Axios.post(
@@ -152,7 +148,6 @@ function Verification() {
                     for (let index = 0; index < error.response.data.errors.length; index++) {
                         toast.error(error.response.data.errors[index]);
                     }
-
                 });
         });
     }
@@ -175,8 +170,8 @@ function Verification() {
                         <input type="file" id="file" accept="image/*" {...register('imageLink', { required: true })}
                             onChange={ImageSelectorHandler} />
                         <label for="file" className="upload-btn">
-                            <img src={Vector} alt="" className="upload-icon" /> Upload your passport Photograph</label>
-
+                            <img src={Vector} alt="" className="upload-icon" /> Upload your passport Photograph
+                        </label>
                     </div>
 
                     <div className="upload-btn-group">
@@ -184,14 +179,16 @@ function Verification() {
                         <input type="file" id="file" accept="image/*" {...register('letterOfRecommendationLink', { required: true })}
                             onChange={LetterSelectorHandler} />
                         <label for="file" className="upload-btn">
-                            <img src={Vector} alt="" className="upload-icon" /> Upload letter of recommendation</label>
+                            <img src={Vector} alt="" className="upload-icon" /> Upload letter of recommendation
+                        </label>
                     </div>
                     <div className="upload-btn-group">
                         <label> National Identity Card</label>
                         <input type="file" id="file" accept="image/*" {...register('nationalIdLink', { required: true })}
                             onChange={IDSelectorHandler} />
                         <label for="file" className="upload-btn">
-                            <img src={Vector} alt="" className="upload-icon" /> Upload a copy of your National identity card</label>
+                            <img src={Vector} alt="" className="upload-icon" /> Upload a copy of your National identity card
+                        </label>
                     </div>
                 </div>
 

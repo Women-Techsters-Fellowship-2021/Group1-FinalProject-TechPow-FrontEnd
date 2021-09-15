@@ -6,10 +6,11 @@ import { AppContext } from '../../components/AppStateProvider';
 function Request() {
     const { register, handleSubmit } = useForm();
     const { state: { setActiveTab, completedTabs }, dispatch } = useContext(AppContext);
+    
     const updateApplicationForm = (data) => {
         dispatch({ type: 'UPDATE_APPLICATION_FORM', payload: data })
 
-        setActiveTab("Verification")
+        setActiveTab("Verification");
     }
 
     useEffect(() => {

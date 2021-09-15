@@ -9,7 +9,7 @@ function PersonalInfo() {
     const updateApplicationForm = (data) => {
         dispatch({ type: 'UPDATE_APPLICATION_FORM', payload: data })
 
-        setActiveTab("Donation Request")
+        setActiveTab("Donation Request");
     }
 
     useEffect(() => {
@@ -29,7 +29,7 @@ function PersonalInfo() {
                     <div className="form-input">
                         <label>Full Name</label>
                         <input type="text" name="fullname" id="fullname" {...register('fullName', { required: true })} />
-                        <span className="notify">Please enter a legal name here. We will ask or your preferred name later.</span>
+                        <span className="notify">Please enter a legal name here. We will ask for your preferred name later.</span>
                     </div>
                     <div className="form-input">
                         <label>Phone Number</label>
@@ -47,7 +47,7 @@ function PersonalInfo() {
                     <div className="form-input">
                         <label>Date of Birth</label>
                         <input type="text" name="dob" id="dob" placeholder="MM/DD/YYYY" {...register('dob', { required: true })} />
-                        <span className="notify">Please Note: To make a donation request, you must be 18 years or above.</span>
+                        <span className="notify"><strong>Please Note:</strong> To make a donation request, you must be 18 years or above.</span>
                     </div>
                     <div className="form-input">
                         <label for="Gender">Gender</label>
