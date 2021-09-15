@@ -14,6 +14,7 @@ import CreateNewPassword from './pages/NewPassword';
 import Authentication from './pages/Authentication';
 import AppStateProvider from './components/AppStateProvider';
 import DoneeApplicationForm from './pages/DoneeApplicationForm';
+import DonorApplicationForm from './pages/DonorApplicationForm';
 import About from './pages/About';
 import TabNav from './components/TabNav';
 import PersonalInfo from './pages/DoneeApplicationForm/PersonalInfo';
@@ -63,6 +64,10 @@ function App() {
             <DoneeApplicationForm />
           </Route>
 
+          <Route path="/DonorApplicationForm" exact>
+            <DonorApplicationForm />
+          </Route>
+
           <Route path="/TabNav" exact>
             <TabNav />
           </Route>
@@ -73,6 +78,7 @@ function App() {
           <Route path="/Request" exact>
             <Request />
           </Route>
+
 
           <Route path="/Verification" exact>
             <Verification />

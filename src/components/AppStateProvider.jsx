@@ -31,9 +31,7 @@ const initialState = {
 
     },
     completedTabs: [],
-    // imageSelectedPass: "",
-    // imageSelectedLetter: "",
-    // imageSelectedID: "",
+
 
 };
 
@@ -64,6 +62,10 @@ function reducer(state, action) {
     if (action.type === 'DONEE_APPLICATION') {
         saveState.isLoggedIn = true;
         saveState.donees = [...saveState.donees, action.payload.donee];
+    }
+    if (action.type === 'DONOR_APPLICATION') {
+        saveState.isLoggedIn = true;
+        saveState.donors = action.payload.donor;
     }
     if (action.type === 'SELECT_IMAGE') {
         saveState.imageSelectedPass = action.payload.imageSelectedPass;
