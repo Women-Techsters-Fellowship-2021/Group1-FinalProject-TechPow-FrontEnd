@@ -19,6 +19,7 @@ import TabNav from './components/TabNav';
 import PersonalInfo from './pages/DoneeApplicationForm/PersonalInfo';
 import Request from './pages/DoneeApplicationForm/Request';
 import Verification from './pages/DoneeApplicationForm/Verification';
+import EmailVerification from './pages/EmailVerification';
 
 function App() {
   return (
@@ -77,6 +78,10 @@ function App() {
           <Route path="/Verification" exact>
             <Verification />
           </Route>
+          <Route path="/EmailVerification" exact>
+            <EmailVerification />
+          </Route>
+         
 
           <Redirect to="/" />
 
