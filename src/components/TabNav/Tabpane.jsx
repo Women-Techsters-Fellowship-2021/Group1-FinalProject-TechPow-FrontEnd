@@ -20,7 +20,6 @@ function Tabpane({ children }) {
             type: 'SET_ACTIVE_TAB',
             payload: setActiveTab
         })
-
     }, [])
 
 
