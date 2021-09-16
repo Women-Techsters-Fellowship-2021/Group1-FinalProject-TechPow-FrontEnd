@@ -1,0 +1,104 @@
+.donee-card {
+    width: 30%;
+	height: 500px;
+	background-color: #fff;
+	border: none;
+    color: var(--clr-primary-100);
+    box-shadow: 0px 1px 1px 0px #888;
+	text-align: left;
+	display: inline-flex;
+    margin: 1rem;
+	transition: all 200ms;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+.donee-card:hover {
+    transform: translateY(-5px);
+	box-shadow: 0px 13px 15px -10px #888;
+}
+
+.Link-Donee {
+    text-decoration: none;
+}
+
+.donee-fullname {
+    color: var(--clr-primary-400);
+}
+
+.grey-text {
+    color: #999;
+    font-weight: 500;
+}
+
+.item-needed {
+    padding: 0.5em 1em;
+    background-color: #fff;
+    position: absolute;
+    font-weight: 500;
+}
+
+.img-donee {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.donee-info {
+    padding: 1em;
+}
+
+.desc, .reason {
+    font-size: 1.05rem;
+    margin-top: -1rem;
+}
+
+.reason {
+    color: var(--clr-primary-400);
+}
+
+.r:hover {
+    text-decoration: underline 2px;
+}
+
+.item-location {
+    display: flex;
+    /* margin-top: -1rem; */
+}
+
+.item-location div {
+    display: flex;
+}
+
+.small-icon {
+    width: 2rem;
+    height: 2rem;
+}
+
+.butns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.shareIcon {
+    margin-inline: 1em;
+    display: flex;
+    font-weight: 500;
+}
+
+.share-text {
+    position: absolute;
+    margin-left: -3em;
+    padding-top: 0.7em;
+}
+
+.extra-small-icon {
+    background-color: #f5f5f5;
+    border: none;
+    border-radius: 100%;
+    padding: 1em;
+}
+
+.extra-small-icon:hover {
+    transform: translateY(3px);
+}

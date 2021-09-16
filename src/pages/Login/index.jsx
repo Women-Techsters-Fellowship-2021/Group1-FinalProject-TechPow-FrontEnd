@@ -48,8 +48,7 @@ function Login() {
                         history.push('/Home');
                         return true;
                     }
-
-                    history.push('/DonorApplicationForm')
+                    history.push('/Donees');
                     return true;
                 }
                 toast.error(result.data.message);
@@ -57,7 +56,6 @@ function Login() {
             .catch(error => {
                 toast.error(error.response.data.message);
             })
-
     }
 
 

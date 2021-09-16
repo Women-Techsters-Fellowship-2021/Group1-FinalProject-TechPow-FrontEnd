@@ -20,6 +20,10 @@ import TabNav from './components/TabNav';
 import PersonalInfo from './pages/DoneeApplicationForm/PersonalInfo';
 import Request from './pages/DoneeApplicationForm/Request';
 import Verification from './pages/DoneeApplicationForm/Verification';
+import EmailVerification from './pages/EmailVerification';
+import Donees from './pages/Donees';
+import Searchbox from './components/Searchbox';
+import DoneeProfile from './pages/Donee-Profile';
 
 function App() {
   return (
@@ -75,6 +79,7 @@ function App() {
           <Route path="/PersonalInfo" exact>
             <PersonalInfo />
           </Route>
+
           <Route path="/Request" exact>
             <Request />
           </Route>
@@ -83,6 +88,23 @@ function App() {
           <Route path="/Verification" exact>
             <Verification />
           </Route>
+
+          <Route path="/EmailVerification" exact>
+            <EmailVerification />
+          </Route>
+
+          <Route path="/Donees" exact>
+            <Donees />
+          </Route>
+
+          {/* <Route exact path="/donees/:doneeid"> */}
+          <Route path="/DoneeProfile"> 
+            <DoneeProfile />
+					</Route>
+
+          <Route path="/Searchbox">
+						<Searchbox />
+					</Route>
 
           <Redirect to="/" />
 

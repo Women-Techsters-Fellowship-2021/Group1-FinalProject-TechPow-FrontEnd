@@ -28,7 +28,6 @@ const initialState = {
         phoneNumber: '',
         gender: '',
         eduLevel: '',
-
     },
     completedTabs: [],
 
@@ -63,6 +62,7 @@ function reducer(state, action) {
         saveState.isLoggedIn = true;
         saveState.donees = [...saveState.donees, action.payload.donee];
     }
+
     if (action.type === 'DONOR_APPLICATION') {
         saveState.isLoggedIn = true;
         saveState.donors = action.payload.donor;
@@ -70,20 +70,21 @@ function reducer(state, action) {
     if (action.type === 'SELECT_IMAGE') {
         saveState.imageSelectedPass = action.payload.imageSelectedPass;
     }
+
     if (action.type === 'SELECT_LETTER') {
-
         saveState.imageSelectedLetter = action.payload.imageSelectedLetter;
-
     }
-    if (action.type === 'SELECT_ID') {
 
+    if (action.type === 'SELECT_ID') {
         saveState.imageSelectedID = action.payload.imageSelectedID;
     }
+
     if (action.type === 'SAVE_IMAGES') {
         saveState.imageUploadPass = action.payload.imageUploadedPass;
         saveState.imageUploadLetter = action.payload.imageUploadedLetter;
         saveState.imageUploadID = action.payload.imageUploadedID;
     }
+
     if (action.type === 'UPDATE_APPLICATION_FORM')
         saveState.applicationForm = { ...saveState.applicationForm, ...action.payload }
 
@@ -94,8 +95,6 @@ function reducer(state, action) {
         saveState.completedTabs = [...saveState.completedTabs, action.payload];
 
     return saveState;
-
-
 }
 
 function AppStateProvider({ children }) {
