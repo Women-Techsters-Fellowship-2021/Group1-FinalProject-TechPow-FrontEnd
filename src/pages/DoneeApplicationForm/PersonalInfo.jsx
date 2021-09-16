@@ -28,7 +28,9 @@ function PersonalInfo() {
                 <div>
                     <div className="form-input">
                         <label>Full Name</label>
-                        <input type="text" name="fullname" id="fullname" {...register('fullName', { required: true })} />
+                        <input type="text" name="fullname"
+                            required
+                            id="fullname" {...register('fullName', { required: true })} />
                         <span className="notify">Please enter a legal name here. We will ask or your preferred name later.</span>
                     </div>
                     <div className="form-input">
@@ -37,6 +39,7 @@ function PersonalInfo() {
                             type="tel"
                             name="phonenumber"
                             id="phonenumber"
+                            required
                             placeholder="+234xxxxxxxxxx"
                             {...register('phoneNumber', { required: true })}
                         />
@@ -46,12 +49,15 @@ function PersonalInfo() {
                 <div>
                     <div className="form-input">
                         <label>Date of Birth</label>
-                        <input type="text" name="dob" id="dob" placeholder="MM/DD/YYYY" {...register('dob', { required: true })} />
+                        <input type="text" name="dob"
+                            required id="dob" placeholder="MM/DD/YYYY" {...register('dob', { required: true })} />
                         <span className="notify">Please Note: To make a donation request, you must be 18 years or above.</span>
                     </div>
                     <div className="form-input">
                         <label for="Gender">Gender</label>
-                        <select name="Gender" id="gender" {...register('gender', { required: true })}>
+                        <select name="Gender" id="gender"
+                            required
+                            {...register('gender', { required: true })}>
                             <option value="Female"> Female</option>
                             <option value="Male"> Male</option>
                         </select>
@@ -61,7 +67,9 @@ function PersonalInfo() {
                 <div>
                     <div className="form-input">
                         <label>What is your home address?</label>
-                        <input type="text" name="address" id="address"  {...register('homeAddress', { required: true })} />
+                        <input type="text" name="address" id="address"
+                            required
+                            {...register('homeAddress', { required: true })} />
                         <span className="notify">Please Note: To make a donation request, you must be 18 years or above.</span>
                     </div>
                     <div className="form-input">

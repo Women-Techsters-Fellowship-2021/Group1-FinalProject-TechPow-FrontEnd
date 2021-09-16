@@ -30,7 +30,9 @@ function Request() {
                 </div>
                 <div className="form-input">
                     <label>What organisation is running the program?</label>
-                    <input type="text" {...register('orgName', { required: true })}
+                    <input type="text"
+                        required
+                        {...register('orgName', { required: true })}
                     />
                 </div>
             </div>
@@ -38,12 +40,16 @@ function Request() {
             <div>
                 <div className="form-input">
                     <label>Provide organisation address</label>
-                    <input type="text" {...register('orgWebsite', { required: true })}
+                    <input type="text"
+                        required
+                        {...register('orgWebsite', { required: true })}
                     />
                 </div>
                 <div className="form-input">
                     <label>Provide organisation's contact details</label>
-                    <input type="text" {...register('orgContact', { required: true })}
+                    <input type="text"
+                        required
+                        {...register('orgContact', { required: true })}
                     />
                 </div>
             </div>
@@ -51,7 +57,9 @@ function Request() {
             <div>
                 <div className="form-input">
                     <label>Give a brief need why you need the item</label>
-                    <textarea name="ReasonforNeed" id="ReasonforNeed" cols="30" rows="10" {...register('reasonForApplication', { required: true })} ></textarea>
+                    <textarea name="ReasonforNeed" id="ReasonforNeed"
+                        required
+                        cols="30" rows="10" {...register('reasonForApplication', { required: true })} ></textarea>
                 </div>
             </div>
 

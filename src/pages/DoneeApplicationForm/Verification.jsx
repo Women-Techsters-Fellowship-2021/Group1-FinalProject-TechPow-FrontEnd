@@ -202,7 +202,9 @@ function Verification() {
                         </h4>
                     </div>
                     <div className="agreement-div">
-                        <input type="checkbox" name="terms" id="terms" />
+                        <input type="checkbox" name="terms" id="terms"
+                            required
+                            {...register('terms', { required: true })} />
                         <p>
                             By clickling this box, I agree to the following:
                         </p>
@@ -211,14 +213,18 @@ function Verification() {
                         </p>
                     </div>
                     <div className="agreement-div">
-                        <input type="checkbox" name="agreement" id="agreement" />
+                        <input type="checkbox" name="agreement" id="agreement"
+                            required
+                            {...register('agreement', { required: true })} />
                         <p>I also agree that by requesting for a device, I agree to be bound by TechPow’s Terms of Use and Privacy Policy</p>
                     </div>
                     <div className="signature">
                         <label for="Signature">
                             Please type your full legal name here as your signature agreeing to all previous statements in this form.
                         </label>
-                        <input type="text" {...register('signature', { required: true })}
+                        <input type="text"
+                            required
+                            {...register('signature', { required: true })}
                         />
                     </div>
                 </div>
