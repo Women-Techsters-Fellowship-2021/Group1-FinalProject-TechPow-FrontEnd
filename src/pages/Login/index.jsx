@@ -47,8 +47,7 @@ function Login() {
                     if (result.data.data.typeofUser === "Donee") {
                         history.push('/Home');
                     }
-
-                    history.push('/DonorApplicationForm')
+                    history.push('/Donees');
                     return true;
                 }
                 toast.error(result.data.message);
@@ -56,7 +55,6 @@ function Login() {
             .catch(error => {
                 toast.error(error.response.data.message);
             })
-
     }
 
 

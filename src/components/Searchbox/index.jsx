@@ -1,5 +1,11 @@
 import { useHistory } from 'react-router-dom';
 
+//import styles
+import './style.css';
+
+//import icon
+import search from '../../resources/icons/search.svg';
+
 function Searchbox() {
     const searchHistory = useHistory();
 
@@ -17,6 +23,7 @@ function Searchbox() {
                 onChange={handleSearch}
                 placeholder="Search"
             />
+            <img src={search} alt="search" className="xms-icon searchbox-icon" />
         </div>
     );
 }

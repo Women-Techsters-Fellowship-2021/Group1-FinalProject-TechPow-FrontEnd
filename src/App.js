@@ -23,6 +23,7 @@ import Verification from './pages/DoneeApplicationForm/Verification';
 import EmailVerification from './pages/EmailVerification';
 import Donees from './pages/Donees';
 import Searchbox from './components/Searchbox';
+import DoneeProfile from './pages/Donee-Profile';
 
 function App() {
   return (
@@ -96,9 +97,10 @@ function App() {
             <Donees />
           </Route>
 
-          {/* <Route exact path="/donees/:doneeid">
-						
-					</Route> */}
+          {/* <Route exact path="/donees/:doneeid"> */}
+          <Route path="/DoneeProfile"> 
+            <DoneeProfile />
+					</Route>
 
           <Route path="/Searchbox">
 						<Searchbox />
