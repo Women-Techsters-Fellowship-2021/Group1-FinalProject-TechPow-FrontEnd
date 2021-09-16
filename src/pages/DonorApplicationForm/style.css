@@ -1,0 +1,26 @@
+.donation-form{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form-split{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.div-split{
+     display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.donation-info{
+    height: 40%;
+    width: 20%;
+    background-color:rgb(141, 141, 248) ;
+}

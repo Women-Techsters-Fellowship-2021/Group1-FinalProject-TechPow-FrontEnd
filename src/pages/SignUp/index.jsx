@@ -135,6 +135,7 @@ export default function Signup() {
                             name="firstName"
                             id="firstName"
                             className="form-control"
+                            required
                             {...register('firstname', { required: true }
                             )}
                         />
@@ -146,6 +147,7 @@ export default function Signup() {
                             name="lastName"
                             id="lastName"
                             className="form-control"
+                            required
                             {...register('lastname', { required: true }
                             )}
                         />
@@ -157,6 +159,7 @@ export default function Signup() {
                             name="email"
                             id="email"
                             className="form-control"
+                            required
                             {...register('email', { required: true }
                             )}
                         />
@@ -168,6 +171,7 @@ export default function Signup() {
                             name="password"
                             id="password"
                             className="form-control"
+                            required
                             {...register('password', {
                                 required: true, validate: validatePassword
                             }
@@ -181,7 +185,7 @@ export default function Signup() {
                             name="confirmPassword"
                             id="ConfirmPassword"
                             className="form-control"
-
+                            required
                             {...register('confirmPassword', { required: true }
                             )}
                         />
@@ -195,7 +199,10 @@ export default function Signup() {
                         </select>
                     </div>
                     <div className="terms">
-                        <input type="checkbox" name="terms-and-conditions" id="checkbox" />
+                        <input type="checkbox"
+                            required
+                            name="terms-and-conditions" id="checkbox"
+                            {...register('terms-and-conditions', { required: true })} />
                         <p>By signing up, you agree to the <strong className="bold-text"><a href="/TermsOfService" className="bold-text">Terms of Service </a></strong>and <strong className="bold-text"><a href="/PrivacyPolicy" className="bold-text">Privacy Policy</a></strong>.</p>
                     </div>
                     <div className="last-flex">

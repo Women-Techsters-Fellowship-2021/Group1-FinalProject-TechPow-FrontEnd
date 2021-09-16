@@ -47,6 +47,8 @@ function Login() {
                     if (result.data.data.typeofUser === "Donee") {
                         history.push('/Home');
                     }
+
+                    history.push('/DonorApplicationForm')
                     return true;
                 }
                 toast.error(result.data.message);
