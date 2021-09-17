@@ -9,20 +9,23 @@ import Request from '../../pages/DoneeApplicationForm/Request';
 
 function TabNav() {
     return (
-        <div>
-            <h2>Application Form</h2>
-            <Tabpane>
+        <div className="application-container">
+            <h3>Application Form</h3>
 
-                <div label="Personal Information">
-                    <PersonalInfo />
-                </div>
-                <div label="Donation Request">
-                    <Request />
-                </div>
-                <div label="Verification">
-                    <Verification />
-                </div>
-            </Tabpane>
+            <div className="tabpane">
+                <Tabpane>
+                    <div label="Personal Information">
+                        <PersonalInfo />
+                    </div>
+                    <div label="Donation Request">
+                        <Request />
+                    </div>
+                    <div label="Verification">
+                        <Verification />
+                    </div>
+                </Tabpane>
+            </div>
+
         </div>
     );
 }

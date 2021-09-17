@@ -1,13 +1,14 @@
 #bg-circle {
     background-image: url("../../resources/icons/Circles.svg");
     background-repeat: no-repeat;
-    background-position: top right 10rem;
+    background-position: top right 30rem;
     background-position-y: top;
 }
 
 .form-container {
     border: 2px solid #f5f5f5;
     box-shadow: 1px 2px 4px 1px #c2f8f0;
+    background-color: #fff;
     max-width: 34rem;
     margin-inline: auto;
     padding: 1em 2em;

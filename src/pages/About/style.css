@@ -3,22 +3,40 @@
     color: var(--clr-primary-100);
 }
 
+.about-image {
+    width: 100%;
+}
+
 .flex-text {
     margin-top: 2em;
     font-size: 1.5rem;
 }
 
+.top-margin {
+    margin-top: -8rem;
+}
+
+.belief {
+    margin-bottom: -5rem;
+}
+
 .blue-div {
-    background-color: var(--clr-primary-100);
+    width: 100%;
+    height: 500px;
+    background-image: url('../../resources/images/Team.png');
+    background-repeat: no-repeat;
+    background-position: 100%;
+    background-size: contain;
     color: var(--clr-neutral-100);
 }
 
 .blue-div-texts h2 {
     font-size: 1.7rem;
+    padding-top: 2em;
 }
 
 .blue-div-texts {
-    padding: 1.5em;
+    padding: 5em;
     text-align: center;
 }
 

@@ -1,5 +1,4 @@
 import React from 'react';
-import Vector from '../../resources/icons/Vector.svg';
 import { useContext, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import Axios from 'axios';
@@ -7,6 +6,9 @@ import { useHistory } from 'react-router-dom';
 import { AppContext } from '../../components/AppStateProvider';
 import { toast } from 'react-toastify';
 //import ThankyouCard from '../../components/Thankyou-cardDonee';
+
+//import icon
+//import Vector from '../../resources/icons/Vector.svg';
 
 function Verification() {
     const { register, handleSubmit } = useForm();
@@ -164,75 +166,105 @@ function Verification() {
     })
 
     return (
-        <form className="donee-form" onSubmit={handleSubmit(updateApplicationForm)}>
-            <div>
-                <div className="upload-section">
-                    <div className="upload-btn-group">
-                        <label>Passport</label>
-                        <input type="file" id="file" accept="image/*" {...register('imageLink', { required: true })}
-                            onChange={ImageSelectorHandler} />
-                        <label for="file" className="upload-btn">
-                            <img src={Vector} alt="" className="upload-icon" /> Upload your passport Photograph
-                        </label>
-                    </div>
-
-                    <div className="upload-btn-group">
-                        <label>Letter of Recommendation</label>
-                        <input type="file" id="file" accept="image/*" {...register('letterOfRecommendationLink', { required: true })}
-                            onChange={LetterSelectorHandler} />
-                        <label for="file" className="upload-btn">
-                            <img src={Vector} alt="" className="upload-icon" /> Upload letter of recommendation
-                        </label>
-                    </div>
-                    <div className="upload-btn-group">
-                        <label> National Identity Card</label>
-                        <input type="file" id="file" accept="image/*" {...register('nationalIdLink', { required: true })}
-                            onChange={IDSelectorHandler} />
-                        <label for="file" className="upload-btn">
-                            <img src={Vector} alt="" className="upload-icon" /> Upload a copy of your National identity card
-                        </label>
-                    </div>
-                </div>
-
+        <div className="donee-app-form">
+            <form className="donee-form" onSubmit={handleSubmit(updateApplicationForm)}>
                 <div>
-                    <div>
-                        <h4>
-                            Please acknowledge the following terms and conditions required for participation in this program.
-                        </h4>
-                    </div>
-                    <div className="agreement-div">
-                        <input type="checkbox" name="terms" id="terms"
-                            required
-                            {...register('terms', { required: true })} />
-                        <p>
-                            By clickling this box, I agree to the following:
-                        </p>
-                        <p>
-                            I understand that applicant must be at least 18 years and confirm that I am 18 years old or older; <br />I understand that if I receive the device, I must use it to acquire digital skills;<br />I agree that I will share my training progress with TechPow and Donor once in a month till the completion of the training.
-                        </p>
-                    </div>
-                    <div className="agreement-div">
-                        <input type="checkbox" name="agreement" id="agreement"
-                            required
-                            {...register('agreement', { required: true })} />
-                        <p>I also agree that by requesting for a device, I agree to be bound by TechPow’s Terms of Use and Privacy Policy</p>
-                    </div>
-                    <div className="signature">
-                        <label for="Signature">
-                            Please type your full legal name here as your signature agreeing to all previous statements in this form.
-                        </label>
-                        <input type="text"
-                            required
-                            {...register('signature', { required: true })}
-                        />
-                    </div>
-                </div>
+                    <div className="upload-section form-flex">
+                        <div className="upload-btn-group">
+                            <label for="file" className="upload-btn">Passport</label>
+                            <div className="upload-field">
+                                <input 
+                                    type="file" 
+                                    id="file"
+                                    className="file"
+                                    accept="image/*" {...register('imageLink', { required: true })}
+                                    onChange={ImageSelectorHandler} 
+                                />
+                                {/* <img src={Vector} alt="" className="upload-icon" />  */}
+                                <p className="upload-text">Upload your passport Photograph</p>
+                            </div>
+                        </div>
 
-                <div className="form-login-btn">
-                    <button type="submit" className="btn btn-primary">Submit</button>
+                        <div className="upload-btn-group">
+                            <label>Letter of Recommendation</label>
+                            <div className="upload-field">
+                                <input 
+                                    type="file" 
+                                    id="file" 
+                                    accept="image/*" {...register('letterOfRecommendationLink', { required: true })}
+                                    onChange={LetterSelectorHandler} 
+                                />
+                                    {/* <img src={Vector} alt="" className="upload-icon" />  */}
+                                    <p className="upload-text">Upload letter of recommendation</p>
+                            </div>
+                        </div>
+
+                        <div className="upload-btn-group">
+                            <label> National Identity Card</label>
+                            <div className="upload-field id-file">
+                                <input 
+                                    type="file" 
+                                    id="file" 
+                                    className="file"
+                                    accept="image/*" {...register('nationalIdLink', { required: true })}
+                                    onChange={IDSelectorHandler} 
+                                />
+                                    {/* <img src={Vector} alt="" className="upload-icon" /> */}
+                                    <p className="upload-text">Upload a copy of your National identity car</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div className="acknowledgement-text">
+                            <h4>
+                                Please acknowledge the following terms and conditions required for participation in this program.
+                            </h4>
+                        </div>
+                        <div className="agreement-div">
+                            <div>
+                                <input type="checkbox" 
+                                    name="terms" 
+                                    id="terms"
+                                    required
+                                    {...register('terms', { required: true })} 
+                                />
+                            </div>
+                            <div>
+                                <p className="blue-text">
+                                    By clickling this box, I agree to the following:
+                                </p>
+                                <p className="blue-text">
+                                    I understand that applicant must be at least 18 years and I confirm that I am 18 years old or above; <br />I understand that if I receive the device, I must use it to acquire digital skills;<br />I agree that I will share my training progress with TechPow and Donor once a month till the completion of the training.
+                                </p>
+                            </div>
+                        </div>
+                        <div className="agreement-div">
+                            <input type="checkbox" 
+                                name="agreement" 
+                                id="agreement"
+                                required
+                                {...register('agreement', { required: true })} 
+                            />
+                            <p className="blue-text">I also agree that by requesting for a device, I agree to be bound by TechPow’s Terms of Use and Privacy Policy</p>
+                        </div>
+                        <div className="signature">
+                            <label for="Signature">
+                                Please type your full legal name here as your signature agreeing to all previous statements in this form.
+                            </label>
+                            <input 
+                                type="text"
+                                className="donee-text-input signature-box"
+                                required
+                                {...register('signature', { required: true })}
+                            />
+                        </div>
+                    </div>
+                    <div className="form-login-btn next-btn submit-app-btn">
+                        <button type="submit" className="btn btn-primary">Submit</button>
+                    </div>
                 </div>
-            </div>
-        </form>
+            </form>
+        </div>
     );
 }
 

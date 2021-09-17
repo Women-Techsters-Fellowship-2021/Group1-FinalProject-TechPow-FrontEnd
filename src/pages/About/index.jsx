@@ -5,7 +5,11 @@ import DefaultLayout from '../../components/Layout/DefaultLayout';
 import './style.css';
 
 //import images
-import imageOne from '../../resources/images/Donee Application.png';
+import imageOne from '../../resources/images/what we do.png';
+import imageTwo from '../../resources/images/our mission.png';
+import imageThree from '../../resources/images/Our Belief.png';
+import greenMap from '../../resources/images/Unique 1.png';
+import secondCircle from '../../resources/images/Unique 2.png';
 
 function About() {
   return (
@@ -21,10 +25,20 @@ function About() {
                             </p>
                           </div>
                           <div>
-                              <img src={imageOne} alt="" />
+                              <img src={imageOne} alt="" className="about-image" />
                           </div>
                       </div>
                   </div>
+              </section>
+
+              <section className="bg-primary top-margin">
+                  <div className="container">
+                        <div>
+                            <p className="flex-text">
+                                We envision a digitally inclusive Africa where all people hold the power to improve their lives.
+                            </p>
+                        </div>
+                    </div>
               </section>
 
               <section>
@@ -32,7 +46,7 @@ function About() {
                       <h2 className="center-text">Our Mission</h2>
                       <div className="split">
                           <div>
-                              <img src={imageOne} alt="" />
+                              <img src={imageTwo} alt="" className="about-image" />
                           </div>
                           <div>
                               <p className="flex-text">
@@ -43,23 +57,34 @@ function About() {
                   </div>
               </section>
 
-              <section>
+              <section className="top-margin">
                   <div className="container">
-                      <h2 className="center-text">Our Vision</h2>
                       <div className="split">
                           <div>
-                              <p className="flex-text">
-                                We envision a digitally exclusive Africa where all people hold the power to improve their lives.
-                              </p>
+                              <h2 className="txt-one">Our Belief</h2>
+                              <ul className="flex-text">
+                                  <li>
+                                      We believe that access to technology is a right, not a privilege.
+                                  </li>
+                                  <li>
+                                      We believe in inspiring the next generation to lead with purpose.
+                                  </li>
+                                  <li>
+                                      We believe that the only way to close the digital divide is to eliminate structural social and economic impediments.
+                                  </li>
+                                  <li>
+                                      We believe that providing everyone with equal access to information and technology allows them to reach their greatest potential.
+                                  </li>
+                              </ul>
                           </div>
                           <div>
-                            <img src={imageOne} alt="" />
+                              <img src={imageThree} alt="" />
                           </div>
                       </div>
                   </div>
               </section>
 
-              <section>
+              <section className="top-margin">
                   <div className="blue-div">
                       <div className="blue-div-texts">
                           <h2>Our Team</h2>
@@ -72,6 +97,26 @@ function About() {
                           <p>
                               We are a team of individuals commited to social good through our social works.
                           </p>
+                      </div>
+                  </div>
+              </section>
+
+              <section>
+                  <div className="container">
+                      <h2 className="center-text">What makes us unique</h2>
+                      <div className="split">
+                          <div>
+                              <img src={greenMap} alt="green map in a circle" className="mmd-icon" />
+                              <p><strong>You choose where to make an impact</strong></p>
+                              <p>Whether to donate to friends in your community or someone halfway around Africa, (and for many, it's both) TechPow gives you the chance to make a difference in someone else's life. Donations at TechPow aren't only about helping; they're a way to create connection and relationships.</p>
+                          </div>
+                          <div>
+                              <img src={secondCircle} alt="" className="mmd-icon" />
+                              <p><strong>To elevate many, one must first lift one.</strong></p>
+                              <p>
+                                  When a TechPow donation assists someone to gain digital skills and open up doors for themselves, it also open doors for others. That ripple effect can shape the future for a family or an entire community.
+                              </p>
+                          </div>
                       </div>
                   </div>
               </section>
