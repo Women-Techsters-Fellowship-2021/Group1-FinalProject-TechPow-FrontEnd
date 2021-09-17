@@ -139,7 +139,6 @@ function Verification() {
                                 donee: newDoneeApplication,
                             },
                         })
-
                         usehistory.push('/Thankyou-cardDonee');
                         return true;
                     }
@@ -173,12 +172,12 @@ function Verification() {
                         <div className="upload-btn-group">
                             <label for="file" className="upload-btn">Passport</label>
                             <div className="upload-field">
-                                <input 
-                                    type="file" 
+                                <input
+                                    type="file"
                                     id="file"
                                     className="file"
                                     accept="image/*" {...register('imageLink', { required: true })}
-                                    onChange={ImageSelectorHandler} 
+                                    onChange={ImageSelectorHandler}
                                 />
                                 {/* <img src={Vector} alt="" className="upload-icon" />  */}
                                 <p className="upload-text">Upload your passport Photograph</p>
@@ -188,29 +187,29 @@ function Verification() {
                         <div className="upload-btn-group">
                             <label>Letter of Recommendation</label>
                             <div className="upload-field">
-                                <input 
-                                    type="file" 
-                                    id="file" 
+                                <input
+                                    type="file"
+                                    id="file"
                                     accept="image/*" {...register('letterOfRecommendationLink', { required: true })}
-                                    onChange={LetterSelectorHandler} 
+                                    onChange={LetterSelectorHandler}
                                 />
-                                    {/* <img src={Vector} alt="" className="upload-icon" />  */}
-                                    <p className="upload-text">Upload letter of recommendation</p>
+                                {/* <img src={Vector} alt="" className="upload-icon" />  */}
+                                <p className="upload-text">Upload letter of recommendation</p>
                             </div>
                         </div>
 
                         <div className="upload-btn-group">
                             <label> National Identity Card</label>
                             <div className="upload-field id-file">
-                                <input 
-                                    type="file" 
-                                    id="file" 
+                                <input
+                                    type="file"
+                                    id="file"
                                     className="file"
                                     accept="image/*" {...register('nationalIdLink', { required: true })}
-                                    onChange={IDSelectorHandler} 
+                                    onChange={IDSelectorHandler}
                                 />
-                                    {/* <img src={Vector} alt="" className="upload-icon" /> */}
-                                    <p className="upload-text">Upload a copy of your National identity car</p>
+                                {/* <img src={Vector} alt="" className="upload-icon" /> */}
+                                <p className="upload-text">Upload a copy of your National identity car</p>
                             </div>
                         </div>
                     </div>
@@ -222,11 +221,11 @@ function Verification() {
                         </div>
                         <div className="agreement-div">
                             <div>
-                                <input type="checkbox" 
-                                    name="terms" 
+                                <input type="checkbox"
+                                    name="terms"
                                     id="terms"
                                     required
-                                    {...register('terms', { required: true })} 
+                                    {...register('terms', { required: true })}
                                 />
                             </div>
                             <div>
@@ -239,11 +238,11 @@ function Verification() {
                             </div>
                         </div>
                         <div className="agreement-div">
-                            <input type="checkbox" 
-                                name="agreement" 
+                            <input type="checkbox"
+                                name="agreement"
                                 id="agreement"
                                 required
-                                {...register('agreement', { required: true })} 
+                                {...register('agreement', { required: true })}
                             />
                             <p className="blue-text">I also agree that by requesting for a device, I agree to be bound by TechPow’s Terms of Use and Privacy Policy</p>
                         </div>
@@ -251,7 +250,7 @@ function Verification() {
                             <label for="Signature">
                                 Please type your full legal name here as your signature agreeing to all previous statements in this form.
                             </label>
-                            <input 
+                            <input
                                 type="text"
                                 className="donee-text-input signature-box"
                                 required
