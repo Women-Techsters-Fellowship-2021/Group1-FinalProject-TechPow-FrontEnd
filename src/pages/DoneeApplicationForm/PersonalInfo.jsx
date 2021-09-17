@@ -27,7 +27,7 @@ function PersonalInfo() {
                             type="text" 
                             name="fullname"
                             className="donee-text-input"
-                            required
+                             
                             id="fullname" {...register('fullName', { required: true })} 
                         />                                             
                         <span className="notify">Please enter a legal name here. We will ask or your preferred name later.</span>

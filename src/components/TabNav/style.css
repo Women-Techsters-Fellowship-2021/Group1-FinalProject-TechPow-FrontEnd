@@ -44,7 +44,6 @@
   padding-inline: 0.5em 5em;
 }
 
-
 .tab-list-active {
   background-color: #ccc;
   border-left: 5px solid var(--clr-primary-100);

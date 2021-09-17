@@ -138,7 +138,9 @@ function LandingPage() {
 
                 <section>
                     <div className="container">
-                        <h2 className="center-text">Featured Donees</h2>
+                        <Link to="/Donees" className="center-text featured-donees-link">
+                            <h2 className="center-text">Featured Donees</h2>
+                        </Link>
                         <p className="center-para">
                             One way to reduce digital inequality in Africa is through an act of kindness.
                         </p>

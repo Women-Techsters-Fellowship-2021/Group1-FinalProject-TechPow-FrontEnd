@@ -23,7 +23,7 @@ function Searchbox() {
                 onChange={handleSearch}
                 placeholder="Search"
             />
-            <img src={search} alt="search" className="xms-icon searchbox-icon" />
+            <img src={search} alt="search" className="searchbox-icon" />
         </div>
     );
 }
