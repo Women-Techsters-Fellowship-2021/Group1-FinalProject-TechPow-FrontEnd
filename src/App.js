@@ -24,6 +24,8 @@ import EmailVerification from './pages/EmailVerification';
 import Donees from './pages/Donees';
 import Searchbox from './components/Searchbox';
 import DoneeProfile from './pages/Donee-Profile';
+import ThankyouCard from './components/Thankyou-cardDonee';
+import ThankyouCardDonor from './components/Thankyou-cardDonor';
 
 function App() {
   return (
@@ -98,13 +100,20 @@ function App() {
           </Route>
 
           {/* <Route exact path="/donees/:doneeid"> */}
-          <Route path="/DoneeProfile"> 
+          <Route path="/DoneeProfile">
             <DoneeProfile />
-					</Route>
+          </Route>
 
           <Route path="/Searchbox">
-						<Searchbox />
-					</Route>
+            <Searchbox />
+          </Route>
+          <Route path="/Thankyou-cardDonee">
+            <ThankyouCard />
+          </Route>
+
+          <Route path="/Thankyou-cardDonor">
+            <ThankyouCardDonor />
+          </Route>
 
           <Redirect to="/" />
 

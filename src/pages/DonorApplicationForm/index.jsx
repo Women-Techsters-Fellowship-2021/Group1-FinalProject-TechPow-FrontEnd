@@ -56,7 +56,7 @@ function DonorApplication() {
                             donor: newDonation,
                         },
                     })
-                    usehistory.push('/LandingPage');
+                    usehistory.push('/Thankyou-cardDonor');
                     return true;
                 }
                 for (let index = 0; index < result.data.errors.length; index++) {

@@ -30,7 +30,7 @@ function DoneeCard({ donee }) {
                             </div>
                         </div>
                         <div className="butns">
-                            <button className="btn-primary">Donate</button>
+                            <Link to="/DonorApplicationForm"><button className="btn-primary">Donate</button></Link>
                             <div className="shareIcon">
                                 <p className="share-text">Share</p>
                                 <img src={shareicon} alt="" className="extra-small-icon" />

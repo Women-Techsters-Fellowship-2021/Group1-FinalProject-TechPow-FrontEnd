@@ -6,6 +6,7 @@ import Axios from 'axios';
 import { useHistory } from 'react-router-dom';
 import { AppContext } from '../../components/AppStateProvider';
 import { toast } from 'react-toastify';
+//import ThankyouCard from '../../components/Thankyou-cardDonee';
 
 function Verification() {
     const { register, handleSubmit } = useForm();
@@ -136,7 +137,8 @@ function Verification() {
                                 donee: newDoneeApplication,
                             },
                         })
-                        usehistory.push('/Home');
+
+                        usehistory.push('/Thankyou-cardDonee');
                         return true;
                     }
                     for (let index = 0; index < result.data.errors.length; index++) {
