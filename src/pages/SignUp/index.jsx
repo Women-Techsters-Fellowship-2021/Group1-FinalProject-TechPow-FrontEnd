@@ -201,7 +201,7 @@ export default function Signup() {
                     <div className="terms">
                         <input type="checkbox"
                             required
-                            name="terms-and-conditions" id="checkbox"
+                            name="terms-and-conditions" id="checkbox" className="signup-check"
                             {...register('terms-and-conditions', { required: true })} />
                         <p>By signing up, you agree to the <strong className="bold-text"><a href="/TermsOfService" className="bold-text">Terms of Service </a></strong>and <strong className="bold-text"><a href="/PrivacyPolicy" className="bold-text">Privacy Policy</a></strong>.</p>
                     </div>

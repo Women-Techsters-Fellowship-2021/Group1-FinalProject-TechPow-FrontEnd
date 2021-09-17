@@ -41,9 +41,15 @@
     padding-inline-start: 0.3rem;
 }
 
-/* .xms-icon:hover {
+.sm-signup-icon:hover {
+    transform: translateY(3px);
+}
 
-} */
+.xms-icon {
+    margin-top: 0.2em;
+    width: 1rem;
+    height: 1rem;
+}
 
 .form-mid-div {
     margin: 1em;
@@ -112,6 +118,10 @@
     text-decoration: underline 2px;
 }
 
+.signup-check {
+    margin-top: 0.8em;
+}
+
 .terms {
     display: flex;
     padding-inline: 0.7rem;
@@ -140,4 +150,3 @@
     text-align: center;
     color: #333;
 }
-

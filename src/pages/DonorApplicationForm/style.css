@@ -1,4 +1,10 @@
-.donation-form{
+.active-donor-tab {
+    background-color: #ccc;
+    border-left: 5px solid var(--clr-primary-100);
+    color: var(--clr-primary-100);
+  }
+
+/* .donation-form{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -23,4 +29,4 @@
     height: 40%;
     width: 20%;
     background-color:rgb(141, 141, 248) ;
-}
+} */
