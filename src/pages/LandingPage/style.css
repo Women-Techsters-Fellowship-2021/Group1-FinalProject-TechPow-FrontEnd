@@ -13,13 +13,9 @@
     height: 100%;
 } */
 
-/* .container, .flex-header, footer{
-    margin-inline: auto;
-    width: min(90%, 70.5rem);
-} */
-
 img {
     display: block;
+    width: 100%;
     max-width: 100%;
 }
 

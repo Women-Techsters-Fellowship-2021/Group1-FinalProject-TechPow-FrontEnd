@@ -1,7 +1,7 @@
 import React from 'react';
 import DefaultLayout from '../../components/Layout/DefaultLayout';
 import { useContext } from 'react';
-import { useHistory } from 'react-router';
+//import { useHistory } from 'react-router';
 import { useForm } from 'react-hook-form';
 import { AppContext } from '../../components/AppStateProvider';
 import Axios from 'axios';
@@ -10,16 +10,16 @@ import './style.css';
 
 function DonorApplication() {
     const { register, handleSubmit } = useForm();
-    const { state: { Token, userId, isLoggedIn }, dispatch } = useContext(AppContext);
-    const usehistory = useHistory();
+    const { state: { Token, userId }, dispatch } = useContext(AppContext);
+    //const usehistory = useHistory();
 
-    if (!isLoggedIn) {
-        usehistory.push('/Login');
-        return toast.error("Please Login to Donate....",
-            {
-                position: toast.POSITION.TOP_CENTER
-            });
-    }
+    // if (!isLoggedIn) {
+    //     usehistory.push('/Login');
+    //     return toast.error("Please Login to Donate....",
+    //         {
+    //             position: toast.POSITION.TOP_CENTER
+    //         });
+    // }
 
     const SubmitDonation = (data) => {
         let newDonation = {
@@ -56,7 +56,7 @@ function DonorApplication() {
                             donor: newDonation,
                         },
                     })
-                    usehistory.push('/LandingPage');
+                    //usehistory.push('/LandingPage');
                     return true;
                 }
                 for (let index = 0; index < result.data.errors.length; index++) {
