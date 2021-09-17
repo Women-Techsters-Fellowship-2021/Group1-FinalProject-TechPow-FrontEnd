@@ -19,7 +19,7 @@ function PersonalInfo() {
 
     return (
         <div className="donee-app-form">
-            <form className=" donee-form" onSubmit={handleSubmit(updateApplicationForm)}>
+            <form className="donee-form" onSubmit={handleSubmit(updateApplicationForm)}>
                 <div className="form-flex">
                     <div className="form-input-field">
                         <label>Full Name</label><br />
@@ -27,10 +27,10 @@ function PersonalInfo() {
                             type="text" 
                             name="fullname"
                             className="donee-text-input"
-                             
+                            required
                             id="fullname" {...register('fullName', { required: true })} 
                         />                                             
-                        <span className="notify">Please enter a legal name here. We will ask or your preferred name later.</span>
+                        <span className="notify">Please enter a legal name here. We will ask for your preferred name later.</span>
                     </div>
                     <div className="form-input-field">
                         <label>Phone Number</label>
@@ -56,7 +56,7 @@ function PersonalInfo() {
                             required 
                             id="dob" placeholder="MM/DD/YYYY" {...register('dob', { required: true })} 
                         />
-                        <span className="notify"><strong>Please Note: </strong> To make a donation request, you must be 18 years or above.</span>
+                        <span className="notify"><strong>Please Note: </strong> This opportunity is only available to applicants of 18 years of age and above.</span>
                     </div>
                     <div className="form-input-field">
                         <label for="Gender">Gender</label>
@@ -80,7 +80,6 @@ function PersonalInfo() {
                             required
                             {...register('homeAddress', { required: true })} 
                         />
-                        <span className="notify"><strong>Please Note: </strong> To make a donation request, you must be 18 years or above.</span>
                     </div>
                     <div className="form-input-field">
                         <label for="Country">Country</label>

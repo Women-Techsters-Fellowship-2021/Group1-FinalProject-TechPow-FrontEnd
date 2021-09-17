@@ -24,6 +24,8 @@ import EmailVerification from './pages/EmailVerification';
 import Donees from './pages/Donees';
 import Searchbox from './components/Searchbox';
 import DoneeProfile from './pages/Donee-Profile';
+import PrivacyPolicy from './pages/PrivacyPolicy/PrivacyPolicy';
+import TermsOfUse from './pages/PrivacyPolicy/TermsOfUse'
 
 function App() {
   return (
@@ -104,6 +106,14 @@ function App() {
 
           <Route path="/Searchbox">
 						<Searchbox />
+					</Route>
+
+          <Route path="/PrivacyPolicy">
+						<PrivacyPolicy />
+					</Route>
+
+          <Route path="/TermsOfUse">
+						<TermsOfUse />
 					</Route>
 
           <Redirect to="/" />

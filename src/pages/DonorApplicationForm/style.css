@@ -1,32 +1,100 @@
+.donor-tabpane {
+    border: 2px solid #f5f5f5;
+    box-shadow: 1px 2px 4px 1px #c2f8f0;
+    background-color: #fff;
+    max-width: 15rem;
+    height: 6em;
+    padding: 1em 2em;
+    border-radius: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.donor-app-form-page {
+    margin-bottom: 12.5rem;
+}
+
+.donor-app-form {
+    width: 80rem;
+    max-width: 60rem;
+    height: 100%;
+    margin-left: 18em;
+    margin-top: -10.6em;
+    padding: 0;
+    box-shadow: 1px 2px 4px 1px #c2f8f0;
+    background-color: #fff;
+    padding: 1em 2em;
+    border-radius: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.donor-form {
+    padding: 2em;
+}
+
 .active-donor-tab {
     background-color: #ccc;
     border-left: 5px solid var(--clr-primary-100);
     color: var(--clr-primary-100);
+    padding: 1em;
+    width: 15rem;
   }
 
-/* .donation-form{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+  .donor-text-input {
+    margin: auto;
+    width: 28em;
+    padding-block: 0.8em;
+    padding-inline-start: 0.5em;
+    border-radius: 4px;
+    border: 1px solid #555;
 }
 
-.form-split{
-    display: flex;
-    flex-direction:column;
-    align-items: center;
-    justify-content: space-between;
+.donor-text-input:focus {
+    background: none;
+    outline: none;
+    border: 2px solid #f5f5f5;
+    box-shadow: 1px 2px 4px 1px #c2f8f0;
 }
 
-.div-split{
-     display: flex;
-    flex-direction:row;
-    align-items: center;
-    justify-content: space-between;
+.schedule-section {
+    margin-top: 1em;
 }
 
-.donation-info{
-    height: 40%;
-    width: 20%;
-    background-color:rgb(141, 141, 248) ;
-} */
+.schedule-section h4 {
+    color: var(--clr-primary-400);
+}
+
+.schedule-section h3 {
+    color: var(--clr-primary-100);
+    margin-inline: 1em 0.5em;
+    margin-top: -0.2em;
+}
+
+.schedule-check {
+    margin-inline: 1em;
+}
+
+.schedule-para {
+    margin-top: -0.5em;
+    margin-left: -0.5em;
+    color: #555;
+}
+
+.t-c-para {
+    margin-bottom: 1em;
+    font-size: 1.2rem;
+}
+
+.signature-box-donor {
+    width: 46rem;
+}
+
+.no-decoration {
+    text-decoration: none;
+}
+
+.no-decoration:hover {
+    text-decoration: underline;
+    font-weight: 500;
+}
