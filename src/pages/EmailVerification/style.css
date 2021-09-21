@@ -1,3 +1,39 @@
 .blue-text {
     color: var(--clr-primary-100);
 }
+
+.verification-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+    justify-content: center;
+}
+
+
+.email-img {
+    width: 100px;
+    height: 100px;
+    padding-bottom: 20px;
+}
+
+.ver-text {
+font-family:Verdana, Geneva, Tahoma, sans-serif;
+font-size: 18px;
+line-height: 25px;
+display: flex;
+align-items: center;
+text-align: center;
+color: #3B3030;
+text-decoration: none;
+}
+
+.verificationpage-header{
+    margin : 2rem;
+    display: flex;
+      align-items: center;
+    justify-content: space-between;
+}
+
+.incorrectemail-div {
+    padding-top: 2rem;
+}

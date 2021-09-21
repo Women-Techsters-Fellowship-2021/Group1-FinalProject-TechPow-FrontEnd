@@ -23,8 +23,8 @@ function PersonalInfo() {
                 <div className="form-flex">
                     <div className="form-input-field">
                         <label>Full Name</label><br />
-                        <input 
-                            type="text" 
+                        <input
+                            type="text"
                             name="fullname"
                             className="donee-text-input"
                             required
@@ -49,12 +49,12 @@ function PersonalInfo() {
                 <div className="form-flex">
                     <div className="form-input-field">
                         <label>Date of Birth</label><br />
-                        <input 
-                            type="text" 
+                        <input
+                            type="text"
                             name="dob"
                             className="donee-text-input"
-                            required 
-                            id="dob" placeholder="MM/DD/YYYY" {...register('dob', { required: true })} 
+                            required
+                            id="dob" placeholder="MM/DD/YYYY" {...register('dob', { required: true })}
                         />
                         <span className="notify"><strong>Please Note: </strong> This opportunity is only available to applicants of 18 years of age and above.</span>
                     </div>
@@ -72,13 +72,13 @@ function PersonalInfo() {
                 <div className="form-flex">
                     <div className="form-input-field">
                         <label>What is your home address?</label><br />
-                        <input 
-                            type="text" 
-                            name="address" 
+                        <input
+                            type="text"
+                            name="address"
                             id="address"
                             className="donee-text-input"
                             required
-                            {...register('homeAddress', { required: true })} 
+                            {...register('homeAddress', { required: true })}
                         />
                     </div>
                     <div className="form-input-field">

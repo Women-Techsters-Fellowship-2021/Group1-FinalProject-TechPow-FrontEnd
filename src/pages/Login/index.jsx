@@ -46,6 +46,7 @@ function Login() {
                     })
                     if (result.data.data.typeofUser === "Donee") {
                         history.push('/Home');
+                        return true;
                     }
                     history.push('/Donees');
                     return true;

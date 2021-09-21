@@ -26,6 +26,8 @@ import DoneeProfile from './pages/Donee-Profile';
 import PrivacyPolicy from './pages/PrivacyPolicy/PrivacyPolicy';
 import TermsOfUse from './pages/PrivacyPolicy/TermsOfUse'
 import GetInvolved from './pages/GetInvolved';
+import ThankyouCard from './components/Thankyou-cardDonee';
+import ThankyouCardDonor from './components/Thankyou-cardDonor';
 
 function App() {
   return (
@@ -101,11 +103,18 @@ function App() {
 
           <Route exact path="/donees/:doneeid"> 
             <DoneeProfile />
-					</Route>
+          </Route>
 
           <Route path="/Searchbox">
-						<Searchbox />
-					</Route>
+            <Searchbox />
+          </Route>
+          <Route path="/Thankyou-cardDonee">
+            <ThankyouCard />
+          </Route>
+
+          <Route path="/Thankyou-cardDonor">
+            <ThankyouCardDonor />
+          </Route>
 
           <Route path="/PrivacyPolicy">
 						<PrivacyPolicy />
