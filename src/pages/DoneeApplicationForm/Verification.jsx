@@ -164,7 +164,7 @@ function Verification() {
             .then(result => {
                 console.log(result);
                 if (result.status === 200) {
-                    toast.success("Email has been resent!");
+                    toast.success("Application Confirmation mail sent!");
                 }
                 return false;
             }

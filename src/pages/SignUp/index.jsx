@@ -116,7 +116,7 @@ export default function Signup() {
             newEmail)
             .then(result => {
                 console.log(result);
-                if (result.data.success) {
+                if (result.status === 200) {
                     return true;
                 }
                 return false;
