@@ -10,7 +10,7 @@ import shareicon from '../../resources/icons/share-fill.svg';
 
 function DoneeCard({ donee }) {
     return (
-        <Link to="/DoneeProfile" className="Link-Donee">
+        <Link to={`/donees/${donee.userId}`} className="Link-Donee">
             <div className="donee-card">
                 <span className="item-needed">{donee.itemNeeded}</span>
                 <div>

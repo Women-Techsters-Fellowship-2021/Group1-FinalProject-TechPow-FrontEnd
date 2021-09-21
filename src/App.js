@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-//import ResponsiveNavbar from './components/Navbar';
 
 //import pages
 import LandingPage from './pages/LandingPage';
@@ -32,8 +31,8 @@ function App() {
     <AppStateProvider>
       <ToastContainer />
       <Router>
-        {/* <ResponsiveNavbar /> */}
         <Switch>
+          
           <Route path="/" exact>
             <LandingPage />
           </Route>
@@ -99,8 +98,7 @@ function App() {
             <Donees />
           </Route>
 
-          {/* <Route exact path="/donees/:doneeid"> */}
-          <Route path="/DoneeProfile"> 
+          <Route exact path="/donees/:doneeid"> 
             <DoneeProfile />
 					</Route>
 

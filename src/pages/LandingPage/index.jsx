@@ -34,7 +34,7 @@ function LandingPage() {
         <DefaultLayout>
             <div className="landingPage">
                 <section>
-                    <div className="container container--narrow">
+                    <div className="container">
                         <div className="split first-section">
                             <div>
                                 <div className="self-aligned">

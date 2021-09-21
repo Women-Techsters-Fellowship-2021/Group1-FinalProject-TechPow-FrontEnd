@@ -12,7 +12,7 @@ const initialState = {
     donees: doneeInfo,
     applicationForm: {
         dob: '',
-        userID: '',
+        userId: '',
         fullName: '',
         homeAddress: '',
         country: '',
@@ -30,8 +30,6 @@ const initialState = {
         eduLevel: '',
     },
     completedTabs: [],
-
-
 };
 
 function reducer(state, action) {
@@ -93,6 +91,10 @@ function reducer(state, action) {
 
     if (action.type === 'ADD_COMPLETED_STEP')
         saveState.completedTabs = [...saveState.completedTabs, action.payload];
+
+    // if (action.type === 'UPDATE_DONEELIST')
+    //     saveState.isLoggedIn = false;
+    //     saveState.donees = [action.payload, ...saveState.donees];
 
     return saveState;
 }

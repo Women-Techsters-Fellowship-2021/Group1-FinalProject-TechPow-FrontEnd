@@ -6,7 +6,7 @@ import { AppContext } from '../AppStateProvider';
 //import styles
 import './style.css';
 
-
+//import logo
 import TechPow_logo from '../../resources/Logos/TechPow Logo.png';
 
 function Navbar() {
@@ -17,9 +17,10 @@ function Navbar() {
         dispatch({ type: 'LOGOUT' });
         history.push('/LandingPage');
     }
+
     return (
         <header>
-            <div className="container">
+            <div className="containe">
                 <div className="flex-header">
                     {!state.isLoggedIn ? (
                         <>
