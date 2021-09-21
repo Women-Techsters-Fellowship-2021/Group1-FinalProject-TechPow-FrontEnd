@@ -87,10 +87,11 @@ export default function Signup() {
                         payload: {
                             userId: newUser.userId,
                             userEmail: newUser.email,
+                            userFirstName: newUser.firstName,
                             userRole: newUser.typeofuser,
                         },
                     })
-                    history.push('Login');
+                    history.push('/EmailVerification');
                     return true;
                 }
                 for (let index = 0; index < result.data.errors.length; index++) {
@@ -104,7 +105,26 @@ export default function Signup() {
                 }
             })
 
+
+        const newEmail = {
+            toEmail: newUser.email,
+            subject: "TechPow Registration Notification",
+            body: "Dear " + newUser.firstName + ". Thank you for completing your registration on TechPow. Please click on the link below to login and complete your application."
+        }
+        //Calling api for email
+        axios.post('https://localhost:44326/api/v1/Email/SendEmail',
+            newEmail)
+            .then(result => {
+                console.log(result);
+                if (result.data.success) {
+                    return true;
+                }
+                return false;
+            }
+            );
     };
+
+
 
 
 
