@@ -26,6 +26,7 @@ import Searchbox from './components/Searchbox';
 import DoneeProfile from './pages/Donee-Profile';
 import PrivacyPolicy from './pages/PrivacyPolicy/PrivacyPolicy';
 import TermsOfUse from './pages/PrivacyPolicy/TermsOfUse'
+import GetInvolved from './pages/GetInvolved';
 
 function App() {
   return (
@@ -114,6 +115,10 @@ function App() {
 
           <Route path="/TermsOfUse">
 						<TermsOfUse />
+					</Route>
+
+          <Route path="/GetInvolved">
+						<GetInvolved />
 					</Route>
 
           <Redirect to="/" />

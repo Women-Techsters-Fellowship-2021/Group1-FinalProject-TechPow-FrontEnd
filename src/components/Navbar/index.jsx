@@ -33,7 +33,7 @@ function Navbar() {
                                     <ul>
                                         <Link to="/About" className
                                             ="head-link">About</Link>
-                                        <a href="#bg-primary" className
+                                        <a href="/GetInvolved" className
                                             ="head-link">Get Invlolved</a>
                                         <Link to="/Contact" className
                                             ="head-link">Contact</Link>

@@ -1,0 +1,79 @@
+.getinvolve-page {
+    background-color: #fff;
+}
+.blue-text2 {
+    text-align: center ;
+    margin-left: 700px;
+}
+
+.get-involved-image {
+width: 400px;
+height:50%px;
+padding: 20px;
+}   
+.join {
+    background-color:azure;
+}
+.txt-one {
+    font-size: 1.7rem;
+    padding-top: 150px;
+}
+.flex-text {
+    margin-top: 1em;
+    font-size: 1.5rem;
+}
+.become {
+    padding-top: 15px;
+    font-size: 1.7rem;
+    margin-left: 20px;
+
+}
+.flex-text2 {
+    margin-top: 1px;
+    font-size: 1.5rem;
+    margin-left: 20px;
+
+}
+.blue-text {
+    text-align: center;
+
+}
+.career-images {
+    display: flex;
+}
+/* .conference {
+    text-align: center;
+    color:#000f3b;
+} */
+.vol-primary {
+    display: flex;
+}
+.all-images {
+    align-items: center;
+}
+.help {
+    background-color: aliceblue;
+    max-width: 100%;
+     height: 300px; ;
+}
+.dig-africa {
+ width: 300px;
+ height:20%px;
+ align-items: center;
+ margin-bottom: 50px; 
+ margin-right: 100px;
+
+}
+.newsletter-container {
+    background-color: #000f3b;;
+    height: 150px;
+    margin-right: 250px;
+    margin-left: 350px;
+}
+.new {
+    color: #fff;
+     font-family: Arial, Helvetica, sans-serif ;
+}
+.blue-text3 {
+    color: #000f3b;
+}
