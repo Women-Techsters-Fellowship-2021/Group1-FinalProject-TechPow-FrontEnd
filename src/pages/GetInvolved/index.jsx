@@ -1,6 +1,5 @@
 import React from 'react';
 //import { useForm } from 'react-hook-form';
-import {Link} from 'react-router-dom';
 import DefaultLayout from '../../components/Layout/DefaultLayout';
 
 
@@ -23,12 +22,10 @@ function GetInvolved() {
             <div className="getinvolve-page">
                 <div className="blue-text2">
                     
-                    <Link to="/SignUp">
                         <button className="join">
                             Join Us
 
                         </button>
-                    </Link>
 
                 </div>
                 <section>
@@ -56,11 +53,10 @@ function GetInvolved() {
                                 to new countries and build programs all over the 
                                 world so that we may reach more people in need.
                             </p>
-                            <Link to="/DonorApplication">
+                                
                                  <button className="btn-primary get">
                                     Get Started
                                 </button>
-                            </Link>
                             
                                
                         </div>
