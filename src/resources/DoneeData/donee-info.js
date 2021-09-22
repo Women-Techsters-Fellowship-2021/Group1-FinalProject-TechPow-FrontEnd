@@ -16,7 +16,8 @@ import hammed from '../images/DoneeImages/Hamed.png';
 
 const doneeInfo = [
     {
-        fullName : "Ifunnanya Oke",
+        firstName : "Ifunnanya",
+        lastName : "Oke",
         dob : "1/1/1999",
         userId : "1238-ewi87-89yrw-w879ewo9309",
         homeAddress : "Man street",
@@ -36,7 +37,8 @@ const doneeInfo = [
     },
 
     {
-        fullName : "Hezron Geteye",
+        firstName : "Hezron",
+        lastName : "Geteye",
         dob : "1/1/1989",
         userId : "1238-ewi87-89yrw-w879558uyt",
         homeAddress : "wesdate crescent street",
@@ -56,7 +58,8 @@ const doneeInfo = [
     },
 
     {
-        fullName : "Reem Mohammed",
+        firstName : "Reem",
+        lastName : "Mohammed",
         dob : "1/1/1992",
         userId : "1238-ewi87-89yrw-w879558uyt",
         homeAddress : " Hatfield street",
@@ -76,7 +79,8 @@ const doneeInfo = [
     },
     
     {
-        fullName : "Fatma Isa",
+        firstName : "Fatma",
+        lastName : "Isa",
         dob : "1/1/1990",
         userId : "1238-ewi87-89yrw-w879558uyt",
         homeAddress : " pictory street",
@@ -96,10 +100,11 @@ const doneeInfo = [
     },
 
     {
-        fullName : "Jospeh Munakin",
+        firstName : "Joseph",
+        lastName : "Munakin",
         dob : "1/1/1991",
         userId : "1238-ewi87-89yrw-w879558uyt",
-        homeAddress : " hamilton street",
+        homeAddress : "hamilton street",
         country : "Kenya",
         phoneNumber: "010-100-200-300",
         eduLevel : "UnderGraduate",
@@ -116,7 +121,8 @@ const doneeInfo = [
     },
 
     {
-        fullName : "Yeute yet",
+        firstName : "Yeute",
+        lastName : "Yet",
         dob : "1/1/1988",
         userId : "1238-ewi87-89yrw-w879558uyt",
         homeAddress : " redate street",
@@ -135,7 +141,8 @@ const doneeInfo = [
         signature : "yeuteyet"
     },
     {
-        fullName : "Lekan Adediran",
+        firstName : "Lekan",
+        lastName : "Adediran",
         dob : "1/1/1996",
         userId : "1238-ewi87-89yrw-w879558uyt",
         homeAddress : " balaa street",
@@ -154,7 +161,8 @@ const doneeInfo = [
         signature : "LekanAdediran"
     },
     {
-        fullName : "Gloria Kawasi",
+        firstName : "Gloria",
+        lastName : "Kawasi",
         dob : "1/1/1986",
         userId : "1238-ewi87-89yrw-w8755tyrut",
         homeAddress : " White oaks street",
@@ -173,7 +181,8 @@ const doneeInfo = [
         signature : "GloriaKawasi"
     },
     {
-        fullName : "Blessing Ozor",
+        firstName : "Blessing",
+        lastName : "Ozor",
         dob : "1/1/1990",
         userId : "1238-ewi87-89yrw-w879558dut",
         homeAddress : " Reservoir Hills",
@@ -193,7 +202,8 @@ const doneeInfo = [
     },
 
     {
-        fullName : "John Efua",
+        firstName : "Johanna",
+        lastName : "Efua",
         dob : "1/1/1996",
         userId : "1238-ewi87-89yrw-w879558uyt",
         homeAddress : " Alekuwodo street",
@@ -213,7 +223,8 @@ const doneeInfo = [
     },
 
     {
-        fullName : "Sally Xathi",
+        firstName : "Sally",
+        lastName : "Xathi",
         dob : "1/1/1991",
         userId : "1238-ewi87-89yrw-w879558uyt",
         homeAddress : " maclarty ton street",
@@ -233,7 +244,8 @@ const doneeInfo = [
     },
     
     {
-        fullName : "Hammed Bashir",
+        firstName : "Hammed",
+        lastName : "Bashir",
         dob : "1/1/1997",
         userId : "1238-ewi43-89yrw-w879558uyt",
         homeAddress : " wal street",

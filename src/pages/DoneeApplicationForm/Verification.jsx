@@ -104,7 +104,8 @@ function Verification() {
             const newDoneeApplication = {
                 dob: applicationForm.dob,
                 userId: userId,
-                fullName: applicationForm.fullName,
+                firstName: applicationForm.firstName,
+                lastName: applicationForm.lastName,
                 homeAddress: applicationForm.homeAddress,
                 country: applicationForm.country,
                 itemNeeded: applicationForm.itemNeeded,

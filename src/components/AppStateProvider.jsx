@@ -14,7 +14,8 @@ const initialState = {
     applicationForm: {
         dob: '',
         userId: '',
-        fullName: '',
+        firstName: '',
+        lastName: '',
         homeAddress: '',
         country: '',
         itemNeeded: '',

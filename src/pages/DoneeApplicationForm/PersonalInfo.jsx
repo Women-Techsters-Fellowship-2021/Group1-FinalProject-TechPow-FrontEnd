@@ -22,16 +22,30 @@ function PersonalInfo() {
             <form className="donee-form" onSubmit={handleSubmit(updateApplicationForm)}>
                 <div className="form-flex">
                     <div className="form-input-field">
-                        <label>Full Name</label><br />
+                        <label>First Name</label><br />
                         <input
                             type="text"
-                            name="fullname"
+                            name="firstname"
                             className="donee-text-input"
                             required
-                            id="fullname" {...register('fullName', { required: true })} 
+                            id="firstname" {...register('firstName', { required: true })} 
                         />                                             
                         <span className="notify">Please enter a legal name here. We will ask for your preferred name later.</span>
                     </div>
+                    <div className="form-input-field">
+                        <label>Last Name</label><br />
+                        <input
+                            type="text"
+                            name="lastname"
+                            className="donee-text-input"
+                            required
+                            id="lastname" {...register('lastName', { required: true })} 
+                        />                                             
+                        <span className="notify">Please enter your surname here.</span>
+                    </div>
+                </div>
+
+                <div className="form-flex">
                     <div className="form-input-field">
                         <label>Phone Number</label>
                         <input
@@ -44,9 +58,6 @@ function PersonalInfo() {
                             {...register('phoneNumber', { required: true })}
                         />
                     </div>
-                </div>
-
-                <div className="form-flex">
                     <div className="form-input-field">
                         <label>Date of Birth</label><br />
                         <input
@@ -58,6 +69,9 @@ function PersonalInfo() {
                         />
                         <span className="notify"><strong>Please Note: </strong> This opportunity is only available to applicants of 18 years of age and above.</span>
                     </div>
+                </div>
+
+                <div className="form-flex">
                     <div className="form-input-field">
                         <label for="Gender">Gender</label>
                         <select name="Gender" id="gender"
@@ -67,9 +81,6 @@ function PersonalInfo() {
                             <option value="Male"> Male</option>
                         </select>
                     </div>
-                </div>
-
-                <div className="form-flex">
                     <div className="form-input-field">
                         <label>What is your home address?</label><br />
                         <input
@@ -81,6 +92,9 @@ function PersonalInfo() {
                             {...register('homeAddress', { required: true })}
                         />
                     </div>
+                </div>
+
+                <div className="form-flex">
                     <div className="form-input-field">
                         <label for="Country">Country</label>
                         <select name="Country" id="country" className="donee-text-input" required {...register('country', { required: true })}>
@@ -92,16 +106,12 @@ function PersonalInfo() {
 
                         </select>
                     </div>
-                </div>
-
-                <div>
-                    <div className="form-input" >
+                    <div className="form-input-field" >
                         <label for="Education">Education level</label><br />
                         <select name="Education" id="education" className="donee-text-input" required {...register('eduLevel', { required: true })}>
                             <option value="Senior Secondary School"> Senior Secondary School</option>
                             <option value="University"> University</option>
                             <option value="Masters"> Masters</option>
-
                         </select>
                     </div>
                 </div>
