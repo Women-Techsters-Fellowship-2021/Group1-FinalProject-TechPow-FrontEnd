@@ -1,79 +1,165 @@
-.getinvolve-page {
+.getinvolved-page {
     background-color: #fff;
 }
+
 .blue-text2 {
-    text-align: center ;
-    margin-left: 700px;
+    width: 92%;
+    height: 6em;
+    margin: auto;
+    padding: 2rem 1rem;
+}
+
+.sub-header {
+    font-weight: 700;
 }
 
 .get-involved-image {
-width: 400px;
-height:50%px;
-padding: 20px;
-}   
-.join {
-    background-color:azure;
+    max-width: 28rem;
+    width: 100%;
 }
+
+.join {
+    background-color: #fff;
+    color: #223e8b;
+    border: 2px solid #223e8b;
+    font-weight: bold;
+    flex-basis: 20%;
+    margin-inline-end: 5rem;
+}
+
+.join:hover {
+    background-color: #223e8b;
+    color: #fff;
+}
+
+#partner {
+    margin-top: -2em;
+}
+
+#partner-text {
+    margin-top: -2.6em;
+    flex-basis: 100%;
+}
+
 .txt-one {
     font-size: 1.7rem;
     padding-top: 150px;
 }
+
 .flex-text {
     margin-top: 1em;
     font-size: 1.5rem;
+    color: #223e8b;
 }
-.become {
-    padding-top: 15px;
-    font-size: 1.7rem;
-    margin-left: 20px;
 
-}
-.flex-text2 {
-    margin-top: 1px;
-    font-size: 1.5rem;
-    margin-left: 20px;
-
-}
-.blue-text {
-    text-align: center;
-
-}
-.career-images {
+.volunteer-container {
     display: flex;
+    justify-content: space-between;
 }
-/* .conference {
-    text-align: center;
-    color:#000f3b;
-} */
-.vol-primary {
-    display: flex;
+
+.volunteer-heading {
+    font-size: 2.5em;
 }
-.all-images {
-    align-items: center;
+
+.vol-container-txt {
+    margin-top: 3em;
 }
-.help {
-    background-color: aliceblue;
-    max-width: 100%;
-     height: 300px; ;
+
+.vol-txt {
+    margin-bottom: 5px;
+    color: #000f3b;
 }
+
+#earth-img {
+    flex-basis: 50%;
+}
+
+#grid-img-section {
+    width: 100%;
+    margin: auto;
+}
+
+.grid-area {
+    width: 66%;
+    margin: auto;
+}
+
+.grid-column1 {
+    margin-right: 4em;
+}
+
+.grid-column2 {
+    margin-bottom: 1.5em;
+}
+
+.grid-img-container {
+    width: 100%;
+    max-width: 34em;
+}
+
+#help {
+    width: 100%;
+    height: 400px;
+    margin: 0;
+}
+
 .dig-africa {
- width: 300px;
- height:20%px;
- align-items: center;
- margin-bottom: 50px; 
- margin-right: 100px;
+    margin-top: -3em;
+    width: 100%;
+    max-width: 26em;
+}
 
+.newsletter-flex {
+    margin: auto;
 }
+
 .newsletter-container {
-    background-color: #000f3b;;
-    height: 150px;
-    margin-right: 250px;
-    margin-left: 350px;
+    background-color: #000f3b;
+    /* margin: auto; */
+    width: max-content;
+    height: max-content;
+    padding: 0.5em 1em;
 }
-.new {
+
+.newsletter-container h5 {
+    font-size: 1.2rem;
+    padding: 1em;
+}
+
+.newsletter-form {
+    display: flex;
+    margin-bottom: 1em;
+}
+
+.white-hover {
+    background-color: #fff;
+}
+
+.white-hover:hover {
+    background-color: #fff;
+}
+
+.white-hover:focus {
+    background-color: #fff;
+}
+
+.subscribe {
+    padding: 0 2em;
+    margin-left: 1em;
+    font-weight: bold;
+    background-color: #fff;
+    color: #000f3b;
+    border: transparent;
+    border-radius: 4px;
+}
+
+.newsletter-text {
     color: #fff;
      font-family: Arial, Helvetica, sans-serif ;
 }
-.blue-text3 {
-    color: #000f3b;
+
+.long-blue-btn {
+    background-color: #000f3b;
+    margin-top: 1em;
+    width: 24.5em;
 }

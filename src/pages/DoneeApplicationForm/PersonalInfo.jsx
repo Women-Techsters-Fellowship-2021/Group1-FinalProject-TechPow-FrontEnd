@@ -40,7 +40,7 @@ function PersonalInfo() {
                             className="donee-text-input"
                             required
                             id="lastname" {...register('lastName', { required: true })} 
-                        />                                             
+                        />     
                         <span className="notify">Please enter your surname here.</span>
                     </div>
                 </div>
@@ -57,6 +57,7 @@ function PersonalInfo() {
                             placeholder="+234xxxxxxxxxx"
                             {...register('phoneNumber', { required: true })}
                         />
+                        <span className="notify">Please enter your phone number with your country code in the above format.</span>
                     </div>
                     <div className="form-input-field">
                         <label>Date of Birth</label><br />

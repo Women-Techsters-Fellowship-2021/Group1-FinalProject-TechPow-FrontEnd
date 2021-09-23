@@ -27,7 +27,8 @@ function DonorApplication() {
     const SubmitDonation = (data) => {
         let newDonation = {
             userID: userId,
-            fullName: data.fullName,
+            firstName: data.firstName,
+            lastName: data.lastName,
             phoneNumber: data.phoneNumber,
             homeAddress: data.homeAddress,
             country: data.country,
@@ -79,12 +80,9 @@ function DonorApplication() {
         <DefaultLayout>
            <div className="container bg-pattern donor-app-form-page">
                 <div className="container">
-
-                    {/* <div className="application-page-header"> */}
                         <h1 className="center-head">
                                 <span className="green appname">Welcome To T</span><span className="appname">ech</span><span className="green appname">P</span><span className="appname">ow</span>
                         </h1>
-                    {/* </div> */}
                     <div className="back-link">
                         <a href="/LandingPage"> &lt; Back to home</a>
                     </div>
@@ -102,27 +100,36 @@ function DonorApplication() {
                             </div>
                         </div>
 
-
-                        {/* <div className="donee-form donation-menu">
-                        <span className="donation-info">Donation Information</span>
-                        </div> */}
-
                         <div className="donor-app-form">
                             <form className="donor-form" onSubmit={handleSubmit(SubmitDonation)}>
 
                                 <div className="form-flex">
                                     <div className="form-input-field">
-                                        <label>Full Name</label>
+                                        <label>First Name</label>
                                         <input 
                                             type="text" 
-                                            name="fullname"
+                                            name="firstName"
                                             required
                                             className="donor-text-input"
-                                            id="fullname" {...register('fullName', { required: true })} 
+                                            id="fullname" {...register('firstName', { required: true })} 
                                         />
                                         <span className="notify">Please enter a legal name here.We will ask for your preferred name later.</span>
                                     </div>
 
+                                    <div className="form-input-field">
+                                        <label>Last Name</label>
+                                        <input 
+                                            type="text" 
+                                            name="lastName"
+                                            required
+                                            className="donor-text-input"
+                                            id="fullname" {...register('lastName', { required: true })} 
+                                        />
+                                        <span className="notify">Please enter a legal name here.We will ask for your preferred name later.</span>
+                                    </div>
+                                </div>
+
+                                <div className="form-flex">
                                     <div className="form-input-field">
                                         <label>Phone Number</label>
                                         <input
@@ -134,10 +141,8 @@ function DonorApplication() {
                                             placeholder="+234xxxxxxxxxx"
                                             {...register('phoneNumber', { required: true })}
                                         />
+                                        <span className="notify">Please enter your phone number with your country code in the above format.</span>
                                     </div>
-                                </div>
-
-                                <div className="form-flex">
                                     <div className="form-input-field">
                                         <label>What is your home address?</label>
                                         <input
@@ -147,6 +152,9 @@ function DonorApplication() {
                                             required
                                             id="address" {...register('homeAddress', { required: true })} />
                                     </div>
+                                </div>
+
+                                <div className="form-flex">
                                     <div className="form-input-field">
                                         <label for="Country">Country</label>
                                         <select name="Country" id="country" className="donor-text-input"
@@ -158,9 +166,6 @@ function DonorApplication() {
                                             <option value="SouthAfrica"> SouthAfrica</option>
                                         </select>
                                     </div>
-                                </div>
-
-                                <div className="form-flex">
                                     <div className="form-input-field">
                                         <label>Reason for giving out the item</label>
                                         <input 
@@ -170,7 +175,10 @@ function DonorApplication() {
                                             className="donor-text-input"
                                             id="donationreason" {...register('reasonForDonation', { required: true })} />
                                     </div>
-                                    <div className="form-input">
+                                </div>
+
+                                <div className="form-flex">
+                                    <div className="form-input-field">
                                         <label for="update">Device Specification</label>
                                         <input 
                                             type="text" 
@@ -179,9 +187,6 @@ function DonorApplication() {
                                             className="donor-text-input"
                                             id="devicespec" {...register('deviceSpecification', { required: true })} />
                                     </div>
-                                </div>
-
-                                <div className="form-flex">
                                     <div className="form-input-field" >
                                         <label for="Ownership">Are you the owner of the device?</label>
                                         <select name="ownership"
@@ -191,6 +196,9 @@ function DonorApplication() {
                                             <option value="No"> No</option>
                                         </select>
                                     </div>
+                                </div>
+
+                                <div className="form-flex">
                                     <div className="form-input-field">
                                         <label for="Country">Device Condition</label>
                                         <select name="devicecondition" id="devicecondition" className="donor-text-input" {...register('deviceCondition', { required: true })}>
@@ -200,17 +208,16 @@ function DonorApplication() {
                                         </select>
                                         <span className="notify"><strong>Please note:</strong>You cannot donate a damaged device now. We would let you know when that option is available.</span>
                                     </div>
-                                </div>
-
-                                <div className="form-input" >
-                                    <label for="update">Would you like to receive an update on the progress of the donee?</label>
-                                    <select name="update"
-                                        required
-                                        className="donor-text-input"
-                                        id="update" {...register('updateRequest', { required: true })}>
-                                        <option value="Yes">Yes</option>
-                                        <option value="No"> No</option>
-                                        </select>
+                                    <div className="form-input-field">
+                                        <label for="update">Would you like to receive an update on the progress of the donee?</label>
+                                        <select name="update"
+                                            required
+                                            className="donor-text-input"
+                                            id="update" {...register('updateRequest', { required: true })}>
+                                            <option value="Yes">Yes</option>
+                                            <option value="No"> No</option>
+                                            </select>
+                                    </div>
                                 </div>
 
                                 <div className="schedule-section">

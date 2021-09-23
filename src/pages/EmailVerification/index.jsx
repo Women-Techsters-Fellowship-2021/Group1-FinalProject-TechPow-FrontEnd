@@ -5,19 +5,20 @@ import TechPow_logo from '../../resources/Logos/TechPow Logo.png';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { AppContext } from '../../components/AppStateProvider';
-//importing the styles
-import './style.css';
 import { toast } from 'react-toastify';
 
+//importing the styles
+import './style.css';
+
 function EmailVerification() {
-    const { state: { userEmail, userFirstName } } = useContext(AppContext);
+    const { state: { userEmail } } = useContext(AppContext);
 
     const ResendEmail = () => {
 
         const newEmail = {
             toEmail: userEmail,
             subject: "TechPow Registration Notification",
-            body: "Dear " + userFirstName + ". Thank you for completing you application on TechPow. Please click on the link below to login and complete your application."
+            body: "Dear " + userEmail + ". Thank you for completing you application on TechPow. Please click on the link below to login and complete your application."
         }
         //Calling api for email
         axios.post('https://localhost:44326/api/v1/Email/SendEmail',

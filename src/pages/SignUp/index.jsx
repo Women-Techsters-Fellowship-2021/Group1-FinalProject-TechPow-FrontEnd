@@ -49,7 +49,7 @@ export default function Signup() {
         //return (/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@#$%^&!]{8,}$/).test(data)
     };
 
-    const registerUser = ({ firstname, lastname, email, password, confirmPassword, role }) => {
+    const registerUser = ({ email, password, confirmPassword, role }) => {
 
         if (!email) {
             // console.log("Error");
@@ -67,8 +67,6 @@ export default function Signup() {
 
         //create a new user object and post to the provided API
         const newUser = {
-            firstName: firstname,
-            lastName: lastname,
             email: email,
             password: password,
             ConfirmPassword: confirmPassword,
@@ -87,7 +85,6 @@ export default function Signup() {
                         payload: {
                             userId: newUser.userId,
                             userEmail: newUser.email,
-                            userFirstName: newUser.firstName,
                             userRole: newUser.typeofuser,
                         },
                     })
@@ -109,7 +106,7 @@ export default function Signup() {
         const newEmail = {
             toEmail: newUser.email,
             subject: "TechPow Registration Notification",
-            body: "Dear " + newUser.firstName + ". Thank you for completing your registration on TechPow. Please click on the link below to login and complete your application."
+            body: "Dear " + newUser.email + ". Thank you for completing your registration on TechPow. Please click on the link below to login and complete your application."
         }
         //Calling api for email
         axios.post('https://localhost:44326/api/v1/Email/SendEmail',
@@ -148,30 +145,6 @@ export default function Signup() {
 
             <div className="col-md-4">
                 <form id="form-group" onSubmit={handleSubmit(registerUser)}>
-                    <div className="form-group">
-                        <label asp-for="FirstName">FirstName</label>
-                        <input
-                            type="text"
-                            name="firstName"
-                            id="firstName"
-                            className="form-control"
-                            required
-                            {...register('firstname', { required: true }
-                            )}
-                        />
-                    </div>
-                    <div className="form-group">
-                        <label asp-for="LastName">LastName</label>
-                        <input
-                            type="text"
-                            name="lastName"
-                            id="lastName"
-                            className="form-control"
-                            required
-                            {...register('lastname', { required: true }
-                            )}
-                        />
-                    </div>
                     <div className="form-group">
                         <label asp-for="Email">Email</label>
                         <input

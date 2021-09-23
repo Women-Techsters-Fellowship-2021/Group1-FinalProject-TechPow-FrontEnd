@@ -19,7 +19,7 @@
     max-width: 60rem;
     height: 100%;
     margin-left: 18em;
-    margin-top: -10.6em;
+    margin-top: -13.7em;
     padding: 0;
     box-shadow: 1px 2px 4px 1px #c2f8f0;
     background-color: #fff;
@@ -27,6 +27,10 @@
     border-radius: 1rem;
     font-size: 1rem;
     cursor: pointer;
+}
+
+.application-container h4 {
+    color: #000f3b;
 }
 
 .donor-form {

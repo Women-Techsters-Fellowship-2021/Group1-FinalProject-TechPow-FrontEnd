@@ -1,12 +1,10 @@
-import React from 'react';
-import { createContext, useReducer } from 'react';
+import React, { createContext, useReducer } from 'react';
 import doneeInfo from '../resources/DoneeData/donee-info';
 
 export const AppContext = createContext();
 
 const initialState = {
     isLoggedIn: false,
-    userFirstName: null,
     userId: null,
     userEmail: null,
     Token: null,
@@ -41,7 +39,6 @@ function reducer(state, action) {
         saveState.isLoggedIn = false;
         saveState.userId = action.payload.userId;
         saveState.userEmail = action.payload.userEmail;
-        saveState.userFirstName = action.payload.userFirstName;
         saveState.userRole = action.payload.userRole;
     }
 
