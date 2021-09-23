@@ -17,7 +17,7 @@ function Verification() {
     let imageselectLetter = "";
     let imageselectID = "";
 
-    const { state: { userEmail, userFirstName, applicationForm, userId, completedTabs, imageSelectedID, imageSelectedLetter, imageSelectedPass, Token }, dispatch } = useContext(AppContext);
+    const { state: { userEmail, applicationForm, userId, completedTabs, imageSelectedID, imageSelectedLetter, imageSelectedPass, Token }, dispatch } = useContext(AppContext);
 
     const ImageSelectorHandler = (e) => {
         imageselectPass = e.target.files[0];
@@ -157,7 +157,7 @@ function Verification() {
         const newEmail = {
             toEmail: userEmail,
             subject: "TechPow Application Notification",
-            body: "Dear " + userFirstName + ". Thank you for completing your application. Our Team will review your application and will let you know about the result within approximately 20 days"
+            body: "Dear " + userEmail + ". Thank you for completing your application. Our Team will review your application and will let you know about the result within approximately 20 days"
         }
         //Calling api for email
         Axios.post('https://localhost:44326/api/v1/Email/SendEmail',
