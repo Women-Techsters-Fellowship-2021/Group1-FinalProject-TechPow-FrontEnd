@@ -69,7 +69,6 @@ function EmailVerification() {
                 <div className="incorrectemail-div">
                     <p className="ver-text">Incorrect Email address?</p><span className="green change-email" onClick={() => displayChangeEmailForm("change-email-container")}> Change it here</span>
                 </div>
-                {viewForm === ""}
                 {viewForm === "change-email-container" &&
                 <div className="change-email-container">
                     <form>
