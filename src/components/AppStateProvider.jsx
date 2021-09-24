@@ -49,6 +49,10 @@ function reducer(state, action) {
         saveState.Token = action.payload.Token;
     }
 
+    if (action.type === 'UPDATE_EMAIL') {
+        saveState.userEmail = action.payload.userEmail;
+    }
+
     if (action.type === 'LOGOUT') {
         saveState.isLoggedIn = false;
         saveState.userId = null;

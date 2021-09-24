@@ -83,11 +83,27 @@ export default function Signup() {
                     context.dispatch({
                         type: 'REGISTER',
                         payload: {
-                            userId: newUser.userId,
-                            userEmail: newUser.email,
-                            userRole: newUser.typeofuser,
+                            userId: result.data.data.id,
+                            userEmail: result.data.data.email,
+                            userRole: result.data.data.typeofuser,
                         },
                     })
+                    const newEmail = {
+                        toEmail: newUser.email,
+                        subject: "TechPow Registration Notification",
+                        body: "Dear " + newUser.email + ". Thank you for completing your registration on TechPow. Please click on the link below to login and complete your application."
+                    }
+                    //Calling api for email
+                    axios.post('https://localhost:44326/api/v1/Email/SendEmail',
+                        newEmail)
+                        .then(result => {
+                            console.log(result);
+                            if (result.status === 200) {
+                                return true;
+                            }
+                            return false;
+                        }
+                        );
                     history.push('/EmailVerification');
                     return true;
                 }
@@ -103,22 +119,6 @@ export default function Signup() {
             })
 
 
-        const newEmail = {
-            toEmail: newUser.email,
-            subject: "TechPow Registration Notification",
-            body: "Dear " + newUser.email + ". Thank you for completing your registration on TechPow. Please click on the link below to login and complete your application."
-        }
-        //Calling api for email
-        axios.post('https://localhost:44326/api/v1/Email/SendEmail',
-            newEmail)
-            .then(result => {
-                console.log(result);
-                if (result.status === 200) {
-                    return true;
-                }
-                return false;
-            }
-            );
     };
 
 
@@ -185,7 +185,7 @@ export default function Signup() {
                         {/* <img src={show} alt="" className="sm-icon show-icon" /> */}
                     </div>
                     <div className="drop-down">
-                        <label for="roles">Apply as:</label>
+                        <label>Apply as:</label>
                         <select name="role" id="role" {...register('role', { required: true })}>
                             <option value="Donor">Donor</option>
                             <option value="Donee">Donee</option>

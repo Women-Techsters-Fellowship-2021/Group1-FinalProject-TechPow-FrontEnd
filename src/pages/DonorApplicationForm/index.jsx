@@ -13,15 +13,16 @@ import './style.css';
 
 function DonorApplication() {
     const { register, handleSubmit } = useForm();
-    const { state: { Token, userId }, dispatch, isLoggedIn } = useContext(AppContext);
+    const { state: { Token, userId, userEmail }, dispatch, isLoggedIn } = useContext(AppContext);
     const usehistory = useHistory();
 
-    if (!isLoggedIn) {
-        usehistory.push('/Login');
-        return toast.error("Please Login to Donate....",
+    if (isLoggedIn === false) {
+        toast.error("Please Login to Donate...",
             {
                 position: toast.POSITION.TOP_CENTER
             });
+        usehistory.push('/Login');
+
     }
 
     const SubmitDonation = (data) => {
@@ -60,7 +61,24 @@ function DonorApplication() {
                             donor: newDonation,
                         },
                     })
-                    //usehistory.push('/LandingPage');
+                    let newEmail = {
+                        toEmail: userEmail,
+                        subject: "TechPow Application Notification",
+                        body: "Dear " + userEmail + ". Thank you for completing your donation application. Our Team will review your application and will let you know about the result within approximately 20 days"
+                    }
+
+                    //Calling api for email
+                    Axios.post('https://localhost:44326/api/v1/Email/SendEmail',
+                        newEmail)
+                        .then(result => {
+                            console.log(result);
+                            if (result.status === 200) {
+                                return true;
+                            }
+                            return false;
+                        }
+                        );
+                    usehistory.push('/Thankyou-cardDonor');
                     return true;
                 }
                 for (let index = 0; index < result.data.errors.length; index++) {
@@ -73,16 +91,17 @@ function DonorApplication() {
                     toast.error(error.response.data.errors[index]);
                 }
 
-            });
+            })
+
     }
 
     return (
         <DefaultLayout>
-           <div className="container bg-pattern donor-app-form-page">
+            <div className="container bg-pattern donor-app-form-page">
                 <div className="container">
-                        <h1 className="center-head">
-                                <span className="green appname">Welcome To T</span><span className="appname">ech</span><span className="green appname">P</span><span className="appname">ow</span>
-                        </h1>
+                    <h1 className="center-head">
+                        <span className="green appname">Welcome To T</span><span className="appname">ech</span><span className="green appname">P</span><span className="appname">ow</span>
+                    </h1>
                     <div className="back-link">
                         <a href="/LandingPage"> &lt; Back to home</a>
                     </div>
@@ -106,24 +125,24 @@ function DonorApplication() {
                                 <div className="form-flex">
                                     <div className="form-input-field">
                                         <label>First Name</label>
-                                        <input 
-                                            type="text" 
+                                        <input
+                                            type="text"
                                             name="firstName"
                                             required
                                             className="donor-text-input"
-                                            id="fullname" {...register('firstName', { required: true })} 
+                                            id="fullname" {...register('firstName', { required: true })}
                                         />
                                         <span className="notify">Please enter a legal name here.We will ask for your preferred name later.</span>
                                     </div>
 
                                     <div className="form-input-field">
                                         <label>Last Name</label>
-                                        <input 
-                                            type="text" 
+                                        <input
+                                            type="text"
                                             name="lastName"
                                             required
                                             className="donor-text-input"
-                                            id="fullname" {...register('lastName', { required: true })} 
+                                            id="fullname" {...register('lastName', { required: true })}
                                         />
                                         <span className="notify">Please enter a legal name here.We will ask for your preferred name later.</span>
                                     </div>
@@ -158,7 +177,7 @@ function DonorApplication() {
                                     <div className="form-input-field">
                                         <label for="Country">Country</label>
                                         <select name="Country" id="country" className="donor-text-input"
-                                        {...register('country', { required: true })}>
+                                            {...register('country', { required: true })}>
                                             <option value="Egypt"> Egypt</option>
                                             <option value="Ghana"> Ghana</option>
                                             <option value="Kenya"> Kenya</option>
@@ -168,8 +187,8 @@ function DonorApplication() {
                                     </div>
                                     <div className="form-input-field">
                                         <label>Reason for giving out the item</label>
-                                        <input 
-                                            type="text" 
+                                        <input
+                                            type="text"
                                             name="donationreason"
                                             required
                                             className="donor-text-input"
@@ -180,8 +199,8 @@ function DonorApplication() {
                                 <div className="form-flex">
                                     <div className="form-input-field">
                                         <label for="update">Device Specification</label>
-                                        <input 
-                                            type="text" 
+                                        <input
+                                            type="text"
                                             name="devicespec"
                                             required
                                             className="donor-text-input"
@@ -216,59 +235,58 @@ function DonorApplication() {
                                             id="update" {...register('updateRequest', { required: true })}>
                                             <option value="Yes">Yes</option>
                                             <option value="No"> No</option>
-                                            </select>
+                                        </select>
                                     </div>
                                 </div>
 
                                 <div className="schedule-section">
                                     <h4>Schedule</h4>
                                     <div className="form-flex">
-                                        <input 
-                                            type="checkbox" 
-                                            name="sendViaOnsite" 
+                                        <input
+                                            type="checkbox"
+                                            name="sendViaOnsite"
                                             id="sendViaOnsite"
                                             className="schedule-check"
                                             required
-                                            {...register('sendViaOnsite', { required: true })} 
+                                            {...register('sendViaOnsite', { required: true })}
                                         />
                                         <p className="schedule-para">Send Via Onsite</p>
                                         <h3>-OR-</h3>
-                                        <input 
-                                            type="checkbox" 
+                                        <input
+                                            type="checkbox"
                                             name="requestforpickup"
-                                            id="requestforpickup"className="schedule-check"
-                                            required
-                                            {...register('sendViaOnsite', { required: true })} 
+                                            id="requestforpickup" className="schedule-check"
+                                            {...register('sendViaOnsite', { required: true })}
                                         />
                                         <p className="schedule-para">Request for pickup</p>
                                     </div>
                                 </div>
-                        
+
                                 <div className="t-c-para">
                                     <h5>Please acknowledge the following terms and conditions required for participation in this program.</h5>
                                 </div>
 
                                 <div className="form-flex">
-                                    <input 
-                                        type="checkbox" 
-                                        name="agreement" 
+                                    <input
+                                        type="checkbox"
+                                        name="agreement"
                                         id="agreement"
                                         className="schedule-check"
                                         required
-                                        {...register('agreement', { required: true })} 
+                                        {...register('agreement', { required: true })}
                                     />
                                     <p className="schedule-para">I agree that by donating a device, I agree to be bound by TechPow’s <Link to="/TermsOfUse" className="blue-text no-decoration">Terms of Use</Link> and <Link to="/PrivacyPolicy" className="blue-text no-decoration">Privacy Policy</Link></p>
                                 </div>
 
                                 <div className="signature">
                                     <p>Please type your full legal name here as your signature agreeing to all previous statements in this form</p>
-                                    <input 
-                                        type="text" 
-                                        name="signature" 
+                                    <input
+                                        type="text"
+                                        name="signature"
                                         id="signature"
                                         className="donor-text-input signature-box-donor"
                                         required
-                                        {...register('signature', { required: true })} 
+                                        {...register('signature', { required: true })}
                                     />
                                 </div>
 
@@ -280,7 +298,7 @@ function DonorApplication() {
                         </div>
                     </div>
                 </div>
-           </div>
+            </div>
         </DefaultLayout>
     );
 }
