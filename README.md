@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+# Group1-FinalProject-TechPow-BackEnd
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+*Group 1:* Incredible Techsters - TechPow
+=================================
+     TechPow WebAPI developed with ASP.NET/C#.
 
-## Available Scripts
+==========================*Product Description*=============================
 
-In the project directory, you can run:
+TechPow is a Web Application for connecting people who need technical devices and internet data with organization/people who are willing to donate in order to fulfil their dreams.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Users can register on the appplication as a donor to help people who are in need of digital devices for skilling up in the tech space.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+Users can also apply as a donee to make their request known, provide the necessary application details and get approved to be featured on the donee list page and get matched to a donor.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+The application process has been developed in such a way that the privilege gotten on TechPow would be received by individuals who really needs it.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+==========================*Tools*=============================
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+ReactJS
 
-### `npm run eject`
+Custom CSS
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+AXIOS - API calls
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+CLOUDINARY - Data Storage
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+==========================*Why TechPow?*=============================
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+TechPow aims to build a fully inclusive digital society.
 
-## Learn More
+Bridging the digital divide in Africa.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+TechPow gives you a platform to contribute and give back to the society.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Smooth and secure application process.
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+They provide an organised space for tech enthusiasts who need help getting the necessary devices to continue/launch a career in tech.
