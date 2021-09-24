@@ -1,5 +1,3 @@
-# Group1-FinalProject-TechPow-BackEnd
-
 *Group 1:* Incredible Techsters - TechPow
 =================================
      TechPow WebAPI developed with ASP.NET/C#.
