@@ -1,6 +1,6 @@
 *Group 1:* Incredible Techsters - TechPow
 =================================
-     TechPow WebAPI developed with ASP.NET/C#.
+     TechPow WebAPI developed with ReactJS
 
 ==========================*Product Description*=============================
 
