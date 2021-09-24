@@ -5,17 +5,19 @@
     flex-direction: column;
 }
 
-.contact-text h2 {
-    color: var(--clr-primary-400);
-}
-
 .contact-text {
     text-align: center;
 }
 
+.contact-text h2 {
+    color: var(--clr-primary-400);
+}
+
 .contact-text p {
-    font-size: 1.1.5rem;
+    font-size: 1.1rem;
+    font-weight: 500;
     color: var(--clr-neutral-200);
+    margin-bottom: -1em;
 }
 
 .third-para {
@@ -52,10 +54,6 @@
 
     #help {
         margin-inline-end: 2em;
-    }
-
-    .last-field {
-        display: flex;
     }
 
     .help-btn {
@@ -119,6 +117,17 @@
 }
 
 .text-area {
+    margin-left: -3em;
     padding-block: 2em;
-    width: 100%;
+    margin-bottom: -5em;
+    width: 50%;
+}
+
+.textarea-flex {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.contact-textarea {
+    margin-bottom: -5em;
 }
