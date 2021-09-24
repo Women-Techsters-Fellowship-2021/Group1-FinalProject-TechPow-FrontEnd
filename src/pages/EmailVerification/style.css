@@ -30,10 +30,31 @@ text-decoration: none;
 .verificationpage-header{
     margin : 2rem;
     display: flex;
-      align-items: center;
+    align-items: center;
     justify-content: space-between;
 }
 
 .incorrectemail-div {
+    display: flex;
     padding-top: 2rem;
+}
+
+.change-email-container {
+    background-color: #ccc;
+    padding: 1em 2em;
+}
+
+.change-email {
+    margin-left: 0.2em;
+    margin-top: -0.1em;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.change-email:hover {
+    text-decoration: underline 2px;
+}
+
+.email-form {
+    font-size: 0.875rem;
 }

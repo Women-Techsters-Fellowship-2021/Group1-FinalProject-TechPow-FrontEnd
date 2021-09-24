@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useContext } from 'react';
 import emailIcon from '../../resources/images/email-verification.jpg';
 import TechPow_logo from '../../resources/Logos/TechPow Logo.png';
@@ -12,6 +12,7 @@ import './style.css';
 
 function EmailVerification() {
     const { state: { userEmail } } = useContext(AppContext);
+    const [viewForm, setViewForm] = useState('');
 
     const ResendEmail = () => {
 
@@ -33,6 +34,11 @@ function EmailVerification() {
             );
 
     }
+
+    const displayChangeEmailForm = (div) => {
+        setViewForm(div);
+    }
+
     return (
         <div className="bg-pattern">
             <div className="verificationpage-header">
@@ -61,9 +67,22 @@ function EmailVerification() {
                     <button className="btn btn-primary" onClick={ResendEmail}>Resend Email </button>
                 </div>
                 <div className="incorrectemail-div">
-                    <p className="ver-text">Incorrect Email address? <Link to="" > Change it here</Link></p>
+                    <p className="ver-text">Incorrect Email address?</p><span className="green change-email" onClick={() => displayChangeEmailForm("change-email-container")}> Change it here</span>
                 </div>
-
+                {viewForm === "change-email-container" &&
+                <div className="change-email-container">
+                    <form>
+                        <input
+                            type="text"
+                            className="donee-text-input white-hover email-form"
+                            placeholder="mynewemail@gmail.com"
+                        />
+                        <button className="btn-primary">
+                            Change email
+                        </button>
+                    </form>
+                </div>
+                }
 
             </div>
 
