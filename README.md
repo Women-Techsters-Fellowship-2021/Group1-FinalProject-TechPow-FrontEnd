@@ -1,6 +1,6 @@
 *Group 1:* Incredible Techsters - TechPow
 =================================
-     TechPow WebAPI developed with ReactJS AND ASP.NET/C#
+     TechPow WebAPI developed with ReactJS
 
 Backend Repository link: https://github.com/Women-Techsters-Fellowship-2021/Group1-FinalProject-TechPow-BackEnd
 
