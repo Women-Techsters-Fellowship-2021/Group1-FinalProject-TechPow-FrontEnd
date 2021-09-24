@@ -44,9 +44,9 @@ function LandingPage() {
                                     <p className="banner-para">
                                         <span className="green appname">T</span><span className="appname">ech</span><span className="green appname">P</span><span className="appname">ow</span> is connecting <strong>people and organizations </strong> that need <strong>technical devices and internet data</strong> with <strong>people that are willing </strong>to donate in order to fulfil their dreams.
                                     </p>
-                                   <Link to="/About">
+                                    <Link to="/About">
                                         <button className=" btn-one btn-primary">Learn more</button>
-                                   </Link>
+                                    </Link>
                                 </div>
                             </div>
                             <div>
@@ -162,9 +162,9 @@ function LandingPage() {
                                         <p>Nigeria</p>
                                     </div>
                                 </div>
-                                <Link to="/">
+                                <Link to="/DonorApplicationForm">
                                     <button className=" btn btn-primary">Donate</button>
-                               </Link>
+                                </Link>
                             </div>
                             <div>
                                 <div className="donee-img">
@@ -183,9 +183,9 @@ function LandingPage() {
                                         <p>Kenya</p>
                                     </div>
                                 </div>
-                               <Link to="/">
+                                <Link to="/DonorApplicationForm">
                                     <button className=" btn btn-primary">Donate</button>
-                               </Link>
+                                </Link>
                             </div>
                             <div>
                                 <div className="donee-img">
@@ -204,9 +204,9 @@ function LandingPage() {
                                         <p>Egypt</p>
                                     </div>
                                 </div>
-                                <Link to="/">
+                                <Link to="/DonorApplicationForm">
                                     <button className=" btn btn-primary">Donate</button>
-                               </Link>
+                                </Link>
                             </div>
                         </div>
                     </div>

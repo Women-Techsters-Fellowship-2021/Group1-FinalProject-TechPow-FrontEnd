@@ -88,6 +88,22 @@ export default function Signup() {
                             userRole: newUser.typeofuser,
                         },
                     })
+                    const newEmail = {
+                        toEmail: newUser.email,
+                        subject: "TechPow Registration Notification",
+                        body: "Dear " + newUser.email + ". Thank you for completing your registration on TechPow. Please click on the link below to login and complete your application."
+                    }
+                    //Calling api for email
+                    axios.post('https://localhost:44326/api/v1/Email/SendEmail',
+                        newEmail)
+                        .then(result => {
+                            console.log(result);
+                            if (result.status === 200) {
+                                return true;
+                            }
+                            return false;
+                        }
+                        );
                     history.push('/EmailVerification');
                     return true;
                 }
@@ -103,22 +119,6 @@ export default function Signup() {
             })
 
 
-        const newEmail = {
-            toEmail: newUser.email,
-            subject: "TechPow Registration Notification",
-            body: "Dear " + newUser.email + ". Thank you for completing your registration on TechPow. Please click on the link below to login and complete your application."
-        }
-        //Calling api for email
-        axios.post('https://localhost:44326/api/v1/Email/SendEmail',
-            newEmail)
-            .then(result => {
-                console.log(result);
-                if (result.status === 200) {
-                    return true;
-                }
-                return false;
-            }
-            );
     };
 
 

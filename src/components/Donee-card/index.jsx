@@ -16,7 +16,7 @@ function DoneeCard({ donee }) {
                 <div>
                     <img src={donee.imageLink} alt="donee" className="img-donee" />
                     <div className="donee-info">
-                        <h2 className="donee-fullname">{donee.fullName}</h2>
+                        <h2 className="donee-fullname">{donee.firstName}{' '}{donee.lastName}</h2>
                         <p className="grey-text desc">Description</p>
                         <p className="reason">{donee.reasonForApplication}... <span className="green"><strong className="r">Read more</strong></span></p>
                         <div className="item-location">
