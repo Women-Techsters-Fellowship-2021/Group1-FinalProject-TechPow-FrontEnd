@@ -22,7 +22,7 @@ import Verification from './pages/DoneeApplicationForm/Verification';
 import EmailVerification from './pages/EmailVerification';
 import Donees from './pages/Donees';
 import Searchbox from './components/Searchbox';
-import DoneeProfile from './pages/Donee-Profile';
+import ReadMore from './pages/ReadMore';
 import PrivacyPolicy from './pages/PrivacyPolicy/PrivacyPolicy';
 import TermsOfUse from './pages/PrivacyPolicy/TermsOfUse'
 import GetInvolved from './pages/GetInvolved';
@@ -102,7 +102,7 @@ function App() {
           </Route>
 
           <Route exact path="/donees/:doneeid"> 
-            <DoneeProfile />
+            <ReadMore />
           </Route>
 
           <Route path="/Searchbox">
