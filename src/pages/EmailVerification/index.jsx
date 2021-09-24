@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useContext } from 'react';
+import { useForm } from 'react-hook-form';
 import emailIcon from '../../resources/images/email-verification.jpg';
 import TechPow_logo from '../../resources/Logos/TechPow Logo.png';
 import { Link } from 'react-router-dom';
@@ -11,8 +12,9 @@ import { toast } from 'react-toastify';
 import './style.css';
 
 function EmailVerification() {
-    const { state: { userEmail } } = useContext(AppContext);
+    const { state: { userEmail, userId }, dispatch } = useContext(AppContext);
     const [viewForm, setViewForm] = useState('');
+    const { register, handleSubmit } = useForm();
 
     const ResendEmail = () => {
 
@@ -26,6 +28,7 @@ function EmailVerification() {
             newEmail)
             .then(result => {
                 console.log(result);
+                console.log(userEmail);
                 if (result.status === 200) {
                     toast.success("Email has been resent!");
                 }
@@ -37,6 +40,29 @@ function EmailVerification() {
 
     const displayChangeEmailForm = (div) => {
         setViewForm(div);
+    }
+
+    const UpdateEmail = ({ update_email }) => {
+        // let email_value = update_email.value
+        console.log(userId);
+        axios.patch(`https://localhost:44326/api/v1/Auth?userID=${userId}`,
+            { email: update_email })
+            .then(result => {
+                console.log(result);
+                if (result.status === 200) {
+                    toast.success("Email has been updated!");
+                    dispatch({
+                        type: 'UPDATE_EMAIL',
+                        payload: {
+                            userEmail: update_email,
+                        }
+                    });
+                }
+
+                return false;
+            }
+            );
+
     }
 
     return (
@@ -70,18 +96,21 @@ function EmailVerification() {
                     <p className="ver-text">Incorrect Email address?</p><span className="green change-email" onClick={() => displayChangeEmailForm("change-email-container")}> Change it here</span>
                 </div>
                 {viewForm === "change-email-container" &&
-                <div className="change-email-container">
-                    <form>
-                        <input
-                            type="text"
-                            className="donee-text-input white-hover email-form"
-                            placeholder="mynewemail@gmail.com"
-                        />
-                        <button className="btn-primary">
-                            Change email
-                        </button>
-                    </form>
-                </div>
+                    <div className="change-email-container">
+                        <form onSubmit={handleSubmit(UpdateEmail)}>
+                            <input
+                                name="update_email"
+                                type="text"
+                                required
+                                className="donee-text-input white-hover email-form"
+                                placeholder="mynewemail@gmail.com"
+                                {...register('update_email', { required: true })}
+                            />
+                            <button type="submit" className="btn-primary">
+                                Change email
+                            </button>
+                        </form>
+                    </div>
                 }
 
             </div>

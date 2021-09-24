@@ -83,9 +83,9 @@ export default function Signup() {
                     context.dispatch({
                         type: 'REGISTER',
                         payload: {
-                            userId: newUser.userId,
-                            userEmail: newUser.email,
-                            userRole: newUser.typeofuser,
+                            userId: result.data.data.id,
+                            userEmail: result.data.data.email,
+                            userRole: result.data.data.typeofuser,
                         },
                     })
                     const newEmail = {
