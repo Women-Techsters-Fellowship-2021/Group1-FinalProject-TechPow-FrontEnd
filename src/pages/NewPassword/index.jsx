@@ -14,7 +14,7 @@ function CreateNewPassword() {
                         <p>We will ask for this password whenever you want to log in.</p>
                         <form method="post">
                             <div className="create-pwd-box">
-                                <label for="password">New Password</label>
+                                <label>New Password</label>
                                 <input
                                     type="password"
                                     name="password"
@@ -23,11 +23,11 @@ function CreateNewPassword() {
                                 />
                             </div>
                             <div className="create-pwd-box">
-                                <label for="password">Re-enter Password</label>
+                                <label>Re-enter Password</label>
                                 <input
-                                    type="password"
-                                    name="password"
-                                    id="password"
+                                    type="confirmpassword"
+                                    name="confirmpassword"
+                                    id="confirmpassword"
                                     className="form-control pwd-field"
                                 />
                             </div>
