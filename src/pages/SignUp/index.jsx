@@ -51,19 +51,19 @@ export default function Signup() {
 
     const registerUser = ({ email, password, confirmPassword, role }) => {
 
-        if (!email) {
-            // console.log("Error");
-            return toast.error("Please provide an email");
-        }
-        if (!password) {
-            return toast.error("Please provide a password");
-        }
-        if (password !== confirmPassword) {
-            return toast.error("Passwords don't match");
-        }
-        if (!role) {
-            return toast.error("Select your action from the dropdown");
-        }
+        // if (!email) {
+        //     // console.log("Error");
+        //     return toast.error("Please provide an email");
+        // }
+        // if (!password) {
+        //     return toast.error("Please provide a password");
+        // }
+        // if (password !== confirmPassword) {
+        //     return toast.error("Passwords don't match");
+        // }
+        // if (!role) {
+        //     return toast.error("Select your action from the dropdown");
+        // }
 
         //create a new user object and post to the provided API
         const newUser = {
@@ -91,7 +91,7 @@ export default function Signup() {
                     const newEmail = {
                         toEmail: newUser.email,
                         subject: "TechPow Registration Notification",
-                        body: "Dear " + newUser.email + ". Thank you for completing your registration on TechPow. Please click on the link below to login and complete your application."
+                        body: "Dear " + newUser.email + ". Thank you for completing your registration on TechPow. Please click on the link to login and complete your application. http://localhost:3000/Login"
                     }
                     //Calling api for email
                     axios.post('https://localhost:44326/api/v1/Email/SendEmail',

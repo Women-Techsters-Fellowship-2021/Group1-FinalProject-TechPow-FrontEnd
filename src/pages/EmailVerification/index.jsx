@@ -21,7 +21,7 @@ function EmailVerification() {
         const newEmail = {
             toEmail: userEmail,
             subject: "TechPow Registration Notification",
-            body: "Dear " + userEmail + ". Thank you for completing you application on TechPow. Please click on the link below to login and complete your application."
+            body: "Dear " + userEmail + ". Thank you for completing you application on TechPow. Please click on the link to login and complete your application. http://localhost:3000/Login"
         }
         //Calling api for email
         axios.post('https://localhost:44326/api/v1/Email/SendEmail',

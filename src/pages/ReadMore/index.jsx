@@ -32,7 +32,7 @@ function ReadMore({ key }) {
                         <div>
                             <img src={donation} alt="" className="small-icon" />
                             <p className="item">{currentDonee.current.itemNeeded}</p>
-                            </div>
+                        </div>
                         <div>
                             <img src={location} alt="" className="small-icon" />
                             <p className="location">{currentDonee.current.country}</p>
@@ -43,7 +43,7 @@ function ReadMore({ key }) {
                         <div className="white-card form-container">
                             <p>Help donate this request</p>
                             <div className="small-flex-btns">
-                                <Link to="/Home">
+                                <Link to="/DonorApplicationForm">
                                     <button className="btn-primary">
                                         Donate
                                     </button>

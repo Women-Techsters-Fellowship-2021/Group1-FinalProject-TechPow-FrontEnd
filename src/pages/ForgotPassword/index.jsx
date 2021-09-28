@@ -15,18 +15,28 @@ function ForgotPassword() {
     const history = useHistory();
 
     const ConfirmUserEmail = ({ reset_email }) => {
+
+        let user_email = {
+            email: reset_email
+        }
         axios.get(`https://localhost:44326/api/v1/Auth/GetUserEmail?Email=${reset_email}`)
             .then(result => {
                 if (result.data.success) {
                     console.log(result.data);
                     history.push('/Authentication');
-                    return true;
+                    axios.post('https://localhost:44326/api/v1/ResetPassword/SendOTPCode', user_email)
+                        .then(result => {
+                            console.log(result);
+                            if (result.status == 200) {
+                                toast.success(result.data);
+                            }
+                            toast.error(result.data.message);
+                        })
+                        .catch(error => {
+                            toast.error(error.response.data.message);
+                        })
                 }
-                toast.error(result.data.message);
-            })
-            .catch(error => {
-                toast.error(error.response.data.message);
-            })
+            });
     }
     return (
         <DefaultLayout>
