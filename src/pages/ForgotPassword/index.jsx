@@ -27,7 +27,7 @@ function ForgotPassword() {
                     axios.post('https://localhost:44326/api/v1/ResetPassword/SendOTPCode', user_email)
                         .then(result => {
                             console.log(result);
-                            if (result.status == 200) {
+                            if (result.status === 200) {
                                 toast.success(result.data);
                             }
                             toast.error(result.data.message);
