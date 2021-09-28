@@ -19,145 +19,117 @@ import imageOne from '../../resources/images/Get Involve1.png';
 function GetInvolved() {
     return(
         <DefaultLayout>
-            <div className="getinvolve-page">
-                <div className="blue-text2">
+            <div className="getinvolved-page">
+
+                <div className="container">
+                    <div className="split blue-text2">
+                        <h1 className="sub-header">
+                            <span className="appname">Get <b className="green appname">Involved</b></span>
+                        </h1>
                     
-                        <button className="join">
+                        <button className="btn-primary join">
                             Join Us
-
                         </button>
-
+                    </div>
                 </div>
-                <section>
-                    <div className="container">
-                            <h1 className="sub-header">
-                                <span className="appname">Get <b className="green appname">Involved</b></span>
-                            </h1>
-                        <div className="split">
-                            <div >
-                             
-                              <img src={imageOne} alt="hand-shaking" className="get-involved-image"/>
 
+                <section id="partner">
+                    <div className="container">                
+                        <div className="split">
+                            <div>
+                                <img src={imageOne} alt="hand-shaking" className="get-involved-image"/>
                             </div>
-                            <div>
-                            <h1 className="txt-one">
-                                <span className="appname">Partner With <b></b></span><span className="green appname">Us</span>
 
-                            </h1>
-                            <p className="flex-text">
-                                Join and partner with us as a Non-governmental body 
+                            <div id="partner-text">
+                                <h1 className="txt-one">
+                                    <span className="appname">Partner With <b></b></span><span className="green appname">Us</span>
 
-                                in order to accomplish the aims and objectives of 
-                                the organisation TechPow avails for partnership across
-                                Afircan countries. Your involvement help us expand 
-                                to new countries and build programs all over the 
-                                world so that we may reach more people in need.
-                            </p>
-                                
-                                 <button className="btn-primary get">
-                                    Get Started
-                                </button>
-                            
-                               
-                        </div>
-                            
-                        </div>
-                        
+                                </h1>
+                                <p className="flex-text">
+                                    Join and partner with us as a Non-governmental body 
+
+                                    in order to accomplish the aims and objectives of 
+                                    the organisation TechPow avails for partnership across
+                                    Afircan countries. Your involvement help us expand 
+                                    to new countries and build programs all over the 
+                                    world so that we may reach more people in need.
+                                </p>
+                                <button className="btn-primary get">Get Started</button>               
+                            </div>            
+                        </div>         
                     </div>
-
                 </section>
-                <section>
-                    <div className="vol-teer">
-                        <div className="split">
-                            <div>
-                                <div className="become">
-                                    <hi className="sub-header"> Become A</hi>
-                                      <br/> 
-                                    <hi className="green appname"> Volunteer</hi>
-                                </div>
-                             <p className="flex-text2">
-                                Join and partner with us as a Non-governmental body 
 
-                                in order to accomplish the aims and objectives of 
-                                the organisation TechPow avails for partnership across
-                                Afircan countries. 
-                             </p>
-                             <button  className="btn-primary get">
+                <section className="bg-primary">
+                    <div className="container">
+                        <div className="split volunteer-container">
+                            <div className="vol-container-txt">
+                                <h2 className="volunteer-heading vol-txt"> Become A</h2>
+                                <h2 className="green volunteer-heading"> Volunteer</h2>
+                                <p className="flex-text">
+                                    Join and partner with us as a Non-governmental body
+                                    in order to accomplish the aims and objectives of 
+                                    the organisation TechPow avails for partnership across African countries. 
+                                </p>
+                                <button  className="btn-primary">
                                   Get Started
-                             </button>
-                            </div>
-                            <div>
-                            <img src={imageTwo} alt="Earth" className="get-involved-image"/>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-                </section>
-                <section>
-                        <div>
-                            <h2 className="blue-text">Join Us in Turning Lives Around</h2>
-                        </div>
-                        <div className="all-images">
-                            <div className="career-images">
-                            <div>
-                            <img src={imagethree} alt="ngo" className="conference"/>
-                            {/* <h4 className="conference"> NGO</h4> */}
-                            </div>
-                              <div>
-                            <img src={imagefour} alt="volunteer" className="two-ppl"/>
-                         </div>
-                        </div>
-                        <div className="vol-primary">
-                          <div>
-                            <img src={imagefive} alt="events" className="eve-hall"/>
-                            </div>
-                             <div>
-                            <img src={career} alt="hand-cross" className="cross-hands"/>
-                            </div>
-
-                        </div>
-
-                        </div>
-
-
-                        
-                </section>
-                <section className="help">
-                    <div className="container">
-                        <h2 className="blue-text">Other Ways to Help</h2>
-                    </div>
-                    <div className="split">
-                        <div>
-                            <img src={together} alt="digital-africa" className="dig-africa"/>
-                      </div>
-                     <div className="newsletter-container">
-                        <form className="newsletter-form" >
-                          <h5 className="new">Newsletter Sign-Up</h5> 
-                            <input
-                            type="text"
-                            className="new-text-input"
-                            placeholder="Your Email Address here"
-                            />
-                            <div>
-                                <button className="blue-text">
-                                    Subscribe
-
                                 </button>
                             </div>
-
-                        </form>
-                        <div className="blue-text3">
-                            <button className="don">
-                                Donate
-                            </button>
+                            <div id="earth-img">
+                                <img src={imageTwo} alt="Earth" className="get-involved-image"/>
+                            </div>
                         </div>
-
                     </div>
+                </section>
 
+                <section id="grid-img-section">
+                    <div className="container">
+                        <div className="grid-area">
+                            <h2 className="blue-text center-head">
+                                Join Us in Turning Lives Around
+                            </h2>
+                            <div className="split grid-column2">
+                                <img src={imagethree} alt="ngo" className="grid-img-container grid-column1"/>
+                                <img src={imagefour} alt="volunteer" className="grid-img-container "/>
+                            </div>
+                            <div className="split">
+                                <img src={imagefive} alt="events" className="grid-img-container grid-column1"/>
+                                <img src={career} alt="hand-cross" className="grid-img-container"/>
+                            </div>
+                        </div>
                     </div>
-                    
+                </section>
+                
+                <section id="help" className="bg-primary">
+                    <div className="container">
+                        <div className="help-form-container">
+                            <h2 className="blue-text center-head">Other Ways to Help</h2>
+                            <div className="split">
+                                <div>
+                                    <img src={together} alt="digital-africa" className="dig-africa"/>
+                                </div>
+
+                                <div className="newsletter-flex">
+                                    <div className="newsletter-container">
+                                        <h5 className="newsletter-text">Newsletter Sign-Up</h5>
+                                        <form className="newsletter-form" >
+                                            <input
+                                            type="text"
+                                            className="donee-text-input white-hover"
+                                            placeholder="Your Email Address here"
+                                            />
+                                            <button className="subscribe btn-primary">
+                                                Subscribe
+                                            </button>
+                                        </form>
+                                    </div>
+                                    <button className="btn-primary long-blue-btn">
+                                            Donate
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>      
                 </section>
 
             </div>

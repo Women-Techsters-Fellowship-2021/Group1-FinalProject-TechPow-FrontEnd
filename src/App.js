@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-//import ResponsiveNavbar from './components/Navbar';
 
 //import pages
 import LandingPage from './pages/LandingPage';
@@ -23,18 +22,20 @@ import Verification from './pages/DoneeApplicationForm/Verification';
 import EmailVerification from './pages/EmailVerification';
 import Donees from './pages/Donees';
 import Searchbox from './components/Searchbox';
-import DoneeProfile from './pages/Donee-Profile';
+import ReadMore from './pages/ReadMore';
 import PrivacyPolicy from './pages/PrivacyPolicy/PrivacyPolicy';
 import TermsOfUse from './pages/PrivacyPolicy/TermsOfUse'
 import GetInvolved from './pages/GetInvolved';
+import ThankyouCard from './components/Thankyou-cardDonee';
+import ThankyouCardDonor from './components/Thankyou-cardDonor';
 
 function App() {
   return (
     <AppStateProvider>
       <ToastContainer />
       <Router>
-        {/* <ResponsiveNavbar /> */}
         <Switch>
+          
           <Route path="/" exact>
             <LandingPage />
           </Route>
@@ -100,14 +101,20 @@ function App() {
             <Donees />
           </Route>
 
-          {/* <Route exact path="/donees/:doneeid"> */}
-          <Route path="/DoneeProfile"> 
-            <DoneeProfile />
-					</Route>
+          <Route exact path="/donees/:doneeid"> 
+            <ReadMore />
+          </Route>
 
           <Route path="/Searchbox">
-						<Searchbox />
-					</Route>
+            <Searchbox />
+          </Route>
+          <Route path="/Thankyou-cardDonee">
+            <ThankyouCard />
+          </Route>
+
+          <Route path="/Thankyou-cardDonor">
+            <ThankyouCardDonor />
+          </Route>
 
           <Route path="/PrivacyPolicy">
 						<PrivacyPolicy />

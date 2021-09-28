@@ -1,5 +1,4 @@
-import React from 'react';
-import { createContext, useReducer } from 'react';
+import React, { createContext, useReducer } from 'react';
 import doneeInfo from '../resources/DoneeData/donee-info';
 
 export const AppContext = createContext();
@@ -12,8 +11,9 @@ const initialState = {
     donees: doneeInfo,
     applicationForm: {
         dob: '',
-        userID: '',
-        fullName: '',
+        userId: '',
+        firstName: '',
+        lastName: '',
         homeAddress: '',
         country: '',
         itemNeeded: '',
@@ -30,8 +30,6 @@ const initialState = {
         eduLevel: '',
     },
     completedTabs: [],
-
-
 };
 
 function reducer(state, action) {
@@ -49,6 +47,10 @@ function reducer(state, action) {
         saveState.userId = action.payload.userId;
         saveState.userEmail = action.payload.userEmail;
         saveState.Token = action.payload.Token;
+    }
+
+    if (action.type === 'UPDATE_EMAIL') {
+        saveState.userEmail = action.payload.userEmail;
     }
 
     if (action.type === 'LOGOUT') {
@@ -93,6 +95,10 @@ function reducer(state, action) {
 
     if (action.type === 'ADD_COMPLETED_STEP')
         saveState.completedTabs = [...saveState.completedTabs, action.payload];
+
+    // if (action.type === 'UPDATE_DONEELIST')
+    //     saveState.isLoggedIn = false;
+    //     saveState.donees = [action.payload, ...saveState.donees];
 
     return saveState;
 }

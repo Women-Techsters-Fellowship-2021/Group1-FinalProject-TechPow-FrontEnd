@@ -1,0 +1,39 @@
+.display-profile {
+    margin-top: 2em;
+    color: var(--clr-primary-400);
+    height: 100%;
+}
+
+.flex-display {
+    display: flex;
+}
+
+.display-image {
+    flex-basis: 70%;
+}
+
+.display-image img {
+    width: 100%;
+    max-width: 50rem;
+}
+
+.white-card {
+    margin-block-end: 0;
+    cursor: pointer;
+    max-width: 22em;
+}
+
+.white-card p{
+    color: var(--clr-primary-400);
+    text-align: center;
+    font-weight: 500;
+}
+
+.small-flex-btns {
+    display: flex;
+    justify-content: space-around;
+}
+
+.story-div {
+    margin: 2em 0 -1em;
+}

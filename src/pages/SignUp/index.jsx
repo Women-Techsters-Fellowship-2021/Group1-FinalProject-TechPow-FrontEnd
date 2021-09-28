@@ -49,7 +49,7 @@ export default function Signup() {
         //return (/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@#$%^&!]{8,}$/).test(data)
     };
 
-    const registerUser = ({ firstname, lastname, email, password, confirmPassword, role }) => {
+    const registerUser = ({ email, password, confirmPassword, role }) => {
 
         if (!email) {
             // console.log("Error");
@@ -67,8 +67,6 @@ export default function Signup() {
 
         //create a new user object and post to the provided API
         const newUser = {
-            firstName: firstname,
-            lastName: lastname,
             email: email,
             password: password,
             ConfirmPassword: confirmPassword,
@@ -85,12 +83,28 @@ export default function Signup() {
                     context.dispatch({
                         type: 'REGISTER',
                         payload: {
-                            userId: newUser.userId,
-                            userEmail: newUser.email,
-                            userRole: newUser.typeofuser,
+                            userId: result.data.data.id,
+                            userEmail: result.data.data.email,
+                            userRole: result.data.data.typeofuser,
                         },
                     })
-                    history.push('Login');
+                    const newEmail = {
+                        toEmail: newUser.email,
+                        subject: "TechPow Registration Notification",
+                        body: "Dear " + newUser.email + ". Thank you for completing your registration on TechPow. Please click on the link below to login and complete your application."
+                    }
+                    //Calling api for email
+                    axios.post('https://localhost:44326/api/v1/Email/SendEmail',
+                        newEmail)
+                        .then(result => {
+                            console.log(result);
+                            if (result.status === 200) {
+                                return true;
+                            }
+                            return false;
+                        }
+                        );
+                    history.push('/EmailVerification');
                     return true;
                 }
                 for (let index = 0; index < result.data.errors.length; index++) {
@@ -104,7 +118,10 @@ export default function Signup() {
                 }
             })
 
+
     };
+
+
 
 
 
@@ -128,30 +145,6 @@ export default function Signup() {
 
             <div className="col-md-4">
                 <form id="form-group" onSubmit={handleSubmit(registerUser)}>
-                    <div className="form-group">
-                        <label asp-for="FirstName">FirstName</label>
-                        <input
-                            type="text"
-                            name="firstName"
-                            id="firstName"
-                            className="form-control"
-                            required
-                            {...register('firstname', { required: true }
-                            )}
-                        />
-                    </div>
-                    <div className="form-group">
-                        <label asp-for="LastName">LastName</label>
-                        <input
-                            type="text"
-                            name="lastName"
-                            id="lastName"
-                            className="form-control"
-                            required
-                            {...register('lastname', { required: true }
-                            )}
-                        />
-                    </div>
                     <div className="form-group">
                         <label asp-for="Email">Email</label>
                         <input
@@ -192,7 +185,7 @@ export default function Signup() {
                         {/* <img src={show} alt="" className="sm-icon show-icon" /> */}
                     </div>
                     <div className="drop-down">
-                        <label for="roles">Apply as:</label>
+                        <label>Apply as:</label>
                         <select name="role" id="role" {...register('role', { required: true })}>
                             <option value="Donor">Donor</option>
                             <option value="Donee">Donee</option>

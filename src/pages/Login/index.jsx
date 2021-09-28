@@ -35,17 +35,19 @@ function Login() {
             .then(result => {
                 if (result.data.success) {
                     console.log(result.data);
-                    toast.success('Welcome! ' + result.data.data.firstName + ' ' + result.data.data.lastName);
+                    toast.success('Welcome! ' + result.data.data.email);
                     context.dispatch({
                         type: 'LOGIN',
                         payload: {
                             isLoggedIn: true,
                             userId: result.data.data.id,
                             Token: result.data.data.token,
+                            userEmail: result.data.data.email
                         },
                     })
                     if (result.data.data.typeofUser === "Donee") {
                         history.push('/Home');
+                        return true;
                     }
                     history.push('/Donees');
                     return true;

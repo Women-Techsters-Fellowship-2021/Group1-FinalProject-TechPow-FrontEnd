@@ -34,7 +34,7 @@ function Donees() {
                 </div>
                 <div className="donee-list">
                     {state.donees.map(donee => {
-                        return <DoneeCard donee={donee} key={donee.id} />
+                        return <DoneeCard donee={donee} key={donee.userId} />
                     })}
                 </div>
             </div>
