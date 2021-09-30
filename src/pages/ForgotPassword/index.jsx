@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Link } from 'react-router-dom';
-=======
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
->>>>>>> 1f1a20748feec19ea2a37a128aed1a3a3e9841ca
 import forgotPassword from '../../resources/icons/Forget Password.svg';
 import DefaultLayout from '../../components/Layout/DefaultLayout';
 import { useHistory } from 'react-router-dom';
