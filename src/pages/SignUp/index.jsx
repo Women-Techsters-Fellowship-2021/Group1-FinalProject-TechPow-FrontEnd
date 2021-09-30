@@ -51,19 +51,19 @@ export default function Signup() {
 
     const registerUser = ({ email, password, confirmPassword, role }) => {
 
-        // if (!email) {
-        //     // console.log("Error");
-        //     return toast.error("Please provide an email");
-        // }
-        // if (!password) {
-        //     return toast.error("Please provide a password");
-        // }
-        // if (password !== confirmPassword) {
-        //     return toast.error("Passwords don't match");
-        // }
-        // if (!role) {
-        //     return toast.error("Select your action from the dropdown");
-        // }
+        if (!email) {
+            // console.log("Error");
+            return toast.error("Please provide an email");
+        }
+        if (!password) {
+            return toast.error("Please provide a password");
+        }
+        if (password !== confirmPassword) {
+            return toast.error("Passwords don't match");
+        }
+        if (!role) {
+            return toast.error("Select your action from the dropdown");
+        }
 
         //create a new user object and post to the provided API
         const newUser = {

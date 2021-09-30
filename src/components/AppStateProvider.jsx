@@ -30,6 +30,7 @@ const initialState = {
         eduLevel: '',
     },
     completedTabs: [],
+    userOTP: 0,
 };
 
 function reducer(state, action) {
@@ -40,6 +41,13 @@ function reducer(state, action) {
         saveState.userId = action.payload.userId;
         saveState.userEmail = action.payload.userEmail;
         saveState.userRole = action.payload.userRole;
+    }
+
+    if (action.type === 'SAVE_OTP') {
+        saveState.userOTP = action.payload.userOTP;
+    }
+    if (action.type === 'SAVE_EMAIL') {
+        saveState.userEmail = action.payload.userEmail;
     }
 
     if (action.type === 'LOGIN') {

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import forgotPassword from '../../resources/icons/Forget Password.svg';
@@ -9,9 +9,11 @@ import axios from 'axios';
 
 //import styles
 import './style.css';
+import { AppContext } from '../../components/AppStateProvider';
 
 function ForgotPassword() {
     const { register, handleSubmit } = useForm();
+    const { dispatch } = useContext(AppContext);
     const history = useHistory();
 
     const ConfirmUserEmail = ({ reset_email }) => {
@@ -19,6 +21,12 @@ function ForgotPassword() {
         let user_email = {
             email: reset_email
         }
+        dispatch({
+            type: 'SAVE_EMAIL',
+            payload: {
+                userEmail: reset_email
+            },
+        })
         axios.get(`https://localhost:44326/api/v1/Auth/GetUserEmail?Email=${reset_email}`)
             .then(result => {
                 if (result.data.success) {
