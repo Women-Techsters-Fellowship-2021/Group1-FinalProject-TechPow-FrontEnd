@@ -1,12 +1,56 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
+=======
+import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import { useForm } from 'react-hook-form';
+>>>>>>> 1f1a20748feec19ea2a37a128aed1a3a3e9841ca
 import forgotPassword from '../../resources/icons/Forget Password.svg';
 import DefaultLayout from '../../components/Layout/DefaultLayout';
+import { useHistory } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import axios from 'axios';
 
 //import styles
 import './style.css';
+import { AppContext } from '../../components/AppStateProvider';
 
 function ForgotPassword() {
+    const { register, handleSubmit } = useForm();
+    const { dispatch } = useContext(AppContext);
+    const history = useHistory();
+
+    const ConfirmUserEmail = ({ reset_email }) => {
+
+        let user_email = {
+            email: reset_email
+        }
+        dispatch({
+            type: 'SAVE_EMAIL',
+            payload: {
+                userEmail: reset_email
+            },
+        })
+        axios.get(`https://localhost:44326/api/v1/Auth/GetUserEmail?Email=${reset_email}`)
+            .then(result => {
+                if (result.data.success) {
+                    console.log(result.data);
+                    history.push('/Authentication');
+                    axios.post('https://localhost:44326/api/v1/ResetPassword/SendOTPCode', user_email)
+                        .then(result => {
+                            console.log(result);
+                            if (result.status === 200) {
+                                toast.success(result.data);
+                            }
+                            toast.error(result.data.message);
+                        })
+                        .catch(error => {
+                            toast.error(error.response.data.message);
+                        })
+                }
+            });
+    }
     return (
         <DefaultLayout>
             <div className="bg-pattern">
@@ -18,18 +62,23 @@ function ForgotPassword() {
                         {/* <div className="show-warn">
                             <p className="light-red">This email is not associated with an account. Please try a different email.</p>
                         </div> */}
-                        <div className="form-group">
-                            <label for="email">Email</label>
-                            <input
-                                type="email"
-                                name="email"
-                                id="email"
-                                className="form-control"
-                            />
-                        </div>
-                        <button type="reset" className="btn-primary reset fg-butn">Reset password</button>
-                        <p>Remeber your password? <Link to="/Login" className="green login-link"><span className="green">Login</span></Link></p>
+                        <form onSubmit={handleSubmit(ConfirmUserEmail)}>
+                            <div className="form-group">
+                                <label>Email</label>
+                                <input
+                                    type="email"
+                                    name="email"
+                                    id="email"
+                                    required
+                                    className="form-control"
+                                    {...register('reset_email', { required: true })}
+                                />
+                            </div>
+                            <button type="submit" className="btn-primary reset">Reset password</button>
+                            <p>Remember your password? <Link to="/Login" className="green"><span className="green">Login</span></Link></p>
+                        </form>
                     </div>
+
                 </div>
             </div>
         </DefaultLayout>
