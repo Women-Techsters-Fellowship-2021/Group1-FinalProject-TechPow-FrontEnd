@@ -25,12 +25,18 @@
 }
 
 .contact-form {
+    background-color: #fff;
     border: 2px solid #f5f5f5;
     box-shadow: 1px 2px 4px 1px #c2f8f0;
     margin-inline: auto;
     width: min(90%, 70.5rem);
     padding: 2em 2em- 4em;
-    border-radius: 1rem;   
+    border-radius: 1rem;
+    height: 600px;
+}
+
+.contact-label {
+    margin-left: 1.2rem;
 }
 
 @media (min-width: 40rem) {
@@ -86,11 +92,13 @@
 }
 
 .form-field {
+    width: 22rem;
     padding-block: 0.8rem;
-    padding-inline: 0.6em 10em;
-    margin-inline-end: 3rem;
+    padding-inline: 0.6em;
+    margin-inline: 1rem 3rem;
     border: 2px solid #ccc;
     border-radius: 0.5rem;
+    font-size: 1rem;
 }
 
 .form-field:hover {
@@ -111,23 +119,22 @@
     padding: 0.5em;
 }
 
+.text-box {
+    height: 150px;
+}
+
+#contact-reason {
+    height: 18em;
+}
+
+.send-btn {
+    width: 76%;
+    margin: auto;
+    margin-top: -5em;
+    text-align: right;
+}
+
 .help-btn {
     padding-block: 0.7em;
-    margin-inline: auto;
-}
-
-.text-area {
-    margin-left: -3em;
-    padding-block: 2em;
-    margin-bottom: -5em;
-    width: 50%;
-}
-
-.textarea-flex {
-    display: flex;
-    flex-flow: row wrap;
-}
-
-.contact-textarea {
-    margin-bottom: -5em;
+    margin-top: 10em;
 }

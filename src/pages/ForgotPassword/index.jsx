@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import forgotPassword from '../../resources/icons/Forget Password.svg';
 import DefaultLayout from '../../components/Layout/DefaultLayout';
 
@@ -9,7 +10,7 @@ function ForgotPassword() {
     return (
         <DefaultLayout>
             <div className="bg-pattern">
-                <div className="center-form">
+                <div className="center-form new-pwd-form">
                     <div className="form-container fg-pwd">
                         <img src={forgotPassword} alt="" className="md-icon" />
                         <h1 className="fg-text">Forgot Password?</h1>
@@ -26,8 +27,8 @@ function ForgotPassword() {
                                 className="form-control"
                             />
                         </div>
-                        <button type="reset" className="btn-primary reset">Reset password</button>
-                        <p>Remeber your password? <span className="green">Login</span></p>
+                        <button type="reset" className="btn-primary reset fg-butn">Reset password</button>
+                        <p>Remeber your password? <Link to="/Login" className="green login-link"><span className="green">Login</span></Link></p>
                     </div>
                 </div>
             </div>

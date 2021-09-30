@@ -46,13 +46,7 @@ function GetInvolved() {
 
                                 </h1>
                                 <p className="flex-text">
-                                    Join and partner with us as a Non-governmental body 
-
-                                    in order to accomplish the aims and objectives of 
-                                    the organisation TechPow avails for partnership across
-                                    Afircan countries. Your involvement help us expand 
-                                    to new countries and build programs all over the 
-                                    world so that we may reach more people in need.
+                                    Join and partner with us as a Non-governmental body(NGO) or individual in order to accomplish our goals. TechPow is available for partnership across African countries. Your involvement will help us expand to new countries and build programs all over the world so that we can reach more people in need.
                                 </p>
                                 <button className="btn-primary get">Get Started</button>               
                             </div>            
@@ -67,9 +61,9 @@ function GetInvolved() {
                                 <h2 className="volunteer-heading vol-txt"> Become A</h2>
                                 <h2 className="green volunteer-heading"> Volunteer</h2>
                                 <p className="flex-text">
-                                    Join and partner with us as a Non-governmental body
+                                    Join and partner with us as a volunteer
                                     in order to accomplish the aims and objectives of 
-                                    the organisation TechPow avails for partnership across African countries. 
+                                    the organisation. TechPow is available for partnership across African countries. 
                                 </p>
                                 <button  className="btn-primary">
                                   Get Started

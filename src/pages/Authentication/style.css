@@ -1,3 +1,31 @@
 .blue-text {
     color: var(--clr-primary-100);
 }
+
+.OTP-form {
+    cursor: pointer;
+}
+
+.blue-link {
+    text-decoration: none;
+}
+
+.blue-link:hover {
+    font-weight: 500;
+}
+
+@media only screen and (max-width: 320px) {
+    .OTP-form {
+        margin-left: -1.4em;
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    .OTP-form {
+        font-size: 1rem;
+    }
+
+    .ver-code {
+        margin-top: 2.5rem;
+    }
+}

@@ -2,7 +2,7 @@ import React from 'react';
 //importing the styles
 //import './styles.css';
 
-function EmailVerification() {
+function IdentityVerification() {
     return (
         <div className="bg-pattern">
             <div className="center-form">
@@ -12,16 +12,10 @@ function EmailVerification() {
                     <form method="Post">
                         <label>Is your email still in use, kindly confirm</label>
                         <button type="submit" className="btn-primary reset">Reset password</button>
-
                     </form>
-
-
                 </div>
-
             </div>
-
         </div>
-
     );
 }
-export default EmailVerification;;
+export default IdentityVerification;;

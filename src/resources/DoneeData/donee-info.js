@@ -11,7 +11,7 @@ import lekan from '../images/DoneeImages/lekan.png';
 import gloria from '../images/DoneeImages/Gloria.png';
 import blessing from '../images/DoneeImages/Blessing.png';
 import john from '../images/DoneeImages/John.png';
-import sally from '../images/DoneeImages/Aisha.png';
+import Sally from '../../resources/images/Team/Sally.png';
 import hammed from '../images/DoneeImages/Hamed.png';
 
 const doneeInfo = [
@@ -234,7 +234,7 @@ const doneeInfo = [
         gender: "Female",
         itemNeeded: "laptop",
         reasonForApplication: "I need a laptop to venture into digital marketing",
-        imageLink: sally,
+        imageLink: Sally,
         letterOfRecomendationLink: imageOne,
         nationalIdLink: imageOne,
         orgName: "Tech4Dev",

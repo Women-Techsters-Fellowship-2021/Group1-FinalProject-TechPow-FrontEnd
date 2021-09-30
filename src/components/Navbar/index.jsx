@@ -34,8 +34,8 @@ function Navbar() {
                                     <ul>
                                         <Link to="/About" className
                                             ="head-link">About</Link>
-                                        <a href="/GetInvolved" className
-                                            ="head-link">Get Invlolved</a>
+                                        <Link to="/GetInvolved" className
+                                            ="head-link">Get Invlolved</Link>
                                         <Link to="/Contact" className
                                             ="head-link">Contact</Link>
                                     </ul>
@@ -45,6 +45,10 @@ function Navbar() {
                                 <button className="btn-primary login-btn">
                                     <a href="/Login" className
                                         ="login-btn">Login</a>
+                                </button>
+                                <button className="btn-primary login-btn">
+                                    <a href="/SignUp" className
+                                        ="login-btn">Sign Up</a>
                                 </button>
                             </div>
                         </>

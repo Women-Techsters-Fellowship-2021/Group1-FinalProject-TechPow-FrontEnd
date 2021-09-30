@@ -99,6 +99,6 @@
 }
 
 .no-decoration:hover {
-    text-decoration: underline;
+    text-decoration: underline 2px;
     font-weight: 500;
 }

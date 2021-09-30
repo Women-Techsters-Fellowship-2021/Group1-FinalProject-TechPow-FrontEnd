@@ -18,24 +18,24 @@ function Contact() {
                         <form id="form-group">
                             <div className="form-box">
                                 <div>
-                                    <label for="Fullname">FullName</label>
-                                    <input type="text" name="fullname" id="fullname" className="form-field" required />
+                                    <label for="Fullname" className="contact-label">FullName</label>
+                                    <input type="text" name="fullname" id="fullname" placeholder="Full name" className="form-field" required />
                                 </div>
                                 <div>
-                                    <label for="Email">Email</label>
-                                    <input type="email" name="email" id="email" className="form-field" required />
+                                    <label for="Email" className="contact-label">Email</label>
+                                    <input type="email" name="email" id="email" placeholder="youremail@gmail.com" className="form-field" required />
                                 </div>
                             </div>
                             <div className="form-box">
                                 <div>
-                                    <label for="subject">Subject</label>
+                                    <label for="subject" className="contact-label">Subject</label>
                                     <input type="text" name="fullname" id="fullname" className="form-field" required />
                                 </div>
                                 <div>
-                                    <label for="topic">Topic</label>
+                                    <label for="topic" className="contact-label">Topic</label>
                                     <select name="topic" id="topic" className="form-field" required>
                                         <option value="--None">--None--</option>
-                                        <option value="Get Started/About TechPow">Get Started/ About TechPow</option>
+                                        <option value="Get Started/About TechPow">Get Started/About TechPow</option>
                                         <option value="Choosing a donee">Choosing a donee</option>
                                         <option value="Donation">Donation</option>
                                         <option value="Email and Password Problem">Email and Password Problem</option>
@@ -46,13 +46,13 @@ function Contact() {
                                     </select>
                                 </div>
                             </div>
-                            <div className="form-box">
+                            <div className="form-box text-box">
                                 <div>
-                                    <label for="help">How can we help you?</label>
-                                    <textarea name="help" id="help" cols="30" rows="10" className="contact-textarea"></textarea>    
+                                    <label for="help" className="contact-label">How can we help you?</label>
+                                    <textarea type="text" name="textarea" id="contact-reason" className=" form-field" />
                                 </div>
                                 <div>
-                                    <label for="topic">How are you feeling right now?</label>
+                                    <label for="topic" className="contact-label">How are you feeling right now?</label>
                                     <select name="feeling" id="feeling" className="form-field" required>
                                         <option value="--None">--None--</option>
                                         <option value="Happy">Happy</option>
@@ -66,8 +66,8 @@ function Contact() {
                                     </select>
                                 </div>                   
                             </div>
-                            <div>
-                                <button type="submit" className="btn-primary last-field help-btn">SEND MESSAGE</button>
+                            <div className="send-btn">
+                                <button type="submit" className="btn-primary help-btn contact-label">SEND MESSAGE</button>
                             </div>
                         </form>
                     </div>

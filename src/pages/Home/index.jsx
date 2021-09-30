@@ -22,9 +22,9 @@ function Home() {
                                     Your Journey in Tech Begins Now
                                 </h1>
                                 <div className="green-line"></div>
-                                <p className="home-banner-para">Request a technical device to fulfil your dreams.</p>
+                                <p className="home-banner-para eligibility-text">Request a technical device to fulfil your dreams.</p>
                                 <Link to="/DoneeApplicationForm">
-                                    <button className="btn-primary home-btns">
+                                    <button className="btn-primary home-btns eligibility-btn">
                                         Get Started
                                     </button>
                                 </Link>
@@ -36,7 +36,7 @@ function Home() {
                     </div>
                 </section>
 
-                <section>
+                <section className="div2">
                     <div className="bg-primary">
                         <div className="bg-primary-para">
                             <p>
@@ -55,7 +55,7 @@ function Home() {
                             </div>
                             <div className="div-home-btn apply-now">
                                 <Link to="/DoneeApplicationForm">
-                                    <button className="btn-primary home-btns">
+                                    <button className="btn-primary home-btns eligibility-btn">
                                         Apply now
                                     </button>
                                 </Link>

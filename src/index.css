@@ -103,3 +103,29 @@ section {
   background-color: #fff;
   margin-top: 2em;
 }
+
+
+/* ===========MEDIA QUERIES=========== */
+@media only screen and (max-width: 325px) {
+  .btn-primary {
+    padding: 0.5rem;
+    font-size: 0.7rem;
+    margin: auto;
+}
+}
+
+@media only screen and (max-width: 425px) {
+  .btn-primary {
+    padding: 0.6rem;
+    font-size: 0.78rem;
+    margin: auto;
+}
+}
+
+@media only screen and (max-width: 760px) {
+  .btn-primary {
+    padding: 0.8rem;
+    font-size: 0.8rem;
+    margin: auto;
+}
+}

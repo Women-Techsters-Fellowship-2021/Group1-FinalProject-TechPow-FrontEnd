@@ -8,7 +8,7 @@ function CreateNewPassword() {
     return (
         <DefaultLayout>
             <div className="bg-pattern">
-                <div className="center-form">
+                <div className="center-form new-pwd-form">
                     <div className="form-container container-padding">
                         <h1 className="fg-text">Create new password</h1>
                         <p>We will ask for this password whenever you want to log in.</p>
@@ -31,7 +31,7 @@ function CreateNewPassword() {
                                     className="form-control pwd-field"
                                 />
                             </div>
-                            <button type="submit" className="btn-primary reset">Submit</button>
+                            <button type="submit" className="btn-primary reset fg-btn">Submit</button>
                         </form>
                     </div>
                 </div>

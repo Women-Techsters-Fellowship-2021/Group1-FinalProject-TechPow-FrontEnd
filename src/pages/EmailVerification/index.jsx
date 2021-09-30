@@ -67,52 +67,53 @@ function EmailVerification() {
 
     return (
         <div className="bg-pattern">
-            <div className="verificationpage-header">
-                <div>
-                    <Link to="/">
-                        <img src={TechPow_logo} alt="TechPow Logo" className="head-logo" />
-                    </Link>
-                </div>
-                <div className="back-link">
-                    <a href="/LandingPage"> &lt; Back to home</a>
-                </div>
-            </div>
-            <div className="verification-container">
-                <div className="ver-img-div">
-                    <img className="email-img" src={emailIcon} alt="" />
-                </div>
-                <div>
-                    <h4 className="center-text">Verify your Email</h4>
-                </div>
-                <div>
-                    <p className="ver-text">
-                        <span>An email has been sent to <strong>{userEmail}</strong> with instructions <br /> to complete your registration. If you have not received the email after a <br />few minutes, please check your spam folder.
-                        </span></p>
-                </div>
-                <div className="resend-btn">
-                    <button className="btn btn-primary" onClick={ResendEmail}>Resend Email </button>
-                </div>
-                <div className="incorrectemail-div">
-                    <p className="ver-text">Incorrect Email address?</p><span className="green change-email" onClick={() => displayChangeEmailForm("change-email-container")}> Change it here</span>
-                </div>
-                {viewForm === "change-email-container" &&
-                    <div className="change-email-container">
-                        <form onSubmit={handleSubmit(UpdateEmail)}>
-                            <input
-                                name="update_email"
-                                type="text"
-                                required
-                                className="donee-text-input white-hover email-form"
-                                placeholder="mynewemail@gmail.com"
-                                {...register('update_email', { required: true })}
-                            />
-                            <button type="submit" className="btn-primary">
-                                Change email
-                            </button>
-                        </form>
+            <div className="container verify">
+                <div className="verificationpage-header">
+                    <div>
+                        <Link to="/">
+                            <img src={TechPow_logo} alt="TechPow Logo" className="head-logo" />
+                        </Link>
                     </div>
-                }
-
+                    <div className="back-link">
+                        <a href="/LandingPage"> &lt; Back to home</a>
+                    </div>
+                </div>
+                <div className="verification-container">
+                    <div className="ver-img-div">
+                        <img className="email-img" src={emailIcon} alt="" />
+                    </div>
+                    <div>
+                        <h4 className="center-text">Verify your Email</h4>
+                    </div>
+                    <div>
+                        <p className="ver-text">
+                            <span>An email has been sent to <strong>{userEmail}</strong> with instructions to complete your registration. If you have not received the email after a few minutes, please check your spam folder.
+                            </span></p>
+                    </div>
+                    <div className="resend-btn">
+                        <button className="btn btn-primary" onClick={ResendEmail}>Resend Email </button>
+                    </div>
+                    <div className="incorrectemail-div">
+                        <p className="ver-text">Incorrect Email address?</p><span className="green change-email" onClick={() => displayChangeEmailForm("change-email-container")}> Change it here</span>
+                    </div>
+                    {viewForm === "change-email-container" &&
+                        <div className="change-email-container">
+                            <form onSubmit={handleSubmit(UpdateEmail)}>
+                                <input
+                                    name="update_email"
+                                    type="text"
+                                    required
+                                    className="donee-text-input white-hover email-form"
+                                    placeholder="mynewemail@gmail.com"
+                                    {...register('update_email', { required: true })}
+                                />
+                                <button type="submit" className="btn-primary">
+                                    Change email
+                                </button>
+                            </form>
+                        </div>
+                    }
+                </div>
             </div>
 
         </div >

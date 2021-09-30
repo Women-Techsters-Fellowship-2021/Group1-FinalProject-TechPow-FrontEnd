@@ -1,5 +1,5 @@
 import React from 'react';
-import Tabpane from "./Tabpane";
+import Tabpane from "./tabpane";
 import "./style.css";
 import PersonalInfo from '../../pages/DoneeApplicationForm/PersonalInfo';
 import Verification from '../../pages/DoneeApplicationForm/Verification';

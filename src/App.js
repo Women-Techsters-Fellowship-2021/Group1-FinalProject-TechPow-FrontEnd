@@ -7,6 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import LandingPage from './pages/LandingPage';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
+import SignUp from './pages/SignUp';
 import Login from './pages/Login';
 import ForgotPassword from './pages/ForgotPassword';
 import CreateNewPassword from './pages/NewPassword';
@@ -28,6 +29,8 @@ import TermsOfUse from './pages/PrivacyPolicy/TermsOfUse'
 import GetInvolved from './pages/GetInvolved';
 import ThankyouCard from './components/Thankyou-cardDonee';
 import ThankyouCardDonor from './components/Thankyou-cardDonor';
+import Modal from './components/Modal';
+import IdentityVerification from './pages/Identity Verification';
 
 function App() {
   return (
@@ -38,6 +41,10 @@ function App() {
           
           <Route path="/" exact>
             <LandingPage />
+          </Route>
+
+          <Route path="/SignUp" exact>
+            <SignUp />
           </Route>
 
           <Route path="/Login" exact>
@@ -126,6 +133,14 @@ function App() {
 
           <Route path="/GetInvolved">
 						<GetInvolved />
+					</Route>
+          
+          <Route path="/GetInvolved">
+						<IdentityVerification />
+					</Route>
+
+          <Route path="/Modal">
+						<Modal />
 					</Route>
 
           <Redirect to="/" />

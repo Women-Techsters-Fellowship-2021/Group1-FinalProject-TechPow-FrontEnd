@@ -7,7 +7,7 @@ import Signup from '../SignUp';
 
 //import logos, images and icons
 import people from '../../resources/images/landingthreePicsAndTriangles.png';
-import together from '../../resources/icons/Together....svg';
+//import together from '../../resources/icons/Together....svg';
 import ladypointing from '../../resources/images/girl_pointing.png';
 import chart from '../../resources/icons/Core areas.svg';
 import guy_pointing from '../../resources/images/guy_pointing.svg';
@@ -22,7 +22,9 @@ import location_icon from '../../resources/icons/Location.svg';
 import microsoft from '../../resources/Logos/images (17).jpeg';
 import techdev from '../../resources/Logos/TECH4DEV-LOGO-orientation-null.png';
 import person_plus from '../../resources/icons/person-plus-fill.svg';
-import phone from '../../resources/icons/telephone.svg';
+//import phone from '../../resources/icons/telephone.svg';
+import donation from '../../resources/icons/Need.svg';
+import shareicon from '../../resources/icons/share-fill.svg';
 
 
 //import styles
@@ -51,19 +53,6 @@ function LandingPage() {
                             </div>
                             <div>
                                 <img src={people} alt="people giving and receiving donations" className="block-images banner-img" />
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <section id="bg-circle">
-                    <div className="container">
-                        <div className="split color-stats">
-                            <div>
-                                <img src={together} alt="statistics" id="statistics" />
-                            </div>
-                            <div>
-                                <Signup />
                             </div>
                         </div>
                     </div>
@@ -145,69 +134,104 @@ function LandingPage() {
                             One way to reduce digital inequality in Africa is through an act of kindness.
                         </p>
                         <div className="flex-images">
-                            <div>
-                                <div className="donee-img">
-                                    <img src={donee1} alt="" className="donee" />
-                                </div>
-                                <h4 className="donee-name">Ifunnaya Oke</h4>
-                                <p className="donee-desc">A description of donee's need...</p>
-                                <a href="/About" className="green link">Learn more</a>
-                                <div className="flex-icon-container">
-                                    <div className="flex-icon">
-                                        <img src={phone} alt="" className="smm-icon" />
-                                        <p>038-39283-38789</p>
+                            <Link to="/Donees" className="flex-img">
+                                <div className="flex-img">
+                                    <span className="item-needed">Laptop</span>
+                                    <div>
+                                        <img src={donee1} alt="" className="donee" />
+                                        <div className="donee-info">
+                                            <h2 className="donee-fullname">Ifunanya Oke</h2>
+                                            <p className="grey-text desc">Description</p>
+                                            <p className="reason">A description of donee's need...<span className="green"><strong className="r">Read more</strong></span></p>
+                                            <div className="item-location">
+                                                <div>
+                                                    <img src={donation} alt="" className="small-icon" />
+                                                    <p className="item">Laptop</p>
+                                                </div>
+                                                <div>
+                                                    <img src={location_icon} alt="" className="sm-icon" />
+                                                    <p className="location">Nigeria</p>
+                                                </div>
+                                            </div>
+                                            <div className="butns">
+                                                <Link to="/DonorApplicationForm">
+                                                    <button className="btn-primary">Donate</button>
+                                                </Link>
+                                                <div className="shareIcon">
+                                                    <p className="share-text">Share</p>
+                                                    <img src={shareicon} alt="" className="extra-small-icon" />
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div className="flex-icon location-icon">
-                                        <img src={location_icon} alt="" className="sm-icon" />
-                                        <p>Nigeria</p>
-                                    </div>
                                 </div>
-                                <Link to="/DonorApplicationForm">
-                                    <button className=" btn btn-primary">Donate</button>
-                                </Link>
-                            </div>
-                            <div>
-                                <div className="donee-img">
+                            </Link>
+
+                            <Link to="/Donees" className="flex-img">
+                                <div className="flex-img">
+                                    <span className="item-needed">Phone</span>
+                                    <div>
                                     <img src={donee2} alt="" className="donee" />
-                                </div>
-                                <h4 className="donee-name">Hezron Geteye</h4>
-                                <p className="donee-desc">A description of donee's need...</p>
-                                <a href="/About" className="green link">Learn more</a>
-                                <div className="flex-icon-container">
-                                    <div className="flex-icon">
-                                        <img src={phone} alt="" className="smm-icon" />
-                                        <p>038-39283-38789</p>
+                                        <div className="donee-info">
+                                            <h2 className="donee-fullname">Hezron Geteye</h2>
+                                            <p className="grey-text desc">Description</p>
+                                            <p className="reason">A description of donee's need...<span className="green"><strong className="r">Read more</strong></span></p>
+                                            <div className="item-location">
+                                                <div>
+                                                    <img src={donation} alt="" className="small-icon" />
+                                                    <p className="item">Phone</p>
+                                                </div>
+                                                <div>
+                                                    <img src={location_icon} alt="" className="sm-icon" />
+                                                    <p className="location">Kenya</p>
+                                                </div>
+                                            </div>
+                                            <div className="butns">
+                                                <Link to="/DonorApplicationForm">
+                                                    <button className="btn-primary">Donate</button>
+                                                </Link>
+                                                <div className="shareIcon">
+                                                    <p className="share-text">Share</p>
+                                                    <img src={shareicon} alt="" className="extra-small-icon" />
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div className="flex-icon location-icon">
-                                        <img src={location_icon} alt="" className="sm-icon" />
-                                        <p>Kenya</p>
-                                    </div>
                                 </div>
-                                <Link to="/DonorApplicationForm">
-                                    <button className=" btn btn-primary">Donate</button>
-                                </Link>
-                            </div>
-                            <div>
-                                <div className="donee-img">
+                            </Link>
+
+                            <Link to="/Donees" className="flex-img">
+                                <div className="flex-img">
+                                    <span className="item-needed">Ipad</span>
+                                    <div>
                                     <img src={donee3} alt="" className="donee" />
-                                </div>
-                                <h4 className="donee-name">Reem Mohammed</h4>
-                                <p className="donee-desc">A description of donee's need...</p>
-                                <a href="/About" className="green link">Learn more</a>
-                                <div className="flex-icon-container">
-                                    <div className="flex-icon">
-                                        <img src={phone} alt="" className="smm-icon" />
-                                        <p>038-39283-38789</p>
+                                        <div className="donee-info">
+                                            <h2 className="donee-fullname">Reem Mohammed</h2>
+                                            <p className="grey-text desc">Description</p>
+                                            <p className="reason donee-desc">A description of donee's need...<span className="green"><strong className="r">Read more</strong></span></p>
+                                            <div className="item-location">
+                                                <div>
+                                                    <img src={donation} alt="" className="small-icon" />
+                                                    <p className="item">Ipad</p>
+                                                </div>
+                                                <div>
+                                                    <img src={location_icon} alt="" className="sm-icon" />
+                                                    <p className="location">Egypt</p>
+                                                </div>
+                                            </div>
+                                            <div className="butns">
+                                                <Link to="/DonorApplicationForm">
+                                                    <button className="btn-primary">Donate</button>
+                                                </Link>
+                                                <div className="shareIcon">
+                                                    <p className="share-text">Share</p>
+                                                    <img src={shareicon} alt="" className="extra-small-icon" />
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div className="flex-icon location-icon">
-                                        <img src={location_icon} alt="" className="sm-icon" />
-                                        <p>Egypt</p>
-                                    </div>
                                 </div>
-                                <Link to="/DonorApplicationForm">
-                                    <button className=" btn btn-primary">Donate</button>
-                                </Link>
-                            </div>
+                            </Link>
                         </div>
                     </div>
                 </section>

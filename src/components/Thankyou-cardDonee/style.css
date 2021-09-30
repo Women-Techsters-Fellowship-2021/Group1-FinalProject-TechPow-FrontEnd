@@ -1,49 +1,53 @@
-
 .thankyou-page{
   width : 100%;
-  height: 100vh; 
-  border: 2px solid rgb(170, 163, 156);
+  height: 100vh;
 }
 
-.roundbtn-div{
-    width : 100%;
-    text-align: right;
-    margin-left: -30rem;
-    }
+.thankyou-card {
+  width: 50%;
+  height: 600px;
+  margin: 4em auto 0;
+  border: 2px solid #f5f5f5;
+  box-shadow: 1px 2px 4px 1px #ddd;
+}
+
 .close-btn {
-    
+  margin-left: 47.3rem;
   color: rgb(50, 49, 65);
-  border-radius:10px;
   border: none;
-  width: 25px;
-height: 25px;
-cursor: pointer;
+  width: 32px;
+  height: 35px;
+  cursor: pointer;
 }
 
 .close-btn:hover{
-color:rgb(206, 205, 204);
-background-color:rgb(36, 36, 58) ;
+  color: #fff;
+  background-color: rgb(240, 56, 56);
 }
 
 .thankyou-content {
-    width: 100%;
-    height: 60%;
-    display: flex;
-   align-items: center;
-   justify-content: center;
+  width: 100%;
+  padding-inline: 2em;
+  margin-top: 5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.thankyou-image{
-    max-width: 100%;
-    height: 80px;
+.thankyouimage{
+  width: 20rem;
+  flex-basis: 100%;
 }
+
 .thankyou-div{
-  margin: 1em;  
+  text-align: center;
+}
+
+.thankyou-para {
+  font-size: 1.2rem;
 }
 
 .proceed-btn{
     width : 100%;
     text-align: center;
-    margin-left: 6rem;
-    margin-top: -10rem;
 }

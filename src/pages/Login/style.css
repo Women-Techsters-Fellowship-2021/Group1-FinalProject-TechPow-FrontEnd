@@ -108,6 +108,7 @@
     border-left: #fff;
     border-right: #fff;
     border-bottom: 1px solid #ccc;
+    font-size: 1rem;
 }
 
 .form-control:focus {
@@ -154,3 +155,51 @@
     margin-inline-end: 0.3rem;
 }
 
+@media only screen and (max-width: 325px) {
+    .sm-login {
+        flex-direction: column;
+        width: 9rem;
+    }
+
+    .sm-login-icon {
+        padding-right: -5px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .sm-login {
+        flex-direction: column;
+        width: 10rem;
+        margin-left: -1rem;
+    }
+
+    .sm-login-icon {
+        padding-right: -5px;
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    .sm-login {
+        flex-direction: row;
+        width: 9rem;
+    }
+
+    .sm-login-icon {
+        padding-inline: 0.5em 1.8em;
+        text-align: center;
+    }
+
+    .form-login-btn {
+        width: 100%;
+        margin: auto;
+    }
+
+    .login_btn {
+        padding-inline: 1em;
+        margin: auto;
+    }
+
+    .alternative-signup {
+        margin-top: 0.5em;
+    }
+}

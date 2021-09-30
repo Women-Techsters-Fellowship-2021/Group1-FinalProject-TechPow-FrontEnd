@@ -18,7 +18,7 @@
 
 .ver-text {
 font-family:Verdana, Geneva, Tahoma, sans-serif;
-font-size: 18px;
+font-size: 1rem;
 line-height: 25px;
 display: flex;
 align-items: center;
@@ -40,6 +40,7 @@ text-decoration: none;
 }
 
 .change-email-container {
+    margin: auto;
     background-color: #ccc;
     padding: 1em 2em;
 }
@@ -57,4 +58,57 @@ text-decoration: none;
 
 .email-form {
     font-size: 0.875rem;
+}
+
+@media only screen and (max-width: 425px) {
+    .ver-text, .change-email {
+        font-size: 0.8rem;
+    }
+
+    .change-email {
+        margin-top: 0.15rem;
+    }
+
+    .change-email-container {
+        padding: 1em;
+        width: 95%;
+        margin: auto;
+        margin-bottom: 1em;
+    }
+
+    .email-form {
+        width: 100%;
+        font-size: 0.6rem;
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    .ver-text, .change-email {
+        font-size: 0.8rem;
+    }
+
+    .change-email {
+        margin-top: 0.15rem;
+    }
+
+    .change-email-container {
+        padding: 1em;
+        width: 95%;
+        margin: auto;
+        margin-bottom: 1em;
+    }
+
+    .email-form {
+        width: 100%;
+        font-size: 0.8rem;
+        margin-bottom: 1em;
+    }
+    
+    .verification-container {
+       text-align: center;
+    }
+
+    .change-email-container {
+        padding: 1em;
+    }
 }

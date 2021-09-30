@@ -126,86 +126,90 @@ export default function Signup() {
 
 
     return (
-        <div className="form-container">
-            <h2 className="form-head">Sign up</h2>
-            <div className="sm-signup">
-                <div className="sm-signup-icon">
-                    <img src={google} alt="google-icon" className="xms-icon" /><span>with Google</span>
-                </div>
-                <div className="sm-signup-icon">
-                    <img src={facebook} alt="facebook-icon" className="xms-icon" /><span>with Facebook</span>
-                </div>
-                <div className="sm-signup-icon">
-                    <img src={linkedin} alt="linkedin-icon" className="xms-icon" /><span>with Linkedin</span>
+        <section id="bg-circle">
+            <div className="container">
+                    <div className="split color-stats">
+                        <div className="form-container">
+                            <h2 className="form-head">Sign up</h2>
+                            <div className="sm-signup">
+                                <div className="sm-signup-icon">
+                                    <img src={google} alt="google-icon" className="xms-icon" /><span>with Google</span>
+                                </div>
+                                <div className="sm-signup-icon">
+                                    <img src={facebook} alt="facebook-icon" className="xms-icon" /><span>with Facebook</span>
+                                </div>
+                                <div className="sm-signup-icon">
+                                    <img src={linkedin} alt="linkedin-icon" className="xms-icon" /><span>with Linkedin</span>
+                                </div>
+                            </div>
 
-                </div>
+                            <div className="form-mid-div"><strong>OR</strong></div>
+
+                            <div className="col-md-4">
+                                <form id="form-group" onSubmit={handleSubmit(registerUser)}>
+                                    <div className="form-group">
+                                        <label asp-for="Email">Email</label>
+                                        <input
+                                            type="email"
+                                            name="email"
+                                            id="email"
+                                            className="form-control"
+                                            required
+                                            {...register('email', { required: true }
+                                            )}
+                                        />
+                                    </div>
+                                    <div className="form-group">
+                                        <label asp-for="Password">Password</label>
+                                        <input
+                                            type="password"
+                                            name="password"
+                                            id="password"
+                                            className="form-control"
+                                            required
+                                            {...register('password', {
+                                                required: true, validate: validatePassword
+                                            }
+                                            )}
+                                        />
+                                    </div>
+                                    <div className="form-group">
+                                        <label asp-for="ConfirmPassword">Confirm Password</label>
+                                        <input
+                                            type="password"
+                                            name="confirmPassword"
+                                            id="ConfirmPassword"
+                                            className="form-control"
+                                            required
+                                            {...register('confirmPassword', { required: true }
+                                            )}
+                                        />
+                                        {/* <img src={show} alt="" className="sm-icon show-icon" /> */}
+                                    </div>
+                                    <div className="drop-down">
+                                        <label>Apply as:</label>
+                                        <select name="role" id="role" {...register('role', { required: true })}>
+                                            <option value="Donor">Donor</option>
+                                            <option value="Donee">Donee</option>
+                                        </select>
+                                    </div>
+                                    <div className="terms">
+                                        <input type="checkbox"
+                                            required
+                                            name="terms-and-conditions" id="checkbox" className="signup-check"
+                                            {...register('terms-and-conditions', { required: true })} />
+                                        <p>By signing up, you agree to the <strong className="bold-text"><a href="/TermsOfService" className="bold-text">Terms of Service </a></strong>and <strong className="bold-text"><a href="/PrivacyPolicy" className="bold-text">Privacy Policy</a></strong>.</p>
+                                    </div>
+                                    <div className="last-flex">
+                                        <button type="submit" className="btn btn-primary">Create Account</button>
+                                        <p>Already have an account? <a className="green" href="/Login">Log in</a></p>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
             </div>
-
-            <div className="form-mid-div"><strong>OR</strong></div>
-
-            <div className="col-md-4">
-                <form id="form-group" onSubmit={handleSubmit(registerUser)}>
-                    <div className="form-group">
-                        <label asp-for="Email">Email</label>
-                        <input
-                            type="email"
-                            name="email"
-                            id="email"
-                            className="form-control"
-                            required
-                            {...register('email', { required: true }
-                            )}
-                        />
-                    </div>
-                    <div className="form-group">
-                        <label asp-for="Password">Password</label>
-                        <input
-                            type="password"
-                            name="password"
-                            id="password"
-                            className="form-control"
-                            required
-                            {...register('password', {
-                                required: true, validate: validatePassword
-                            }
-                            )}
-                        />
-                    </div>
-                    <div className="form-group">
-                        <label asp-for="ConfirmPassword">Confirm Password</label>
-                        <input
-                            type="password"
-                            name="confirmPassword"
-                            id="ConfirmPassword"
-                            className="form-control"
-                            required
-                            {...register('confirmPassword', { required: true }
-                            )}
-                        />
-                        {/* <img src={show} alt="" className="sm-icon show-icon" /> */}
-                    </div>
-                    <div className="drop-down">
-                        <label>Apply as:</label>
-                        <select name="role" id="role" {...register('role', { required: true })}>
-                            <option value="Donor">Donor</option>
-                            <option value="Donee">Donee</option>
-                        </select>
-                    </div>
-                    <div className="terms">
-                        <input type="checkbox"
-                            required
-                            name="terms-and-conditions" id="checkbox" className="signup-check"
-                            {...register('terms-and-conditions', { required: true })} />
-                        <p>By signing up, you agree to the <strong className="bold-text"><a href="/TermsOfService" className="bold-text">Terms of Service </a></strong>and <strong className="bold-text"><a href="/PrivacyPolicy" className="bold-text">Privacy Policy</a></strong>.</p>
-                    </div>
-                    <div className="last-flex">
-                        <button type="submit" className="btn btn-primary">Create Account</button>
-                        <p>Already have an account? <a className="green" href="/Login">Log in</a></p>
-                    </div>
-                </form>
-            </div>
-
-        </div>
+        </section>
     );
 }
 
