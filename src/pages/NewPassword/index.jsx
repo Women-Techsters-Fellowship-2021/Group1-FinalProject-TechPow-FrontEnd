@@ -26,7 +26,7 @@ function CreateNewPassword() {
             newPassword: password
         };
 
-        const userEmail = {
+        const usermail = {
             email: userEmail
         }
         console.log(newResetPassword)
@@ -40,7 +40,7 @@ function CreateNewPassword() {
                     return;
                 }
                 toast.error(result.data.message);
-                axios.post('https://localhost:44326/api/v1/ResetPassword/SendOTPCode', userEmail)
+                axios.post('https://localhost:44326/api/v1/ResetPassword/SendOTPCode', usermail)
                     .then(result => {
                         console.log(result);
                         if (result.status === 200) {
