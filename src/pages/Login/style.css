@@ -1,0 +1,205 @@
+.bg-pattern {
+    width: 100%;
+    margin: 0;
+    height: 100vh;
+    background-image: url("../../resources/icons/background_small.svg");
+    background-position: center;
+    background-size: contain;
+}
+
+.home-link {
+    width: 100%;
+    text-align: right;
+    padding: 1rem 3rem;
+}
+
+.back-to-link {
+    color: var(--clr-neutral-200);
+    font-size: 1.1325rem;
+    text-align: right;
+}
+
+.back-to-link:hover {
+    font-weight: 500;
+}
+
+#portrait {
+    width: 5rem;
+    height: 5rem;
+    margin-inline: auto;
+}
+
+.top-login-section {
+    max-width: 34rem;
+    margin-top: -1rem;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.top-login-section h2 {
+    margin-top: 1.3rem;
+    color: var(--clr-primary-400);
+}
+
+.top-login-section p {
+    font-size: 1.1rem;
+    color: var(--clr-neutral-200);
+}
+
+.form-container {
+    border: 2px solid #f5f5f5;
+    box-shadow: 1px 2px 4px 1px #c2f8f0;
+    max-width: 28rem;
+    height: max-content;
+    margin: auto;
+    padding: 2em 2em- 4em;
+    border-radius: 1rem;
+}
+
+.form-head {
+    color: #333;
+}
+
+.sm-login {
+    display: flex;
+    width: 100%;
+}
+
+.sm-login-icon {
+    padding: 0.15rem 0.3rem;
+    margin-inline-end: 0.4rem;
+    display: flex;
+    border: 2px solid #f5f5f5;
+    border-radius: 0.4rem;
+    font-size: 0.9125rem;
+    box-shadow: 1px 2px 2px 2px #ddd;
+}
+
+.sm-login-icon span {
+    padding-inline-start: 0.3rem;
+}
+
+.form-mid-div {
+    margin: 1em;
+    font-size: 1.4rem;
+    text-align: center;
+    color: #333;
+}
+
+#form-group {
+    margin-top: -1rem;
+}
+
+.form-group {
+    display: flex;
+}
+
+.form-group label {
+    margin-top: 1rem;
+}
+
+.form-control {
+    width: 34em;
+    margin-block: 0.7em;  
+    align-self: flex-end;
+    border-top: #fff;
+    border-left: #fff;
+    border-right: #fff;
+    border-bottom: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.form-control:focus {
+    outline: none;
+    border: none;
+}
+
+.terms {
+    display: flex;
+    margin-top: 1rem;
+    padding-inline: 0.5rem;
+    color: #333;
+    font-weight: bold;
+}
+
+#remember-me {
+    margin-top: 0.5rem;
+}
+
+.terms p {
+    margin-top: 0.3rem;
+    margin-left: 0.5rem;
+}
+
+.green-span {
+    margin-top: 0.3rem;
+    margin-left: 5.5rem;
+    text-decoration: none;
+}
+
+.green-span:hover {
+    text-decoration: underline 2px;
+    color: teal;
+}
+
+
+.form-login-btn {
+    width: 100%;
+    margin: 1rem;
+    text-align: center;
+}
+
+.txt1 {
+    margin-inline-end: 0.3rem;
+}
+
+@media only screen and (max-width: 325px) {
+    .sm-login {
+        flex-direction: column;
+        width: 9rem;
+    }
+
+    .sm-login-icon {
+        padding-right: -5px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .sm-login {
+        flex-direction: column;
+        width: 10rem;
+        margin-left: -1rem;
+    }
+
+    .sm-login-icon {
+        padding-right: -5px;
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    .sm-login {
+        flex-direction: row;
+        width: 9rem;
+    }
+
+    .sm-login-icon {
+        padding-inline: 0.5em 1.8em;
+        text-align: center;
+    }
+
+    .form-login-btn {
+        width: 100%;
+        margin: auto;
+    }
+
+    .login_btn {
+        padding-inline: 1em;
+        margin: auto;
+    }
+
+    .alternative-signup {
+        margin-top: 0.5em;
+    }
+}

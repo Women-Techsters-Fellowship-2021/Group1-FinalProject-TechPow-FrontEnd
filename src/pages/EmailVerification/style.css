@@ -1,0 +1,114 @@
+.blue-text {
+    color: var(--clr-primary-100);
+}
+
+.verification-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+    justify-content: center;
+}
+
+
+.email-img {
+    width: 100px;
+    height: 100px;
+    padding-bottom: 20px;
+}
+
+.ver-text {
+font-family:Verdana, Geneva, Tahoma, sans-serif;
+font-size: 1rem;
+line-height: 25px;
+display: flex;
+align-items: center;
+text-align: center;
+color: #3B3030;
+text-decoration: none;
+}
+
+.verificationpage-header{
+    margin : 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.incorrectemail-div {
+    display: flex;
+    padding-top: 2rem;
+}
+
+.change-email-container {
+    margin: auto;
+    background-color: #ccc;
+    padding: 1em 2em;
+}
+
+.change-email {
+    margin-left: 0.2em;
+    margin-top: -0.1em;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.change-email:hover {
+    text-decoration: underline 2px;
+}
+
+.email-form {
+    font-size: 0.875rem;
+}
+
+@media only screen and (max-width: 425px) {
+    .ver-text, .change-email {
+        font-size: 0.8rem;
+    }
+
+    .change-email {
+        margin-top: 0.15rem;
+    }
+
+    .change-email-container {
+        padding: 1em;
+        width: 95%;
+        margin: auto;
+        margin-bottom: 1em;
+    }
+
+    .email-form {
+        width: 100%;
+        font-size: 0.6rem;
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    .ver-text, .change-email {
+        font-size: 0.8rem;
+    }
+
+    .change-email {
+        margin-top: 0.15rem;
+    }
+
+    .change-email-container {
+        padding: 1em;
+        width: 95%;
+        margin: auto;
+        margin-bottom: 1em;
+    }
+
+    .email-form {
+        width: 100%;
+        font-size: 0.8rem;
+        margin-bottom: 1em;
+    }
+    
+    .verification-container {
+       text-align: center;
+    }
+
+    .change-email-container {
+        padding: 1em;
+    }
+}

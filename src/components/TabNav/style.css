@@ -1,0 +1,50 @@
+.application-container {
+  margin-top: 2em;
+}
+
+.application-container h3 {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: var(--clr-neutral-200)
+}
+
+.tabpane {
+  border: 2px solid #f5f5f5;
+  box-shadow: 1px 2px 4px 1px #c2f8f0;
+  background-color: #fff;
+  max-width: 15rem;
+  height: 10.5rem;
+  padding: 1em 2em;
+  border-radius: 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.tabs {
+  display:flex;
+  padding-inline-end: 5.5em;
+}
+
+.tabnav {
+    width: 100%;
+}
+
+.tab-list {
+  margin-inline: -1.9em 1.5em;
+  margin-top: -1em;
+  padding: 1em;
+}
+
+.tab-list-item {
+  width: 15rem;
+  list-style: none;
+  margin-left: -1.2em;
+  padding-block: 0.7rem;
+  padding-inline: 0.5em 5em;
+}
+
+.tab-list-active {
+  background-color: #ccc;
+  border-left: 5px solid var(--clr-primary-100);
+  color: var(--clr-primary-100);
+}

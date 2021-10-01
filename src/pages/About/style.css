@@ -1,0 +1,98 @@
+
+.txt-one {
+    font-size: 1.7rem;
+    color: var(--clr-primary-100);
+    margin-top: -3em;
+}
+
+.txt-two {
+    padding-top: 2.5em;
+}
+
+.about-image {
+    width: 100%;
+    margin-top: -3em;
+}
+
+.mission-img {
+    margin-left: -2em;
+}
+
+.flex-text {
+    margin-top: 2em;
+    font-size: 1.5rem;
+}
+
+.top-margin {
+    margin-top: -10rem;
+}
+
+.belief {
+    margin-bottom: -5rem;
+}
+
+.blue-div {
+    width: 100%;
+    height: 500px;
+    background-image: url('../../resources/images/Team.png');
+    background-repeat: no-repeat;
+    background-position: 100%;
+    background-size: contain;
+    color: var(--clr-neutral-100);
+}
+
+.blue-div-texts h2 {
+    font-size: 1.7rem;
+    padding-top: 2em;
+}
+
+.blue-div-texts {
+    width: 80%;
+    padding: 5em;
+    margin: auto;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.div5 {
+    margin-top: -5em;
+}
+
+.green-map {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.grey-circle {
+    padding: 4em;
+    margin-top: -2em;
+}
+
+.grey-line {
+    margin: auto;
+    margin-top: -2em;
+    font-size: 1.2rem;
+    font-weight: 500;
+    background-color: #ddd;
+    text-align: center;
+    border: 2px solid #f5f5f5;
+    box-shadow: 1px 2px 4px 1px #ddd;
+    background-color: #fff;
+    padding: 1em 2em;
+    border-radius: 1rem;
+    height: 6rem;
+}
+
+.team-list {
+    margin-top: -2em;
+}
+
+.track {
+    margin-top: -1em;
+}
+
+@media (max-width: 375px) {
+    .about-page {
+        margin-inline: auto;
+    }
+}

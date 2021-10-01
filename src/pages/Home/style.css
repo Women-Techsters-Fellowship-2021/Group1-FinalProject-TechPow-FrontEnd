@@ -1,0 +1,96 @@
+.home-page {
+    background-color: #fff;
+    margin-top: -5em;
+    cursor: pointer;
+}   
+
+.home-banner-text {
+    font-size: 3.6rem;
+    margin-block-start: 1.5em;
+}
+
+.green-line {
+    width: 25%;
+    padding: 0.3rem;
+    margin-top: -2em;
+    background-color: var(--clr-primary-200);
+}
+
+.home-banner-para {
+    padding-top: 1em;
+}
+
+.div2 {
+    margin-top: -6em;
+}
+
+/* .home-imgOne {
+    margin-inline-start: -8em;
+} */
+
+.donee-flow-img {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.bg-primary-para {
+    width: 100%;
+    padding: 1.5rem;
+}
+
+.bg-primary-para p {
+    width: 80%;
+    text-align: center;
+    margin-inline: auto;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.div-home-btn {
+    width: 100%;
+    text-align: center;
+}
+
+.home-btns {
+    padding: 0.9rem 5rem;
+    margin-inline: auto;
+}
+
+.apply-now {
+    margin-top: 1.5em;
+}
+
+.eligibility-container {
+    padding-block: 2em;
+}
+
+.eligibility-text {
+    font-size: 1.2rem;
+}
+
+.eligibility-header {
+    color: var(--clr-primary-400);
+    text-align: center;
+}
+
+.img-check {
+    display: flex;
+}
+
+.img-check p {
+    margin-inline-start: 0.3rem;
+}
+
+.xxms-icon {
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.div-eligibility-btn {
+    width: 100%;
+}
+
+.eligibility-btn {
+    font-size: 1.2rem;
+}

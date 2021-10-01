@@ -1,0 +1,63 @@
+.center-form {
+    display: flex;
+    height: 80vh;
+    margin-block: auto;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+
+/* to show on hover */
+.light-red {
+    color:  var(--clr-primary-500);
+}
+
+.fg-pwd {
+    padding: 2rem;
+    max-width: 28rem;
+    cursor: pointer;
+}
+
+.fg-text {
+    color:  var(--clr-primary-400);
+    text-align: center;
+}
+
+.reset {
+    margin: 2em auto;
+}
+
+.login-link {
+    text-decoration: none;
+}
+
+.login-link:hover {
+    text-decoration: underline 2px ;
+}
+
+@media only screen and (max-width: 325px) {
+    .fg-pwd {
+        margin-top: 4em;
+        margin-left: 6em;
+        width: 25em;
+    }
+}
+
+@media only screen and (min-width: 326px) {
+    .fg-pwd {
+        width: 15em;
+    }
+
+}
+
+@media only screen and (min-width: 375px) {
+    .fg-pwd {
+        width: 15em;
+        font-size: 1rem;
+    }
+
+    .container-padding {
+        font-size: 1rem;
+    }
+
+}

@@ -1,0 +1,49 @@
+.welcome-div {
+    margin-top: 1.5em;
+}
+
+.flex-welcome {
+    display: flex;
+    justify-content: space-between;
+}
+
+.avatar {
+    height: 70px;
+    width: 70px;
+    padding-top: 0.2em;
+    background-color: var(--clr-primary-600);
+    border-radius: 50%;
+    margin-right: 2em;
+    margin-top: 0.25em;
+    font-weight: 700;
+    font-size: 2em;
+    color: var(--clr-primary-200);
+    text-align: center;
+}
+
+.welcome-text {
+    font-size: 2.7rem;
+}
+
+.welcome-para {
+    color: var(--clr-primary-400);
+    font-size: 1.3rem;
+    margin-top: -1.6em;
+}
+
+.gold-text {
+    color: var(--clr-primary-600);
+}
+
+.feature-text {
+    margin-block: 1.5em;
+}
+
+.feature-text p {
+    width: 90%;
+    margin-block-start: -1.3em;
+    margin-inline: auto;
+    text-align: center;
+    color: var(--clr-primary-400);
+    font-weight: 500;
+}

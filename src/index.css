@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +16,116 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+#root {
+  width: 100%;
+  height: 100vh;
+}
+
+/* =========DECLARING UTILITY CLASSES======== */
+
+:root {
+  --clr-primary-100: #223e8b;
+  --clr-primary-200: #008470;
+  --clr-primary-400: #000f3b;
+  --clr-primary-500: #ed1c24;
+  --clr-primary-600: #ffbf46;
+  --clr-neutral-100: #fff;
+  --clr-neutral-200: #555;
+  --clr-neutral-400: #f44174;
+
+  /* --ff-primary: serif; */
+  /* --ff-accent: monteserrat; */
+}
+
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.1125rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+body, h1, h2, h3, h4, p {
+  margin: 0;
+}
+
+h1, h2, h3, h4 {
+  /* font-family: var(--ff-accent); */
+  font-weight: 900;
+  line-height: 1;
+}
+
+h1, h2, h3, h4, p {
+  margin-bottom: 1em;
+}
+
+.bg-primary {
+  background-color:#A9F1DF1A;
+}
+
+/* ==========GENERAL STYLING FOR CONTAINER, HEADER AND FOOTER ============= */
+.container, .flex-header, .flex-footer {
+  margin-inline: auto;
+  width: min(90%, 85.5rem);
+}
+
+/* =======STYLING PRIMARY BUTTONS========= */
+.btn-primary {
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  background-color: var(--clr-primary-100);
+  color: var(--clr-neutral-100);
+  border: none;
+  border-radius: 6px;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  opacity: 0.85;
+  transform: translateY(3px);
+}
+
+/* =======STYLING FORM LABEL=========== */
+label {
+  font-weight: 500;
+  color: var(--clr-neutral-200);
+}
+
+/* ========STYLING SECTIONS========= */
+section {
+  background-color: #fff;
+  margin-top: 2em;
+}
+
+
+/* ===========MEDIA QUERIES=========== */
+@media only screen and (max-width: 325px) {
+  .btn-primary {
+    padding: 0.5rem;
+    font-size: 0.7rem;
+    margin: auto;
+}
+}
+
+@media only screen and (max-width: 425px) {
+  .btn-primary {
+    padding: 0.6rem;
+    font-size: 0.78rem;
+    margin: auto;
+}
+}
+
+@media only screen and (max-width: 760px) {
+  .btn-primary {
+    padding: 0.8rem;
+    font-size: 0.8rem;
+    margin: auto;
+}
 }
