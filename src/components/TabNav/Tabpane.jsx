@@ -20,7 +20,7 @@ function Tabpane({ children }) {
             type: 'SET_ACTIVE_TAB',
             payload: setActiveTab
         })
-    }, [])
+    }, [dispatch])
 
 
     return (
@@ -50,6 +50,7 @@ function Tabpane({ children }) {
 
 }
 
+export default Tabpane;
 
 
 
@@ -103,5 +104,3 @@ function Tabpane({ children }) {
 //         );
 //     }
 // }
-
-export default Tabpane;

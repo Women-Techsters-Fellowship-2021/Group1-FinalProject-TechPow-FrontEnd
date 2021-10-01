@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 //import components
 import DefaultLayout from '../../components/Layout/DefaultLayout';
-import Signup from '../SignUp';
 
 //import logos, images and icons
 import people from '../../resources/images/landingthreePicsAndTriangles.png';
