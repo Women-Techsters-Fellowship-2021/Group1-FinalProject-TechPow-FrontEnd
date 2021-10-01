@@ -75,7 +75,7 @@ export default function Signup() {
         };
 
         // console.log(newUser);
-        axios.post('https://localhost:44326/api/v1/Auth/Register',
+        axios.post('https://techpowtechsters-001-site1.itempurl.com/api/v1/Auth/Register',
             newUser)
             .then(result => {
                 console.log(result);
@@ -92,10 +92,10 @@ export default function Signup() {
                     const newEmail = {
                         toEmail: newUser.email,
                         subject: "TechPow Registration Notification",
-                        body: "Dear " + newUser.email + ". Thank you for completing your registration on TechPow. Please click on the link to login and complete your application. http://localhost:3000/Login"
+                        body: "Dear " + newUser.email + ". Thank you for completing your registration on TechPow. Please click on the link to login and complete your application. https://techpowtechsters-001-site1.itempurl.com/Login"
                     }
                     //Calling api for email
-                    axios.post('https://localhost:44326/api/v1/Email/SendEmail',
+                    axios.post('https://techpowtechsters-001-site1.itempurl.com/api/v1/Email/SendEmail',
                         newEmail)
                         .then(result => {
                             console.log(result);

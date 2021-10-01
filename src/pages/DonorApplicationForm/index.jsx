@@ -41,12 +41,11 @@ function DonorApplication() {
             deviceCondition: data.deviceCondition,
             updateRequest: data.updateRequest,
             signature: data.signature
-
         }
 
         const token = Token;
         //Call webAPI
-        Axios.post('https://localhost:44326/api/v1/Donor',
+        Axios.post('https://techpowtechsters-001-site1.itempurl.com/api/v1/Donor',
             newDonation,
             {
                 headers: {
@@ -70,7 +69,7 @@ function DonorApplication() {
                     }
 
                     //Calling api for email
-                    Axios.post('https://localhost:44326/api/v1/Email/SendEmail',
+                    Axios.post('https://techpowtechsters-001-site1.itempurl.com/api/v1/Email/SendEmail',
                         newEmail)
                         .then(result => {
                             console.log(result);

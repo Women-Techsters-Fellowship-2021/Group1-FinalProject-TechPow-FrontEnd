@@ -27,12 +27,13 @@ function ForgotPassword() {
                 userEmail: reset_email
             },
         })
-        axios.get(`https://localhost:44326/api/v1/Auth/GetUserEmail?Email=${reset_email}`)
+        
+        axios.get(`https://techpowtechsters-001-site1.itempurl.com/api/v1/Auth/GetUserEmail?Email=${reset_email}`)
             .then(result => {
                 if (result.data.success) {
                     console.log(result.data);
                     history.push('/Authentication');
-                    axios.post('https://localhost:44326/api/v1/ResetPassword/SendOTPCode', user_email)
+                    axios.post('https://techpowtechsters-001-site1.itempurl.com/api/v1/ResetPassword/SendOTPCode', user_email)
                         .then(result => {
                             console.log(result);
                             if (result.status === 200) {
@@ -46,6 +47,7 @@ function ForgotPassword() {
                 }
             });
     }
+
     return (
         <DefaultLayout>
             <div className="bg-pattern">
