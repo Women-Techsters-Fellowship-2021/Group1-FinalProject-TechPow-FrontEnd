@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { ChakraProvider } from "@chakra-ui/react";
 
 //import pages
 import LandingPage from './pages/LandingPage';
@@ -35,122 +34,120 @@ import IdentityVerification from './pages/Identity Verification';
 
 function App() {
   return (
-    <ChakraProvider>
-        <AppStateProvider>
-          <ToastContainer />
-          <Router>
-            <Switch>
-              
-              <Route path="/" exact>
-                <LandingPage />
-              </Route>
+    <AppStateProvider>
+      <ToastContainer />
+      <Router>
+        <Switch>
+          
+          <Route path="/" exact>
+            <LandingPage />
+          </Route>
 
-              <Route path="/SignUp" exact>
-                <SignUp />
-              </Route>
+          <Route path="/SignUp" exact>
+            <SignUp />
+          </Route>
 
-              <Route path="/Login" exact>
-                <Login />
-              </Route>
+          <Route path="/Login" exact>
+            <Login />
+          </Route>
 
-              <Route path="/Home" exact>
-                <Home />
-              </Route>
+          <Route path="/Home" exact>
+            <Home />
+          </Route>
 
-              <Route path="/About" exact>
-                <About />
-              </Route>
+          <Route path="/About" exact>
+            <About />
+          </Route>
 
-              <Route path="/Contact" exact>
-                <Contact />
-              </Route>
+          <Route path="/Contact" exact>
+            <Contact />
+          </Route>
 
-              <Route path="/ForgotPassword" exact>
-                <ForgotPassword />
-              </Route>
+          <Route path="/ForgotPassword" exact>
+            <ForgotPassword />
+          </Route>
 
-              <Route path="/CreateNewPassword" exact>
-                <CreateNewPassword />
-              </Route>
+          <Route path="/CreateNewPassword" exact>
+            <CreateNewPassword />
+          </Route>
 
-              <Route path="/Authentication" exact>
-                <Authentication />
-              </Route>
+          <Route path="/Authentication" exact>
+            <Authentication />
+          </Route>
 
-              <Route path="/DoneeApplicationForm" exact>
-                <DoneeApplicationForm />
-              </Route>
+          <Route path="/DoneeApplicationForm" exact>
+            <DoneeApplicationForm />
+          </Route>
 
-              <Route path="/DonorApplicationForm" exact>
-                <DonorApplicationForm />
-              </Route>
+          <Route path="/DonorApplicationForm" exact>
+            <DonorApplicationForm />
+          </Route>
 
-              <Route path="/TabNav" exact>
-                <TabNav />
-              </Route>
+          <Route path="/TabNav" exact>
+            <TabNav />
+          </Route>
 
-              <Route path="/PersonalInfo" exact>
-                <PersonalInfo />
-              </Route>
+          <Route path="/PersonalInfo" exact>
+            <PersonalInfo />
+          </Route>
 
-              <Route path="/Request" exact>
-                <Request />
-              </Route>
+          <Route path="/Request" exact>
+            <Request />
+          </Route>
 
 
-              <Route path="/Verification" exact>
-                <Verification />
-              </Route>
+          <Route path="/Verification" exact>
+            <Verification />
+          </Route>
 
-              <Route path="/EmailVerification" exact>
-                <EmailVerification />
-              </Route>
+          <Route path="/EmailVerification" exact>
+            <EmailVerification />
+          </Route>
 
-              <Route path="/Donees" exact>
-                <Donees />
-              </Route>
+          <Route path="/Donees" exact>
+            <Donees />
+          </Route>
 
-              <Route exact path="/donees/:doneeid"> 
-                <ReadMore />
-              </Route>
+          <Route exact path="/donees/:doneeid"> 
+            <ReadMore />
+          </Route>
 
-              <Route path="/Searchbox">
-                <Searchbox />
-              </Route>
-              <Route path="/Thankyou-cardDonee">
-                <ThankyouCard />
-              </Route>
+          <Route path="/Searchbox">
+            <Searchbox />
+          </Route>
+          <Route path="/Thankyou-cardDonee">
+            <ThankyouCard />
+          </Route>
 
-              <Route path="/Thankyou-cardDonor">
-                <ThankyouCardDonor />
-              </Route>
+          <Route path="/Thankyou-cardDonor">
+            <ThankyouCardDonor />
+          </Route>
 
-              <Route path="/PrivacyPolicy">
-                <PrivacyPolicy />
-              </Route>
+          <Route path="/PrivacyPolicy">
+						<PrivacyPolicy />
+					</Route>
 
-              <Route path="/TermsOfUse">
-                <TermsOfUse />
-              </Route>
+          <Route path="/TermsOfUse">
+						<TermsOfUse />
+					</Route>
 
-              <Route path="/GetInvolved">
-                <GetInvolved />
-              </Route>
-              
-              <Route path="/GetInvolved">
-                <IdentityVerification />
-              </Route>
+          <Route path="/GetInvolved">
+						<GetInvolved />
+					</Route>
+          
+          <Route path="/GetInvolved">
+						<IdentityVerification />
+					</Route>
 
-              <Route path="/Modal">
-                <Modal />
-              </Route>
+          <Route path="/Modal">
+						<Modal />
+					</Route>
 
-              <Redirect to="/" />
+          <Redirect to="/" />
 
-            </Switch>
-          </Router>
-        </AppStateProvider>
-    </ChakraProvider>
+        </Switch>
+      </Router>
+    </AppStateProvider>
   );
 }
 

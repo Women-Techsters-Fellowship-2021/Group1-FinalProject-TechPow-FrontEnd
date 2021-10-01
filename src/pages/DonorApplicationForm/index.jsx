@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import DefaultLayout from '../../components/Layout/DefaultLayout';
 import { useHistory } from 'react-router';
 import { useForm } from 'react-hook-form';
@@ -6,26 +6,26 @@ import { AppContext } from '../../components/AppStateProvider';
 import Axios from 'axios';
 import { toast } from 'react-toastify';
 import { Link } from 'react-router-dom';
-import Modal from '../../components/Modal/index';
+//import Modal from '../../components/Modal/index';
 
 //import styles
 import './style.css';
-import ThankyouCardDonor from '../../components/Thankyou-cardDonor';
+//import ThankyouCardDonor from '../../components/Thankyou-cardDonor';
 
 function DonorApplication() {
     const { register, handleSubmit } = useForm();
     const { state: { Token, userId, userEmail }, dispatch, isLoggedIn } = useContext(AppContext);
     const usehistory = useHistory();
-    const {show, setShow} = useState(false);
+    //const {show, setShow} = useState(false);
 
-    // if (isLoggedIn === false) {
-    //     toast.error("Please Login to Donate...",
-    //         {
-    //             position: toast.POSITION.TOP_CENTER
-    //         });
-    //     usehistory.push('/Login');
+    if (isLoggedIn === false) {
+        toast.error("Please Login to Donate...",
+            {
+                position: toast.POSITION.TOP_CENTER
+            });
+        usehistory.push('/Login');
 
-    // }
+    }
 
     const SubmitDonation = (data) => {
         let newDonation = {
@@ -294,16 +294,19 @@ function DonorApplication() {
                                     </div>
 
                                     <div className="form-login-btn next-btn">
-                                        <button type="submit" className="btn btn-primary" onClick={() => setShow(true)}>Submit</button>
+                                        <Link to="/Thankyou-CardDonor">
+                                            <button type="submit" className="btn btn-primary">Submit</button>
+                                        </Link>
+                                        {/* <button type="submit" className="btn btn-primary" onClick={() => setShow(true)}>Submit</button> */}
                                     </div>
                                 </form>
                             </div>
                         </div>
                     </div>
                 </div>
-                <Modal show={show} onClose={() => setShow(false)}>
+                {/* <Modal show={show} onClose={() => setShow(false)}>
                     <ThankyouCardDonor />
-                </Modal>
+                </Modal> */}
             </DefaultLayout>
         </React.Fragment>
     );

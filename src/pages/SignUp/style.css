@@ -1,8 +1,12 @@
-#bg-circle {
+/* #bg-circle {
     background-image: url("../../resources/icons/Circles.svg");
     background-repeat: no-repeat;
     background-position: top right 30rem;
     background-position-y: top;
+} */
+
+.signup-page {
+    margin-top: 4em;
 }
 
 .form-container {

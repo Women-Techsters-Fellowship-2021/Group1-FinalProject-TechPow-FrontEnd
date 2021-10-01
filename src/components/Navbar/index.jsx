@@ -22,13 +22,13 @@ function Navbar() {
         <header>
             <div className="containe">
                 <div className="flex-header">
+                    <div className="app-logo">
+                        <Link to="/">
+                            <img src={TechPow_logo} alt="TechPow Logo" className="head-logo" />
+                        </Link>
+                    </div>
                     {!state.isLoggedIn ? (
-                        <>
-                            <div>
-                                <Link to="/">
-                                    <img src={TechPow_logo} alt="TechPow Logo" className="head-logo" />
-                                </Link>
-                            </div>
+                        <>                          
                             <div className="flex-header-links">
                                 <nav>
                                     <ul>
@@ -41,7 +41,7 @@ function Navbar() {
                                     </ul>
                                 </nav>
                             </div>
-                            <div>
+                            <div className="nav-btns">
                                 <button className="btn-primary login-btn">
                                     <a href="/Login" className
                                         ="login-btn">Login</a>
@@ -54,9 +54,9 @@ function Navbar() {
                         </>
                     ) : (
                         <>
-                            <div>
+                            {/* <div>
                                 <img src={TechPow_logo} alt="TechPow Logo" className="head-logo" />
-                            </div>
+                            </div> */}
                             <div className="flex-header-links">
                                 <nav>
                                     <ul>
@@ -69,10 +69,12 @@ function Navbar() {
                                     </ul>
                                 </nav>
                             </div>
-                            <div>
-                                <button className="btn-primary login-btn" onClick={logout}>
-                                    Logout
-                                </button>
+                            <div className="nav-btns">
+                                <div>
+                                    <button className="btn-primary login-btn" onClick={logout}>
+                                        Logout
+                                    </button>
+                                </div>
                             </div>
                         </>
                     )}
