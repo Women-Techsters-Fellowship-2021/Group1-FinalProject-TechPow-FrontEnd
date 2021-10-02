@@ -20,11 +20,9 @@ function EmailVerification() {
 
         const newEmail = {
             toEmail: userEmail,
-            subject: "TechPow Registration Notification",
-            body: "Dear " + userEmail + ". Thank you for completing you application on TechPow. Please click on the link to login and complete your application. http://techpowtechsters-001-site1.itempurl.com/Login"
         }
         //Calling api for email
-        axios.post('https://techpowtechsters-001-site1.itempurl.com/api/v1/Email/SendEmail',
+        axios.post('http://techpowtechsters-001-site1.itempurl.com/api/v1/Email/SendEmail',
             newEmail)
             .then(result => {
                 console.log(result);
@@ -45,7 +43,7 @@ function EmailVerification() {
     const UpdateEmail = ({ update_email }) => {
         // let email_value = update_email.value
         console.log(userId);
-        axios.patch(`https://techpowtechsters-001-site1.itempurl.com/api/v1/Auth?userID=${userId}`,
+        axios.patch(`http://techpowtechsters-001-site1.itempurl.com/api/v1/Auth?userID=${userId}`,
             { email: update_email })
             .then(result => {
                 console.log(result);

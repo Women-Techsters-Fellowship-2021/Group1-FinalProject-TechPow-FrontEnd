@@ -50,8 +50,12 @@ export default function Signup() {
         //return (/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@#$%^&!]{8,}$/).test(data)
     };
 
-    const registerUser = ({ email, password, confirmPassword, role }) => {
+    const registerUser = ({ username, email, password, confirmPassword, role }) => {
 
+        if (!username) {
+            // console.log("Error");
+            return toast.error("Please provide a username");
+        }
         if (!email) {
             // console.log("Error");
             return toast.error("Please provide an email");
@@ -68,6 +72,7 @@ export default function Signup() {
 
         //create a new user object and post to the provided API
         const newUser = {
+            username: username,
             email: email,
             password: password,
             ConfirmPassword: confirmPassword,
@@ -75,7 +80,7 @@ export default function Signup() {
         };
 
         // console.log(newUser);
-        axios.post('https://techpowtechsters-001-site1.itempurl.com/api/v1/Auth/Register',
+        axios.post('http://techpowtechsters-001-site1.itempurl.com/api/v1/Auth/Register',
             newUser)
             .then(result => {
                 console.log(result);
@@ -84,6 +89,7 @@ export default function Signup() {
                     context.dispatch({
                         type: 'REGISTER',
                         payload: {
+                            username: result.data.data.username,
                             userId: result.data.data.id,
                             userEmail: result.data.data.email,
                             userRole: result.data.data.typeofuser,
@@ -91,11 +97,9 @@ export default function Signup() {
                     })
                     const newEmail = {
                         toEmail: newUser.email,
-                        subject: "TechPow Registration Notification",
-                        body: "Dear " + newUser.email + ". Thank you for completing your registration on TechPow. Please click on the link to login and complete your application. https://techpowtechsters-001-site1.itempurl.com/Login"
                     }
                     //Calling api for email
-                    axios.post('https://techpowtechsters-001-site1.itempurl.com/api/v1/Email/SendEmail',
+                    axios.post('http://techpowtechsters-001-site1.itempurl.com/api/v1/Email/SendEmail',
                         newEmail)
                         .then(result => {
                             console.log(result);
@@ -118,8 +122,6 @@ export default function Signup() {
                     toast.error(error.response.data.errors[index]);
                 }
             })
-
-
     };
 
 
@@ -146,7 +148,19 @@ export default function Signup() {
                         <div className="col-md-4">
                             <form id="form-group" onSubmit={handleSubmit(registerUser)}>
                                 <div className="form-group">
-                                    <label asp-for="Email">Email</label>
+                                    <label>Username</label>
+                                    <input
+                                        type="text"
+                                        name="username"
+                                        id="username"
+                                        className="form-control"
+                                        required
+                                        {...register('username', { required: true }
+                                        )}
+                                    />
+                                </div>
+                                <div className="form-group">
+                                    <label>Email</label>
                                     <input
                                         type="email"
                                         name="email"
@@ -158,7 +172,7 @@ export default function Signup() {
                                     />
                                 </div>
                                 <div className="form-group">
-                                    <label asp-for="Password">Password</label>
+                                    <label>Password</label>
                                     <input
                                         type="password"
                                         name="password"

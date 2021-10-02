@@ -31,7 +31,7 @@ function CreateNewPassword() {
         }
         console.log(newResetPassword)
 
-        axios.post('https://localhost:44326/api/v1/ResetPassword/ResetPassword', newResetPassword)
+        axios.post('http://localhost:44326/api/v1/ResetPassword/ResetPassword', newResetPassword)
             .then(result => {
                 console.log(result);
                 if (result.data.success) {
@@ -40,12 +40,12 @@ function CreateNewPassword() {
                     return;
                 }
                 toast.error(result.data.message);
-                axios.post('https://localhost:44326/api/v1/ResetPassword/SendOTPCode', usermail)
+                axios.post('http://localhost:44326/api/v1/ResetPassword/SendOTPCode', usermail)
                     .then(result => {
                         console.log(result);
                         if (result.status === 200) {
                             toast.success(result.data);
-                            history.push('/Authentication')
+                            history.push('/Authentication');
                         }
                         toast.error(result.data.message);
                     })

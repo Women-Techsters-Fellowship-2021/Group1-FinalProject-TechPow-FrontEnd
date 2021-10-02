@@ -19,6 +19,8 @@ import odomero from '../../resources/images/Team/odomero.png';
 import Rahmot from'../../resources/images/Team/Rahmot.png';
 import Rukayat from '../../resources/images/Team/Rukayat.png';
 import Sarah from '../../resources/images/Team/Sarah.png';
+import Sally from '../../resources/images/Team/Sally Nyiwende Oketch Kenya (1).jpg';
+import ope from '../../resources/images/Team/Opeyemi Akinbode.png';
 
 function About() {
   return (
@@ -220,20 +222,31 @@ function About() {
                                 </div>
                             </div>
                         </div>
-                      {/* <div className="split">
+                      <div className="split">
                         <div>
-                            <div className="grey-circle"></div>
+                            <div className="grey-circle">
+                                <img src={Sally} alt="" className="team-img" />
+                            </div>
+                            <div className="grey-line">
+                                <h3 className="blue-text">Sally Oketch</h3>
+                                <p className="track">CyberSecurity</p>
+                            </div>
+                        </div>
+                        <div>
+                            <div className="grey-circle">
+                            </div>
                             <div className="grey-line"></div>
                         </div>
                         <div>
-                            <div className="grey-circle"></div>
-                            <div className="grey-line"></div>
+                            <div className="grey-circle">
+                                <img src={ope} alt="" className="team-img" />
+                            </div>
+                            <div className="grey-line">
+                                <h3 className="blue-text">Opeyemi Akinbode</h3>
+                                <p className="track">Product Designer</p>
+                            </div>
                         </div>
-                        <div>
-                            <div className="grey-circle"></div>
-                            <div className="grey-line"></div>
-                        </div>
-                      </div> */}
+                      </div>
                   </div>
               </section>
           </div>

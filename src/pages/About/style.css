@@ -63,6 +63,20 @@
     text-align: center;
 }
 
+.team-img {
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+}
+
+.empty-div  {
+    padding: 4em;
+    margin-top: -2em;
+    border-radius: 100%;
+    background-color: #ddd;
+}
+
+
 .grey-circle {
     padding: 4em;
     margin-top: -2em;

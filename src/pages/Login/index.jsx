@@ -30,7 +30,7 @@ function Login() {
             password: password,
         }
 
-        axios.post('https://techpowtechsters-001-site1.itempurl.com/api/v1/Auth/Login',
+        axios.post('http://techpowtechsters-001-site1.itempurl.com/api/v1/Auth/Login',
             userlogin)
             .then(result => {
                 if (result.data.success) {

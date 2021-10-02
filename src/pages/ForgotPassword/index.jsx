@@ -28,12 +28,12 @@ function ForgotPassword() {
             },
         })
         
-        axios.get(`https://techpowtechsters-001-site1.itempurl.com/api/v1/Auth/GetUserEmail?Email=${reset_email}`)
+        axios.get(`http://techpowtechsters-001-site1.itempurl.com/api/v1/Auth/GetUserEmail?Email=${reset_email}`)
             .then(result => {
                 if (result.data.success) {
                     console.log(result.data);
                     history.push('/Authentication');
-                    axios.post('https://techpowtechsters-001-site1.itempurl.com/api/v1/ResetPassword/SendOTPCode', user_email)
+                    axios.post('http://techpowtechsters-001-site1.itempurl.com/api/v1/ResetPassword/SendOTPCode', user_email)
                         .then(result => {
                             console.log(result);
                             if (result.status === 200) {

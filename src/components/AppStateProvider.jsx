@@ -38,6 +38,7 @@ function reducer(state, action) {
 
     if (action.type === 'REGISTER') {
         saveState.isLoggedIn = false;
+        saveState.userName = action.payload.username;
         saveState.userId = action.payload.userId;
         saveState.userEmail = action.payload.userEmail;
         saveState.userRole = action.payload.userRole;
