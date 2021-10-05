@@ -1,10 +1,12 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
 import axios from 'axios';
 import { AppContext } from '../../components/AppStateProvider';
 import DefaultLayout from '../../components/Layout/DefaultLayout';
+import { css } from "@emotion/react";
+import  BeatLoader from "react-spinners/BeatLoader";
 
 
 //import social-media icons
@@ -18,7 +20,15 @@ import portrait from '../../resources/icons/person-bounding-box.svg';
 //import styles
 import './style.css'
 
+const overrride = css`
+    display: block;
+    margin: 0 auto;
+    border-color: navy;
+`;
+
 function Login() {
+    const [loading, setLoading] = useState(false);
+    const [color] = useState("navy");
     const { register, handleSubmit } = useForm();
     const context = useContext(AppContext);
     const history = useHistory();
@@ -30,10 +40,13 @@ function Login() {
             password: password,
         }
 
+        setLoading(true);
+
         axios.post('https://donationappwebapi20211005103856.azurewebsites.net/api/v1/Auth/Login',
             userlogin)
             .then(result => {
                 if (result.data.success) {
+                    setLoading(false);
                     console.log(result.data);
                     toast.success('Welcome! ' + result.data.data.username);
                     context.dispatch({
@@ -52,6 +65,7 @@ function Login() {
                     history.push('/Donees');
                     return true;
                 }
+                setLoading(false);
                 toast.error(result.data.message);
             })
             .catch(error => {
@@ -116,8 +130,12 @@ function Login() {
                                     <a href="/ForgotPassword" className=" red   green-span">Forgot Password?
                                     </a>
                                 </div>
-                                <div className="form-login-btn">
-                                    <button type="submit" className="btn btn-primary login_btn">Log in</button>
+                                <div className="form-login-btn last-flex sweet-loading">
+                                    <button type="submit" className="btn btn-primary login_btn" disabled={loading}>
+                                        { loading && (<div><BeatLoader color={color} css={overrride} size={15} />
+                                            </div>)}
+                                        { !loading && <span>Log in</span>}
+                                    </button>
                                 </div>
                                 <div className="alternative-signup">
                                     <span className="txt1">

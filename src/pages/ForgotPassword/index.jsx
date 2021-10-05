@@ -31,38 +31,39 @@ function ForgotPassword() {
         let user_email = {
             email: reset_email
         }
+
         dispatch({
             type: 'SAVE_EMAIL',
             payload: {
                 userEmail: reset_email
             },
         })
+
+        setLoading(true);
         
         axios.get(`https://donationappwebapi20211005103856.azurewebsites.net/api/v1/Auth/GetUserEmail?Email=${reset_email}`)
             .then(result => {
                 if (result.data.success) {
+                    setLoading(false);
                     console.log(result.data);
                     history.push('/Authentication');
+
                     axios.post('https://donationappwebapi20211005103856.azurewebsites.net/api/v1/ResetPassword/SendOTPCode', user_email)
                         .then(result => {
                             console.log(result);
                             if (result.status === 200) {
                                 toast.success(result.data);
                             }
+                            setLoading(false);
                             toast.error(result.data.message);
                         })
                         .catch(error => {
                             toast.error(error.response.data.message);
                         })
                 }
+                setLoading(false);
             });
-    }
-
-    const displayLoader = () => {
-        setLoading(true);
-        setTimeout(() => {
-            setLoading({ loading: false});
-        }, 1000)
+        
     }
 
     return (
@@ -89,7 +90,7 @@ function ForgotPassword() {
                                 />
                             </div>
                             <div className="sweet-loading">
-                                <button type="submit" className="btn btn-primary reset" onClick={displayLoader} disabled={loading}>
+                                <button type="submit" className="btn btn-primary reset" disabled={loading}>
                                     { loading && (<div><BeatLoader color={color} css={overrride} size={15} />
                                                 </div>)}
                                     { !loading && <span>Reset password</span>}

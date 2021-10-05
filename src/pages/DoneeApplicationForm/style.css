@@ -96,9 +96,8 @@
     margin: auto;
 }
 
-
 .upload-field {
-    width: 25rem;
+    width: 28rem;
     height: 12rem;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -117,6 +116,11 @@
     font-size: 0.92rem;
     color: #555;
 }
+
+/* .file-upload {
+    width: 100%;
+    text-align: center;
+} */
 
 .acknowledgement-text {
     margin-block-start: 5em;

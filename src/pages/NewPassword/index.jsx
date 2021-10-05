@@ -28,33 +28,43 @@ function CreateNewPassword() {
         if (password !== confirmpassword) {
             return toast.error("Passwords don't match");
         }
+
         const newResetPassword = {
             email: userEmail,
             otp: userOTP,
             newPassword: password
         };
+        console.log(newResetPassword);
 
         const usermail = {
             email: userEmail
         }
-        console.log(newResetPassword)
+
+        setLoading(true);
 
         axios.post('https://donationappwebapi20211005103856.azurewebsites.net/api/v1/ResetPassword/ResetPassword', newResetPassword)
             .then(result => {
                 console.log(result);
                 if (result.data.success) {
+                    setLoading(false);
                     toast.success(result.data.message);
                     history.push('/Login');
                     return;
                 }
+                setLoading(false);
                 toast.error(result.data.message);
+
+                setLoading(true);
+
                 axios.post('https://donationappwebapi20211005103856.azurewebsites.net/api/v1/ResetPassword/SendOTPCode', usermail)
                     .then(result => {
                         console.log(result);
                         if (result.status === 200) {
+                            setLoading(false);
                             toast.success(result.data);
                             history.push('/Authentication');
                         }
+                        setLoading(false);
                         toast.error(result.data.message);
                     })
                     .catch(error => {
@@ -65,13 +75,6 @@ function CreateNewPassword() {
                 toast.error(error.response.data.message);
             })
 
-    }
-
-    const displayLoader = () => {
-        setLoading(true);
-        setTimeout(() => {
-            setLoading({ loading: false});
-        }, 1000)
     }
 
     return (
@@ -106,7 +109,7 @@ function CreateNewPassword() {
                                 />
                             </div>
                             <div className="sweet-loading">
-                                <button type="submit" className="btn btn-primary reset fg-btn" onClick={displayLoader} disabled={loading}>
+                                <button type="submit" className="btn btn-primary reset fg-btn" disabled={loading}>
                                     { loading && (<div><BeatLoader color={color} css={overrride} size={15} />
                                                 </div>)}
                                     { !loading && <span>Submit</span>}

@@ -86,6 +86,8 @@ export default function Signup() {
             typeofuser: role
         };
 
+        setLoading(true);
+
         // console.log(newUser);
         axios.post('https://donationappwebapi20211005103856.azurewebsites.net/api/v1/Auth/Register',
             newUser)
@@ -111,8 +113,10 @@ export default function Signup() {
                         .then(result => {
                             console.log(result);
                             if (result.status === 200) {
+                                setLoading(false);
                                 return true;
                             }
+                            setLoading(false);
                             return false;
                         }
                         );
@@ -131,12 +135,7 @@ export default function Signup() {
             })
     };
 
-    const displayLoader = () => {
-        setLoading(true);
-        setTimeout(() => {
-            setLoading({ loading: false});
-        }, 1000)
-    }
+        
 
 
     return (
@@ -224,10 +223,10 @@ export default function Signup() {
                                         required
                                         name="terms-and-conditions" id="checkbox" className="signup-check"
                                         {...register('terms-and-conditions', { required: true })} />
-                                    <p>By signing up, you agree to the <strong className="bold-text"><a href="/TermsOfUse" className="bold-text">Terms of Service </a></strong>and <strong className="bold-text"><a href="/PrivacyPolicy" className="bold-text">Privacy Policy</a></strong>.</p>
+                                    <p>By signing up, you agree to the <strong className="bold-text"><a href="/TermsOfUse" target="_blank" rel="noreferrer" className="bold-text">Terms of Service </a></strong>and <strong className="bold-text"><a href="/PrivacyPolicy" target="_blank" rel="noreferrer" className="bold-text">Privacy Policy</a></strong>.</p>
                                 </div>
                                 <div className="last-flex sweet-loading">
-                                    <button type="submit" className="btn btn-primary" onClick={displayLoader} disabled={loading}>
+                                    <button type="submit" className="btn btn-primary" disabled={loading}>
                                         { loading && (<div><BeatLoader color={color} css={overrride} size={15} />
                                             </div>)}
                                         { !loading && <span>Create Account</span>}

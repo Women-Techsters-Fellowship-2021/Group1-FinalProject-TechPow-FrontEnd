@@ -54,6 +54,8 @@ function DonorApplication() {
         }
 
         const token = Token;
+
+        setLoading(true);
         //Call webAPI
         Axios.post('https://donationappwebapi20211005103856.azurewebsites.net/api/v1/Donor',
             newDonation,
@@ -65,6 +67,7 @@ function DonorApplication() {
             .then(result => {
                 console.log(result);
                 if (result.data.success) {
+                    setLoading(false);
                     toast.success(result.data.message);
                     dispatch({
                         type: 'DONOR_APPLICATION',
@@ -72,6 +75,7 @@ function DonorApplication() {
                             donor: newDonation,
                         },
                     })
+
                     let newEmail = {
                         toEmail: userEmail,
                     }
@@ -90,6 +94,7 @@ function DonorApplication() {
                     usehistory.push('/Thankyou-cardDonor');
                     return true;
                 }
+                setLoading(false);
                 for (let index = 0; index < result.data.errors.length; index++) {
                     toast.error(result.data.errors[index]);
                 }
@@ -102,14 +107,6 @@ function DonorApplication() {
 
             })
 
-    }
-
-    const displayLoader = () => {
-        setLoading(true);
-        setTimeout(() => {
-            setLoading({ loading: false});
-        }, 1000);
-        usehistory.push('/Thankyou-cardDonor');
     }
 
     return (
@@ -265,8 +262,7 @@ function DonorApplication() {
                                                 name="sendViaOnsite"
                                                 id="sendViaOnsite"
                                                 className="schedule-check"
-                                                required
-                                                {...register('sendViaOnsite', { required: true })}
+                                                {...register('sendViaOnsite', { required: false })}
                                             />
                                             <p className="schedule-para">Send Via Onsite</p>
                                             <h3>-OR-</h3>
@@ -274,7 +270,7 @@ function DonorApplication() {
                                                 type="checkbox"
                                                 name="requestforpickup"
                                                 id="requestforpickup" className="schedule-check"
-                                                {...register('sendViaOnsite', { required: true })}
+                                                {...register('sendViaOnsite', { required: false })}
                                             />
                                             <p className="schedule-para">Request for pickup</p>
                                         </div>
@@ -310,7 +306,7 @@ function DonorApplication() {
 
                                     <div className="form-login-btn next-btn">
                                         <div className="sweet-loading">
-                                            <button type="submit" className="btn btn-primary" onClick={displayLoader} disabled={loading}>
+                                            <button type="submit" className="btn btn-primary" disabled={loading}>
                                                 { loading && (<div><BeatLoader color={color} css={overrride} size={15} />
                                                             </div>)}
                                                 { loading && <span>Submitting</span>}

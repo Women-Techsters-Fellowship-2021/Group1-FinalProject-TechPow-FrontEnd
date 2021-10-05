@@ -132,6 +132,8 @@ function Verification() {
                 eduLevel: applicationForm.eduLevel
             };
             const token = Token;
+
+            setLoading(true);
             //Call webAPI
             Axios.post('https://donationappwebapi20211005103856.azurewebsites.net/api/v1/DoneeApp',
                 newDoneeApplication,
@@ -143,6 +145,7 @@ function Verification() {
                 .then(result => {
                     console.log(result);
                     if (result.data.success) {
+                        setLoading(false);
                         toast.success(result.data.message);
                         dispatch({
                             type: 'DONEE_APPLICATION',
@@ -168,6 +171,7 @@ function Verification() {
                         usehistory.push('/Thankyou-cardDonee');
                         return true;
                     }
+                    setLoading(false);
                     for (let index = 0; index < result.data.errors.length; index++) {
                         toast.error(result.data.errors[index]);
                     }
@@ -187,14 +191,6 @@ function Verification() {
             dispatch({ type: 'ADD_COMPLETED_STEP', payload: "Verification" })
     })
 
-    const displayLoader = () => {
-        setLoading({ loading: true});
-        setTimeout(() => {
-            setLoading({ loading: false});
-        }, 2000);
-        usehistory.push("/Thankyou-cardDonee");
-    };
-
     return (
         <div className="donee-app-form">
             <form className="donee-form" onSubmit={handleSubmit(updateApplicationForm)}>
@@ -213,7 +209,7 @@ function Verification() {
                                     className="file-upload"
                                     accept="image/*" {...register('imageLink', { required: true })}
                                     onChange={ImageSelectorHandler}
-                                    hidden
+                                    required
                                 />
                             </div>
                         </div>
@@ -229,9 +225,9 @@ function Verification() {
                                     type="file"
                                     id="recommend-btn"
                                     className="file-upload"
+                                    required
                                     accept="image/*" {...register('letterOfRecommendationLink', { required: true })}
                                     onChange={LetterSelectorHandler}
-                                    hidden
                                 />
                             </div>
                         </div>
@@ -239,7 +235,7 @@ function Verification() {
                         <div className="upload-field">
                             <label for="idcard" className="upload-btn">
                                 <p>National Identity Card</p>
-                                <img src={Vector} alt="" className="upload-icon" />
+                                <img src={Vector} alt="upload-icon" className="upload-icon" />
                                 <p className="upload-text">Upload a copy of your National identity card</p>
                             </label>
                             <div>
@@ -247,9 +243,9 @@ function Verification() {
                                     type="file"
                                     id="idcard"
                                     className="file-upload"
+                                    required
                                     accept="image/*" {...register('nationalIdLink', { required: true })}
                                     onChange={IDSelectorHandler}
-                                    hidden
                                 />
                             </div>
                         </div>
@@ -300,7 +296,7 @@ function Verification() {
                         </div>
                     </div>
                     <div className="form-login-btn next-btn submit-app-btn sweet-loading">
-                        <button type="submit" className="btn btn-primary" onClick={displayLoader} disabled={loading}>
+                        <button type="submit" className="btn btn-primary" disabled={loading}>
                             { loading && (<div><BeatLoader color={color} css={overrride} size={15} />
                                         </div>)}
                             { loading && <span>Submitting</span>}
