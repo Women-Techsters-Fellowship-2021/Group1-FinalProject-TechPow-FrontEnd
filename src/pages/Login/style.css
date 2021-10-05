@@ -81,6 +81,10 @@
     padding-inline-start: 0.3rem;
 }
 
+.sm-login-icon:hover {
+    transform: translateY(3px);
+}
+
 .form-mid-div {
     margin: 1em;
     font-size: 1.4rem;

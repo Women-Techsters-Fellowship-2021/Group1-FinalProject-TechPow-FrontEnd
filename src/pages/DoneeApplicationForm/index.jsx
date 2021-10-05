@@ -31,7 +31,7 @@ function DoneeApplicationForm() {
                         <p>We aim to ensure that everyone has access to technical devices.</p>
                     </div>
                     <div className="back-link">
-                        <a href="/LandingPage"> &lt; Back to home</a>
+                        <a href="/Home"> &lt; Back to home</a>
                     </div>
                     <TabNav />
                 </div>

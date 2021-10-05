@@ -48,7 +48,7 @@ function Login() {
                 if (result.data.success) {
                     setLoading(false);
                     console.log(result.data);
-                    toast.success('Welcome! ' + result.data.data.userName);
+                    toast.success('Welcome,' + result.data.data.userName);
                     context.dispatch({
                         type: 'LOGIN',
                         payload: {
@@ -79,7 +79,7 @@ function Login() {
             <div className="bg-pattern">
                 <div className="container">
                     <div className="home-link">
-                        <Link to="/Home" className="back-to-link">Back to home</Link>
+                        <Link to="/Home" className="back-to-link"> &lt; Back to home</Link>
                     </div>
                     <div className="top-login-section">
                         <img src={portrait} alt="" id="portrait" />

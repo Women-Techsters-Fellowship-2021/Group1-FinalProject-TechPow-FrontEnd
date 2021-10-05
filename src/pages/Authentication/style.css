@@ -6,6 +6,13 @@
     cursor: pointer;
 }
 
+#OTP {
+    margin-inline: 0.5em 2em;
+    width: 4.5rem;
+    border-bottom: 2px dashed #ccc;
+    overflow-x: hidden;
+}
+
 .blue-link {
     text-decoration: none;
 }

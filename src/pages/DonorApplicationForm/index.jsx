@@ -118,7 +118,7 @@ function DonorApplication() {
                             <span className="green appname">Welcome To T</span><span className="appname">ech</span><span className="green appname">P</span><span className="appname">ow</span>
                         </h1>
                         <div className="back-link">
-                            <a href="/LandingPage"> &lt; Back to home</a>
+                            <a href="/Donees"> &lt; Back to home</a>
                         </div>
 
                         <div className="application-container">

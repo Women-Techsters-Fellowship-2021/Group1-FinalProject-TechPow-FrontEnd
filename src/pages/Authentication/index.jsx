@@ -32,13 +32,15 @@ function Authentication() {
                         <h1 className="fg-text">Authentication Required</h1>
                         <p>We've sent a One Time Password (OTP) to the specified email.</p>
                         <form method="post" onSubmit={handleSubmit(handleOTP)}>
-                            <label for="otp">Enter OTP</label>
-                            <input type="tel" name="OTP" id="OTP"
-                                register
-                                className="form-control pwd-field"
-                                {...register('otp', { required: true }
-                                )}
-                            />
+                            <div className="otp-form-field">
+                                <label for="otp">Enter OTP</label>
+                                <input type="tel" name="OTP" id="OTP"
+                                    register
+                                    className="form-control pwd-field"
+                                    {...register('otp', { required: true }
+                                    )}
+                                />
+                            </div>
                             <button type="submit" className="btn-primary reset">Continue</button>
                         </form>
                         <p className="ver-code">Did not receive email verification code? <Link to="#" className="blue-link"><span className="blue-text">Resend OTP</span></Link></p>
