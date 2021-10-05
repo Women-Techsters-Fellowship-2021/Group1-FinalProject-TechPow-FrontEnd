@@ -117,10 +117,10 @@
     color: #555;
 }
 
-/* .file-upload {
-    width: 100%;
-    text-align: center;
-} */
+.file-upload {
+    color: #fff;
+    background-color: #000f3b;
+}
 
 .acknowledgement-text {
     margin-block-start: 5em;

@@ -108,7 +108,7 @@ export default function Signup() {
                         toEmail: newUser.email,
                     }
                     //Calling api for email
-                    axios.post('https://donationappwebapi20211005103856.azurewebsites.net/api/v1/Email/SendEmail',
+                    axios.post('https://donationappwebapi20211005103856.azurewebsites.net/api/v1/Email/SendRegistrationEmail',
                         newEmail)
                         .then(result => {
                             console.log(result);

@@ -157,7 +157,7 @@ function Verification() {
                             toEmail: userEmail,
                         }
                         //Calling api for email
-                        Axios.post('https://donationappwebapi20211005103856.azurewebsites.net/api/v1/Email/SendEmail',
+                        Axios.post('https://donationappwebapi20211005103856.azurewebsites.net/api/v1/Email/SendDoneeApplicationEmail',
                             newEmail)
                             .then(result => {
                                 console.log(result);
@@ -236,7 +236,7 @@ function Verification() {
                             <label for="idcard" className="upload-btn">
                                 <p>National Identity Card</p>
                                 <img src={Vector} alt="upload-icon" className="upload-icon" />
-                                <p className="upload-text">Upload a copy of your National identity card</p>
+                                <p className="upload-text">Upload a copy of your ID Card</p>
                             </label>
                             <div>
                                 <input

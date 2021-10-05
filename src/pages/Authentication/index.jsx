@@ -30,7 +30,7 @@ function Authentication() {
                 <div className="center-form OTP-form new-pwd-form">
                     <div className="form-container fg-pwd container-padding">
                         <h1 className="fg-text">Authentication Required</h1>
-                        <p>We've sent a One Time Password (OTP) to the email <span className="blue-text">ent********122@gmail.com</span></p>
+                        <p>We've sent a One Time Password (OTP) to the specified email.</p>
                         <form method="post" onSubmit={handleSubmit(handleOTP)}>
                             <label for="otp">Enter OTP</label>
                             <input type="tel" name="OTP" id="OTP"

@@ -81,7 +81,7 @@ function DonorApplication() {
                     }
 
                     //Calling api for email
-                    Axios.post('https://donationappwebapi20211005103856.azurewebsites.net/api/v1/Email/SendEmail',
+                    Axios.post('https://donationappwebapi20211005103856.azurewebsites.net/api/v1/Email/SendDonorApplicationEmail',
                         newEmail)
                         .then(result => {
                             console.log(result);

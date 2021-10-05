@@ -48,7 +48,7 @@ function Login() {
                 if (result.data.success) {
                     setLoading(false);
                     console.log(result.data);
-                    toast.success('Welcome! ' + result.data.data.username);
+                    toast.success('Welcome! ' + result.data.data.userName);
                     context.dispatch({
                         type: 'LOGIN',
                         payload: {
