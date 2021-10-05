@@ -1,8 +1,9 @@
 import React from 'react';
+import './style.css';
 
 function TermsOfUse() {
     return (
-        <div>
+        <div className="container privacy-terms">
             <h2><strong>Terms and Conditions</strong></h2>
 
             <p>Welcome to TechPow!</p>

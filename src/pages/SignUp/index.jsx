@@ -224,7 +224,7 @@ export default function Signup() {
                                         required
                                         name="terms-and-conditions" id="checkbox" className="signup-check"
                                         {...register('terms-and-conditions', { required: true })} />
-                                    <p>By signing up, you agree to the <strong className="bold-text"><a href="/TermsOfService" className="bold-text">Terms of Service </a></strong>and <strong className="bold-text"><a href="/PrivacyPolicy" className="bold-text">Privacy Policy</a></strong>.</p>
+                                    <p>By signing up, you agree to the <strong className="bold-text"><a href="/TermsOfUse" className="bold-text">Terms of Service </a></strong>and <strong className="bold-text"><a href="/PrivacyPolicy" className="bold-text">Privacy Policy</a></strong>.</p>
                                 </div>
                                 <div className="last-flex sweet-loading">
                                     <button type="submit" className="btn btn-primary" onClick={displayLoader} disabled={loading}>

@@ -2,8 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+// import AOS from 'aos';
+// import 'aos/dist/aos.css';
 
 //import pages
 import LandingPage from './pages/LandingPage';
@@ -36,7 +36,7 @@ import IdentityVerification from './pages/Identity Verification';
 import Loader from './components/Loader';
 
 function App() {
-  AOS.init();
+  // AOS.init();
   
   return (
     <AppStateProvider>
