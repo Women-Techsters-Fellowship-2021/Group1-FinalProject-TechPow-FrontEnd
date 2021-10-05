@@ -87,7 +87,7 @@ export default function Signup() {
         };
 
         // console.log(newUser);
-        axios.post('http://techpowtechsters-001-site1.itempurl.com/api/v1/Auth/Register',
+        axios.post('https://donationappwebapi20211005103856.azurewebsites.net/api/v1/Auth/Register',
             newUser)
             .then(result => {
                 console.log(result);
@@ -106,7 +106,7 @@ export default function Signup() {
                         toEmail: newUser.email,
                     }
                     //Calling api for email
-                    axios.post('http://techpowtechsters-001-site1.itempurl.com/api/v1/Email/SendEmail',
+                    axios.post('https://donationappwebapi20211005103856.azurewebsites.net/api/v1/Email/SendEmail',
                         newEmail)
                         .then(result => {
                             console.log(result);
@@ -228,10 +228,8 @@ export default function Signup() {
                                 </div>
                                 <div className="last-flex sweet-loading">
                                     <button type="submit" className="btn btn-primary" onClick={displayLoader} disabled={loading}>
-                                        { loading && <div className="clip-loader">
-                                            <BeatLoader color={color} css={overrride} size={15} />
-                                            </div>
-                                        }
+                                        { loading && (<div><BeatLoader color={color} css={overrride} size={15} />
+                                            </div>)}
                                         { !loading && <span>Create Account</span>}
                                     </button>
                                 </div>

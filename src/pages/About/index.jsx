@@ -21,6 +21,7 @@ import Rukayat from '../../resources/images/Team/Rukayat.png';
 import Sarah from '../../resources/images/Team/Sarah.png';
 import Sally from '../../resources/images/Team/Sally Nyiwende Oketch Kenya (1).jpg';
 import ope from '../../resources/images/Team/Opeyemi Akinbode.png';
+import Uchenna from '../../resources/images/Team/Uchenna.jpg';
 
 function About() {
   return (
@@ -234,8 +235,12 @@ function About() {
                         </div>
                         <div>
                             <div className="grey-circle">
+                                <img src={Uchenna} alt="" className="team-img" />
                             </div>
-                            <div className="grey-line"></div>
+                            <div className="grey-line">
+                                <h3 className="blue-text">Okoro Uchenna</h3>
+                                <p className="track">Data Scientist</p>
+                            </div>
                         </div>
                         <div>
                             <div className="grey-circle">

@@ -22,7 +22,7 @@ function EmailVerification() {
             toEmail: userEmail,
         }
         //Calling api for email
-        axios.post('http://techpowtechsters-001-site1.itempurl.com/api/v1/Email/SendEmail',
+        axios.post('https://donationappwebapi20211005103856.azurewebsites.net/api/v1/Email/SendEmail',
             newEmail)
             .then(result => {
                 console.log(result);
@@ -43,7 +43,7 @@ function EmailVerification() {
     const UpdateEmail = ({ update_email }) => {
         // let email_value = update_email.value
         console.log(userId);
-        axios.patch(`http://techpowtechsters-001-site1.itempurl.com/api/v1/Auth?userID=${userId}`,
+        axios.patch(`https://donationappwebapi20211005103856.azurewebsites.net/api/v1/Auth?userID=${userId}`,
             { email: update_email })
             .then(result => {
                 console.log(result);

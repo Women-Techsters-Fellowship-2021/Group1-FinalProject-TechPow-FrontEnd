@@ -39,7 +39,7 @@ function CreateNewPassword() {
         }
         console.log(newResetPassword)
 
-        axios.post('http://localhost:44326/api/v1/ResetPassword/ResetPassword', newResetPassword)
+        axios.post('https://donationappwebapi20211005103856.azurewebsites.net/api/v1/ResetPassword/ResetPassword', newResetPassword)
             .then(result => {
                 console.log(result);
                 if (result.data.success) {
@@ -48,7 +48,7 @@ function CreateNewPassword() {
                     return;
                 }
                 toast.error(result.data.message);
-                axios.post('http://localhost:44326/api/v1/ResetPassword/SendOTPCode', usermail)
+                axios.post('https://donationappwebapi20211005103856.azurewebsites.net/api/v1/ResetPassword/SendOTPCode', usermail)
                     .then(result => {
                         console.log(result);
                         if (result.status === 200) {
@@ -107,8 +107,8 @@ function CreateNewPassword() {
                             </div>
                             <div className="sweet-loading">
                                 <button type="submit" className="btn btn-primary reset fg-btn" onClick={displayLoader} disabled={loading}>
-                                    { loading && <div className="clip-loader"><BeatLoader color={color} css={overrride} size={15} />
-                                                </div>}
+                                    { loading && (<div><BeatLoader color={color} css={overrride} size={15} />
+                                                </div>)}
                                     { !loading && <span>Submit</span>}
                                 </button>
                             </div>

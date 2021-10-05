@@ -1,5 +1,5 @@
 .donee-app-form-page {
-    margin-bottom: 4rem;
+    margin-bottom: 10rem;
 }
 
 .center-head {
@@ -19,7 +19,6 @@
     font-weight: 500;
     color: var(--clr-neutral-200);
 }
-
 
 /* ==========STYLING THE FORMS============ */
 .donee-app-form {
@@ -88,6 +87,7 @@
 .upload-section {
     margin-top: -1.8em;
     margin-bottom: -2em;
+    cursor: pointer;
 }
 
 .upload-icon {
@@ -96,8 +96,30 @@
     margin: auto;
 }
 
+
+.upload-field {
+    width: 25rem;
+    height: 12rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 2em;
+    text-align: center;
+    padding-block: 1.5em;
+    cursor: pointer;
+}
+
+.upload-field:hover {
+    background-color: #f5f5f5;
+}
+
+.upload-text {
+    padding: 0.5rem 0.5rem 0;
+    font-size: 0.92rem;
+    color: #555;
+}
+
 .acknowledgement-text {
-    margin-block-start: 3em;
+    margin-block-start: 5em;
 }
 
 .agreement-div {
@@ -112,26 +134,4 @@
 .signature-box {
     margin-top: 1em;
     width: 46rem;
-}
-
-.upload-field {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-right: 2em;
-    text-align: center;
-    padding-block: 2em;
-    cursor: pointer;
-}
-
-.upload-field:hover {
-    background-color: #ddd;
-}
-
-.id-file {
-    padding-block: 1.28em;
-}
-
-.upload-text {
-    font-size: 0.92rem;
-    color: #555;
 }

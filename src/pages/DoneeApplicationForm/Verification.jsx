@@ -10,7 +10,7 @@ import  BeatLoader from "react-spinners/BeatLoader";
 //import ThankyouCard from '../../components/Thankyou-cardDonee';
 
 //import icon
-//import Vector from '../../resources/icons/Vector.svg';
+import Vector from '../../resources/icons/Vector.svg';
 
 const overrride = css`
     display: block;
@@ -133,7 +133,7 @@ function Verification() {
             };
             const token = Token;
             //Call webAPI
-            Axios.post('http://techpowtechsters-001-site1.itempurl.com/api/v1/DoneeApp',
+            Axios.post('https://donationappwebapi20211005103856.azurewebsites.net/api/v1/DoneeApp',
                 newDoneeApplication,
                 {
                     headers: {
@@ -154,7 +154,7 @@ function Verification() {
                             toEmail: userEmail,
                         }
                         //Calling api for email
-                        Axios.post('http://techpowtechsters-001-site1.itempurl.com/api/v1/Email/SendEmail',
+                        Axios.post('https://donationappwebapi20211005103856.azurewebsites.net/api/v1/Email/SendEmail',
                             newEmail)
                             .then(result => {
                                 console.log(result);
@@ -188,59 +188,69 @@ function Verification() {
     })
 
     const displayLoader = () => {
-        setLoading(true);
+        setLoading({ loading: true});
         setTimeout(() => {
             setLoading({ loading: false});
-        }, 1000)
+        }, 2000);
         usehistory.push("/Thankyou-cardDonee");
-    }
+    };
 
     return (
         <div className="donee-app-form">
             <form className="donee-form" onSubmit={handleSubmit(updateApplicationForm)}>
                 <div>
                     <div className="upload-section form-flex">
-                        <div className="upload-btn-group">
-                            <label for="file" className="upload-btn">Passport</label>
-                            <div className="upload-field">
+                        <div className="upload-field">
+                            <label for="passport-upload" className="upload-btn">
+                                <p>Passport</p>
+                                <img src={Vector} alt="upload-icon" className="upload-icon" /> 
+                                <p className="upload-text">Upload your passport Photograph</p>
+                            </label>
+                            <div>
                                 <input
                                     type="file"
-                                    id="file"
-                                    className="file"
+                                    id="passport-upload"
+                                    className="file-upload"
                                     accept="image/*" {...register('imageLink', { required: true })}
                                     onChange={ImageSelectorHandler}
+                                    hidden
                                 />
-                                {/* <img src={Vector} alt="" className="upload-icon" />  */}
-                                <p className="upload-text">Upload your passport Photograph</p>
                             </div>
                         </div>
 
-                        <div className="upload-btn-group">
-                            <label>Letter of Recommendation</label>
-                            <div className="upload-field">
+                        <div className="upload-field">
+                            <label for="recommend-btn" className="upload-btn">
+                                <p>Letter of Recommendation</p>
+                                <img src={Vector} alt="upload-icon" className="upload-icon" /> 
+                                <p className="upload-text">Upload a letter of recommendation</p>
+                            </label>
+                            <div>
                                 <input
                                     type="file"
-                                    id="file"
+                                    id="recommend-btn"
+                                    className="file-upload"
                                     accept="image/*" {...register('letterOfRecommendationLink', { required: true })}
                                     onChange={LetterSelectorHandler}
+                                    hidden
                                 />
-                                {/* <img src={Vector} alt="" className="upload-icon" />  */}
-                                <p className="upload-text">Upload letter of recommendation</p>
                             </div>
                         </div>
 
-                        <div className="upload-btn-group">
-                            <label> National Identity Card</label>
-                            <div className="upload-field id-file">
+                        <div className="upload-field">
+                            <label for="idcard" className="upload-btn">
+                                <p>National Identity Card</p>
+                                <img src={Vector} alt="" className="upload-icon" />
+                                <p className="upload-text">Upload a copy of your National identity card</p>
+                            </label>
+                            <div>
                                 <input
                                     type="file"
-                                    id="file"
-                                    className="file"
+                                    id="idcard"
+                                    className="file-upload"
                                     accept="image/*" {...register('nationalIdLink', { required: true })}
                                     onChange={IDSelectorHandler}
+                                    hidden
                                 />
-                                {/* <img src={Vector} alt="" className="upload-icon" /> */}
-                                <p className="upload-text">Upload a copy of your National identity car</p>
                             </div>
                         </div>
                     </div>
@@ -291,9 +301,11 @@ function Verification() {
                     </div>
                     <div className="form-login-btn next-btn submit-app-btn sweet-loading">
                         <button type="submit" className="btn btn-primary" onClick={displayLoader} disabled={loading}>
-                            { loading && <div className="clip-loader"><BeatLoader color={color} css={overrride} size={15} />
-                                        </div>}
-                            { !loading && <span>Submit</span>}</button>
+                            { loading && (<div><BeatLoader color={color} css={overrride} size={15} />
+                                        </div>)}
+                            { loading && <span>Submitting</span>}
+                            { !loading && <span>Submit</span>}
+                        </button>
                     </div>
                 </div>
             </form>

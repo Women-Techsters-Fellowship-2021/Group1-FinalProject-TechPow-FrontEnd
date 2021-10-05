@@ -38,12 +38,12 @@ function ForgotPassword() {
             },
         })
         
-        axios.get(`http://techpowtechsters-001-site1.itempurl.com/api/v1/Auth/GetUserEmail?Email=${reset_email}`)
+        axios.get(`https://donationappwebapi20211005103856.azurewebsites.net/api/v1/Auth/GetUserEmail?Email=${reset_email}`)
             .then(result => {
                 if (result.data.success) {
                     console.log(result.data);
                     history.push('/Authentication');
-                    axios.post('http://techpowtechsters-001-site1.itempurl.com/api/v1/ResetPassword/SendOTPCode', user_email)
+                    axios.post('https://donationappwebapi20211005103856.azurewebsites.net/api/v1/ResetPassword/SendOTPCode', user_email)
                         .then(result => {
                             console.log(result);
                             if (result.status === 200) {
@@ -90,15 +90,14 @@ function ForgotPassword() {
                             </div>
                             <div className="sweet-loading">
                                 <button type="submit" className="btn btn-primary reset" onClick={displayLoader} disabled={loading}>
-                                    { loading && <div className="clip-loader"><BeatLoader color={color} css={overrride} size={15} />
-                                                </div>}
+                                    { loading && (<div><BeatLoader color={color} css={overrride} size={15} />
+                                                </div>)}
                                     { !loading && <span>Reset password</span>}
                                 </button>
                             </div>
                             <p>Remember your password? <Link to="/Login" className="green"><span className="green">Login</span></Link></p>
                         </form>
                     </div>
-
                 </div>
             </div>
         </DefaultLayout>

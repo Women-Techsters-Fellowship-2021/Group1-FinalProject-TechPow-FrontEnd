@@ -55,7 +55,7 @@ function DonorApplication() {
 
         const token = Token;
         //Call webAPI
-        Axios.post('http://techpowtechsters-001-site1.itempurl.com/api/v1/Donor',
+        Axios.post('https://donationappwebapi20211005103856.azurewebsites.net/api/v1/Donor',
             newDonation,
             {
                 headers: {
@@ -77,7 +77,7 @@ function DonorApplication() {
                     }
 
                     //Calling api for email
-                    Axios.post('http://techpowtechsters-001-site1.itempurl.com/api/v1/Email/SendEmail',
+                    Axios.post('https://donationappwebapi20211005103856.azurewebsites.net/api/v1/Email/SendEmail',
                         newEmail)
                         .then(result => {
                             console.log(result);
@@ -311,8 +311,9 @@ function DonorApplication() {
                                     <div className="form-login-btn next-btn">
                                         <div className="sweet-loading">
                                             <button type="submit" className="btn btn-primary" onClick={displayLoader} disabled={loading}>
-                                                { loading && <div className="clip-loader"><BeatLoader color={color} css={overrride} size={15} />
-                                                            </div>}
+                                                { loading && (<div><BeatLoader color={color} css={overrride} size={15} />
+                                                            </div>)}
+                                                { loading && <span>Submitting</span>}
                                                 { !loading && <span>Submit</span>}</button>
                                         </div>
                                     </div>
