@@ -1,17 +1,25 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import DefaultLayout from '../../components/Layout/DefaultLayout';
 import { useForm } from 'react-hook-form';
-import { useContext } from 'react';
 import { AppContext } from '../../components/AppStateProvider';
 import { useHistory } from 'react-router';
 import { toast } from 'react-toastify';
 import axios from 'axios';
-
+import { css } from "@emotion/react";
+import  BeatLoader from "react-spinners/BeatLoader";
 
 //import styles
 import './style.css';
 
+const overrride = css`
+    display: block;
+    margin: 0 auto;
+    border-color: navy;
+`;
+
 function CreateNewPassword() {
+    const [loading, setLoading] = useState(false);
+    const [color] = useState("navy");
     const { register, handleSubmit } = useForm();
     const { state: { userEmail, userOTP } } = useContext(AppContext);
     const history = useHistory();
@@ -59,6 +67,13 @@ function CreateNewPassword() {
 
     }
 
+    const displayLoader = () => {
+        setLoading(true);
+        setTimeout(() => {
+            setLoading({ loading: false});
+        }, 1000)
+    }
+
     return (
         <DefaultLayout>
             <div className="bg-pattern">
@@ -90,7 +105,13 @@ function CreateNewPassword() {
                                     {...register('confirmpassword', { required: true })}
                                 />
                             </div>
-                            <button type="submit" className="btn-primary reset fg-btn">Submit</button>
+                            <div className="sweet-loading">
+                                <button type="submit" className="btn btn-primary reset fg-btn" onClick={displayLoader} disabled={loading}>
+                                    { loading && <div className="clip-loader"><BeatLoader color={color} css={overrride} size={15} />
+                                                </div>}
+                                    { !loading && <span>Submit</span>}
+                                </button>
+                            </div>
                         </form>
                     </div>
                 </div>

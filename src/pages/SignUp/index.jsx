@@ -1,10 +1,12 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useHistory } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import axios from 'axios';
 import { AppContext } from '../../components/AppStateProvider';
 import DefaultLayout from '../../components/Layout/DefaultLayout';
+import { css } from "@emotion/react";
+import  BeatLoader from "react-spinners/BeatLoader";
 
 //import styles
 import './style.css';
@@ -17,11 +19,16 @@ import google from '../../resources/icons/google.svg';
 import facebook from '../../resources/icons/facebook.svg';
 import linkedin from '../../resources/icons/linkedin.svg';
 
+const overrride = css`
+    display: block;
+    margin: 0 auto;
+    border-color: navy;
+`;
+
 export default function Signup() {
-
-    const { register, handleSubmit } = useForm(
-        { reValidateMode: 'onSubmit' })
-
+    const [loading, setLoading] = useState(false);
+    const [color] = useState("navy");
+    const { register, handleSubmit } = useForm({ reValidateMode: 'onSubmit' });
     const history = useHistory();
     const context = useContext(AppContext);
 
@@ -124,6 +131,13 @@ export default function Signup() {
             })
     };
 
+    const displayLoader = () => {
+        setLoading(true);
+        setTimeout(() => {
+            setLoading({ loading: false});
+        }, 1000)
+    }
+
 
     return (
         <DefaultLayout>
@@ -212,10 +226,16 @@ export default function Signup() {
                                         {...register('terms-and-conditions', { required: true })} />
                                     <p>By signing up, you agree to the <strong className="bold-text"><a href="/TermsOfService" className="bold-text">Terms of Service </a></strong>and <strong className="bold-text"><a href="/PrivacyPolicy" className="bold-text">Privacy Policy</a></strong>.</p>
                                 </div>
-                                <div className="last-flex">
-                                    <button type="submit" className="btn btn-primary">Create Account</button>
-                                    <p>Already have an account? <a className="green" href="/Login">Log in</a></p>
+                                <div className="last-flex sweet-loading">
+                                    <button type="submit" className="btn btn-primary" onClick={displayLoader} disabled={loading}>
+                                        { loading && <div className="clip-loader">
+                                            <BeatLoader color={color} css={overrride} size={15} />
+                                            </div>
+                                        }
+                                        { !loading && <span>Create Account</span>}
+                                    </button>
                                 </div>
+                                <p>Already have an account? <a className="green" href="/Login">Log in</a></p>
                             </form>
                         </div>
                     </div>
@@ -224,4 +244,3 @@ export default function Signup() {
         </DefaultLayout>
     );
 }
-

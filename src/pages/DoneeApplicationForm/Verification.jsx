@@ -1,16 +1,26 @@
 import React from 'react';
-import { useContext, useEffect } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import Axios from 'axios';
-import { Link, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { AppContext } from '../../components/AppStateProvider';
 import { toast } from 'react-toastify';
+import { css } from "@emotion/react";
+import  BeatLoader from "react-spinners/BeatLoader";
 //import ThankyouCard from '../../components/Thankyou-cardDonee';
 
 //import icon
 //import Vector from '../../resources/icons/Vector.svg';
 
+const overrride = css`
+    display: block;
+    margin: 0 auto;
+    border-color: navy;
+`;
+
 function Verification() {
+    const [loading, setLoading] = useState(false);
+    const [color] = useState("navy");
     const { register, handleSubmit } = useForm();
     const usehistory = useHistory();
     let imageselectPass = "";
@@ -172,14 +182,18 @@ function Verification() {
 
     }
 
-    // Handler for Image selection  for upload
-
-
-
     useEffect(() => {
         if (!completedTabs.includes("Verification"))
             dispatch({ type: 'ADD_COMPLETED_STEP', payload: "Verification" })
     })
+
+    const displayLoader = () => {
+        setLoading(true);
+        setTimeout(() => {
+            setLoading({ loading: false});
+        }, 1000)
+        usehistory.push("/Thankyou-cardDonee");
+    }
 
     return (
         <div className="donee-app-form">
@@ -275,11 +289,12 @@ function Verification() {
                             />
                         </div>
                     </div>
-                    <Link to="/Thankyou-cardDonee">
-                        <div className="form-login-btn next-btn submit-app-btn">
-                            <button type="submit" className="btn btn-primary">Submit</button>
-                        </div>
-                    </Link>
+                    <div className="form-login-btn next-btn submit-app-btn sweet-loading">
+                        <button type="submit" className="btn btn-primary" onClick={displayLoader} disabled={loading}>
+                            { loading && <div className="clip-loader"><BeatLoader color={color} css={overrride} size={15} />
+                                        </div>}
+                            { !loading && <span>Submit</span>}</button>
+                    </div>
                 </div>
             </form>
         </div>

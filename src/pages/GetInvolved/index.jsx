@@ -1,5 +1,7 @@
 import React from 'react';
-//import { useForm } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
+import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import DefaultLayout from '../../components/Layout/DefaultLayout';
 
 
@@ -17,6 +19,12 @@ import imageOne from '../../resources/images/Get Involve1.png';
 
 
 function GetInvolved() {
+    const { register, handleSubmit} = useForm();
+
+    const subscribe = () => {
+        return toast.succcess("Thank you for subscribing to our newsletter!");
+    }
+
     return(
         <DefaultLayout>
             <div className="getinvolved-page">
@@ -27,9 +35,11 @@ function GetInvolved() {
                             <span className="appname">Get <b className="green appname">Involved</b></span>
                         </h1>
                     
-                        <button className="btn-primary join">
-                            Join Us
-                        </button>
+                        <Link to="/Signup">
+                            <button className="btn-primary join">
+                                Join Us
+                            </button>
+                        </Link>
                     </div>
                 </div>
 
@@ -106,11 +116,13 @@ function GetInvolved() {
                                 <div className="newsletter-flex">
                                     <div className="newsletter-container">
                                         <h5 className="newsletter-text">Newsletter Sign-Up</h5>
-                                        <form className="newsletter-form" >
+                                        <form className="newsletter-form" onSubmit={handleSubmit(subscribe)}>
                                             <input
                                             type="text"
+                                            name="newsletter"
                                             className="donee-text-input white-hover"
                                             placeholder="Your Email Address here"
+                                            {...register('newsletter', {required: true})}
                                             />
                                             <button className="subscribe btn-primary">
                                                 Subscribe

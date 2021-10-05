@@ -35,7 +35,7 @@ function Login() {
             .then(result => {
                 if (result.data.success) {
                     console.log(result.data);
-                    toast.success('Welcome! ' + result.data.data.email);
+                    toast.success('Welcome! ' + result.data.data.username);
                     context.dispatch({
                         type: 'LOGIN',
                         payload: {

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import DefaultLayout from '../../components/Layout/DefaultLayout';
 import { useHistory } from 'react-router';
 import { useForm } from 'react-hook-form';
@@ -6,13 +6,23 @@ import { AppContext } from '../../components/AppStateProvider';
 import Axios from 'axios';
 import { toast } from 'react-toastify';
 import { Link } from 'react-router-dom';
+import { css } from "@emotion/react";
+import  BeatLoader from "react-spinners/BeatLoader";
 //import Modal from '../../components/Modal/index';
 
 //import styles
 import './style.css';
 //import ThankyouCardDonor from '../../components/Thankyou-cardDonor';
 
+const overrride = css`
+    display: block;
+    margin: 0 auto;
+    border-color: navy;
+`;
+
 function DonorApplication() {
+    const [loading, setLoading] = useState(false);
+    const [color] = useState("navy");
     const { register, handleSubmit } = useForm();
     const { state: { Token, userId, userEmail }, dispatch, isLoggedIn } = useContext(AppContext);
     const usehistory = useHistory();
@@ -92,6 +102,14 @@ function DonorApplication() {
 
             })
 
+    }
+
+    const displayLoader = () => {
+        setLoading(true);
+        setTimeout(() => {
+            setLoading({ loading: false});
+        }, 1000);
+        usehistory.push('/Thankyou-cardDonor');
     }
 
     return (
@@ -291,19 +309,18 @@ function DonorApplication() {
                                     </div>
 
                                     <div className="form-login-btn next-btn">
-                                        <Link to="/Thankyou-CardDonor">
-                                            <button type="submit" className="btn btn-primary">Submit</button>
-                                        </Link>
-                                        {/* <button type="submit" className="btn btn-primary" onClick={() => setShow(true)}>Submit</button> */}
+                                        <div className="sweet-loading">
+                                            <button type="submit" className="btn btn-primary" onClick={displayLoader} disabled={loading}>
+                                                { loading && <div className="clip-loader"><BeatLoader color={color} css={overrride} size={15} />
+                                                            </div>}
+                                                { !loading && <span>Submit</span>}</button>
+                                        </div>
                                     </div>
                                 </form>
                             </div>
                         </div>
                     </div>
                 </div>
-                {/* <Modal show={show} onClose={() => setShow(false)}>
-                    <ThankyouCardDonor />
-                </Modal> */}
             </DefaultLayout>
         </React.Fragment>
     );

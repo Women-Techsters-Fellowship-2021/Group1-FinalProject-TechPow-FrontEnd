@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import forgotPassword from '../../resources/icons/Forget Password.svg';
@@ -6,12 +6,22 @@ import DefaultLayout from '../../components/Layout/DefaultLayout';
 import { useHistory } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import axios from 'axios';
+import { css } from "@emotion/react";
+import  BeatLoader from "react-spinners/BeatLoader";
 
 //import styles
 import './style.css';
 import { AppContext } from '../../components/AppStateProvider';
 
+const overrride = css`
+    display: block;
+    margin: 0 auto;
+    border-color: navy;
+`;
+
 function ForgotPassword() {
+    const [loading, setLoading] = useState(false);
+    const [color] = useState("navy");
     const { register, handleSubmit } = useForm();
     const { dispatch } = useContext(AppContext);
     const history = useHistory();
@@ -48,6 +58,13 @@ function ForgotPassword() {
             });
     }
 
+    const displayLoader = () => {
+        setLoading(true);
+        setTimeout(() => {
+            setLoading({ loading: false});
+        }, 1000)
+    }
+
     return (
         <DefaultLayout>
             <div className="bg-pattern">
@@ -71,7 +88,13 @@ function ForgotPassword() {
                                     {...register('reset_email', { required: true })}
                                 />
                             </div>
-                            <button type="submit" className="btn-primary reset">Reset password</button>
+                            <div className="sweet-loading">
+                                <button type="submit" className="btn btn-primary reset" onClick={displayLoader} disabled={loading}>
+                                    { loading && <div className="clip-loader"><BeatLoader color={color} css={overrride} size={15} />
+                                                </div>}
+                                    { !loading && <span>Reset password</span>}
+                                </button>
+                            </div>
                             <p>Remember your password? <Link to="/Login" className="green"><span className="green">Login</span></Link></p>
                         </form>
                     </div>
