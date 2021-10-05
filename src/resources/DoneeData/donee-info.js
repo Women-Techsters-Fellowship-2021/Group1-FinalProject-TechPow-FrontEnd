@@ -1,6 +1,4 @@
 //import images
-import imageOne from '../images/Donne1.png';
-
 import ifunnanya from '../images/DoneeImages/Serah.png';
 import hezron from '../images/DoneeImages/Hezron.png';
 import reem from '../images/DoneeImages/Reem.png';
